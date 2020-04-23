@@ -1,0 +1,28 @@
+/**************************************************
+ * Timing constraint sanity check File 
+**************************************************/
+
+/* Start Section: Pin constraint values greater than available time */
+/* End Section: Pin constraint values greater than available time */
+
+/* Start Section: Ports without constraints */
+/* End Section: Ports without constraints */
+
+/* Start Section: Missing constraints due to constant signals at ports */
+/* End Section: Missing constraints due to constant signals at ports */
+
+/* Start Section: Missing constraints due to false path assignments at ports */
+/* End Section: Missing constraints due to false path assignments at ports */
+
+/* Start Section: List of ports w/o constraints with added false_path assertions */
+/* End Section: List of ports w/o constraints with added false_path assertions */
+
+
+/*Start Section: List of mixed Ports*/
+/*End Section: List of mixed Ports*/
+
+/* Start Section Unconnected Ports */
+
+
+/* End Section Unconnected Ports */
+

@@ -1,0 +1,17 @@
+##
+## Top level constraint for design PresentEnc
+##
+create_clock -name {clk} -period 0.800 -waveform { 0.000 0.400 } [list  \
+  [get_ports {clk}]]
+## start reading from input constraint file 
+set_driving_cell -lib_cell NAND2X1 \
+  -library gscl45nm \
+  -pin Y\
+   [all_inputs]
+set_drive 0.2500 \
+   {clk} 
+set_input_delay -clock clk 0.0000 \
+   [all_inputs]
+set_output_delay -clock clk 3.0000 \
+   [all_outputs]
+## end reading from input constraint file 

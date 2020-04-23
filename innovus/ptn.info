@@ -1,0 +1,9 @@
+set ::ilm::ptnParent(Reg_width64) PresentEnc
+set ::ilm::ptnParent(Reg_width80) PresentEnc
+set ::ilm::ptnParent(AsyncMux_width80) PresentEnc
+set ::ilm::ptnParent(AsyncMux_width64) PresentEnc
+set ::ilm::nested 0
+set ::ilm_eco::partitions {PresentEnc Reg_width64 Reg_width80 AsyncMux_width80 AsyncMux_width64}
+set ::ilm_eco::top_module PresentEnc
+set ::ilm_eco::proto_model_dir /nethome/mwhite93/Documents/6133/ece6133_timing_budgeting/innovus/proto_model
+set ::ilm_eco::flex_modules {}
