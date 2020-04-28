@@ -74,3 +74,7 @@ plt.hist(error, bins = 25)
 plt.xlabel("Prediction Error [" + col + "]")
 _ = plt.ylabel("Count")
 plt.show()
+filename = ("nn_histogram-" + str(sys.argv[1]) + ".png")
+plt.savefig(filename)
+print("wrote fig to " + filename)
+

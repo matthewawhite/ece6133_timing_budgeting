@@ -68,7 +68,11 @@ if col == "route_ratio":
     ylim_max = 0.2
 
 plotter = tfdocs.plots.HistoryPlotter(smoothing_std=2)
-plotter.plot({'Basic': history}, metric = "mae")
+plotter.plot({'Basic': history}, metric = "mean_absolute_error")
 plt.ylim([0, ylim_max])
 plt.ylabel('MAE [' + col + ']')
 plt.show()
+
+filename = ("nn_mae-" + str(sys.argv[1]) + ".png")
+plt.savefig(filename)
+print('wrote figure to ' + filename)

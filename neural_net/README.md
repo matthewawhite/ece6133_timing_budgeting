@@ -10,10 +10,11 @@ This folder contains four Python scripts that plot different graphs based on the
 
 To run the software, several Python packages first need to be installed. If using the ECE servers follow the instructions below:
 1.) bash
-2.) virtualenv env
+2.) python3 -m venv env
 3.) source env/bin/activate
-4.) pip3 install -r requirements.txt
+4.) python -m pip3 install -r requirements.txt
 5.) python3 [file_name] [column_name]
+6.) deactivate
 
 Examples:
 python3 nn_histogram.py efo_ratio
@@ -21,6 +22,19 @@ python3 nn_predicted_vs_true.py route_ratio
 
 The argument after the Python file name is the column being trained and predicted on. We focussed on efo_ratio and route_ratio since many of the other columns can be
 calculated from the others using linear equations. The total list of column available to be trained on is:
-["top_slack", "tile_slack", "slack_delta", "driver_slack", "receiver_slack", "delay_split", "available_time", "driver_delay", "receiver_delay", "driver_efo", "receiver_efo", "efo_delta", "route_ratio", "efo_ratio"]
+ * top_slack
+ * tile_slack
+ * slack_delta
+ * driver_slack
+ * receiver_slack
+ * delay_split
+ * available_time
+ * driver_delay
+ * receiver_delay
+ * efo_delta
+ * route_ratio
+ * efo_ratio
 
 To ensure that the plots show up, make sure to ssh into the server using the -XY flag to enable X11 forwarding (similar to running a Cadence/Synopsys tool's GUI remotely).
+It looks like the server is missing python3-tk system packages to forward the plots. They will be written to images in this directory and a notification will be printed
+at the end. If able, the plots will also be shown directly.
