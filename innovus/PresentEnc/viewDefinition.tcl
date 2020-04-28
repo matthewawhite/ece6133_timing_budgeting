@@ -5,11 +5,17 @@ create_constraint_mode -name present_enc_cm -sdc_files PresentEnc_present_enc_av
 create_library_set -name gscl45nm_ls_budgeting_max\
    -timing\
     [list ../gscl45nm.tlf\
-    ./AsyncMux_width64_present_enc_av_max.lib]
+    ../AsyncMux_width64/AsyncMux_width64_present_enc_av_max.lib\
+    ../AsyncMux_width80/AsyncMux_width80_present_enc_av_max.lib\
+    ../Reg_width80/Reg_width80_present_enc_av_max.lib\
+    ../Reg_width64/Reg_width64_present_enc_av_max.lib]
 create_library_set -name gscl45nm_ls_budgeting_min\
    -timing\
     [list ../gscl45nm.tlf\
-    ./AsyncMux_width64_present_enc_av_min.lib]
+    ../AsyncMux_width64/AsyncMux_width64_present_enc_av_min.lib\
+    ../AsyncMux_width80/AsyncMux_width80_present_enc_av_min.lib\
+    ../Reg_width80/Reg_width80_present_enc_av_min.lib\
+    ../Reg_width64/Reg_width64_present_enc_av_min.lib]
 create_rc_corner -name default_rc_corner\
    -preRoute_res 1\
    -preRoute_cap 1\

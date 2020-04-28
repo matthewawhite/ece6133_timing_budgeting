@@ -1,0 +1,5518 @@
+/**************************************************
+ * simple timing model for PtnCell                 
+ **************************************************/
+library(AsyncMux_width80_present_enc_av.partcell) {
+  delay_model : table_lookup ; 
+  date : "Thu Apr 23 20:07:58 2020" ; 
+  time_unit : "1ns";
+  pulling_resistance_unit : "1kohm";
+  capacitive_load_unit(1.0,pf);
+  slew_lower_threshold_pct_rise : 20 ;
+  slew_upper_threshold_pct_rise : 80 ;
+  input_threshold_pct_fall : 50 ;
+  output_threshold_pct_fall : 50 ;
+  input_threshold_pct_rise : 50 ;
+  output_threshold_pct_rise : 50 ;
+  slew_lower_threshold_pct_fall : 20 ;
+  slew_upper_threshold_pct_fall : 80 ;
+  slew_derate_from_library : 0.750 ;
+  nom_process : 1.0000;
+  nom_voltage : 1.1000;
+  nom_temperature : 27.0000;
+  in_place_swap_mode : match_footprint;
+  lu_table_template( DriveTemplate ) {
+    variable_1 :  total_output_net_capacitance; 
+    index_1 ( "0.042, 0.167, 0.542, 1.667, 5.000");
+  }
+  lu_table_template( SlewTemplate ) {
+    variable_1 : input_net_transition; 
+    index_1 ("0.042, 0.167, 0.542, 1.667, 5.000");
+  }
+  type(AsyncMux_width80_output_79to0) {
+    base_type : "array";
+    data_type : "bit";
+    bit_width : 80;
+    bit_from  : 79;
+    bit_to    : 0;
+    downto    : true;
+  }
+  type(AsyncMux_width80_input1_79to0) {
+    base_type : "array";
+    data_type : "bit";
+    bit_width : 80;
+    bit_from  : 79;
+    bit_to    : 0;
+    downto    : true;
+  }
+  type(AsyncMux_width80_input0_79to0) {
+    base_type : "array";
+    data_type : "bit";
+    bit_width : 80;
+    bit_from  : 79;
+    bit_to    : 0;
+    downto    : true;
+  }
+ cell( AsyncMux_width80 ) {
+  interface_timing : true ;
+
+  bus( output) {
+    bus_type : "AsyncMux_width80_output_79to0";
+    direction : output;
+    pin(output[79]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[79];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.958" );
+            }
+            cell_fall(scalar) {
+              values( "0.956" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[79];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.976" );
+            }
+            cell_fall(scalar) {
+              values( "0.967" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[79]|!input0[79]|!ctrl);
+    }
+    pin(output[78]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[78];
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.959" );
+            }
+            cell_fall(scalar) {
+              values( "0.960" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[78];
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.953" );
+            }
+            cell_fall(scalar) {
+              values( "0.962" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.971" );
+            }
+            cell_fall(scalar) {
+              values( "0.971" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (input1[78]|input0[78]|ctrl);
+    }
+    pin(output[77]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[77];
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.955" );
+            }
+            cell_fall(scalar) {
+              values( "0.957" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[77];
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.953" );
+            }
+            cell_fall(scalar) {
+              values( "0.962" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.971" );
+            }
+            cell_fall(scalar) {
+              values( "0.971" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (input1[77]|input0[77]|ctrl);
+    }
+    pin(output[76]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[76];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.963" );
+            }
+            cell_fall(scalar) {
+              values( "0.963" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[76];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.974" );
+            }
+            cell_fall(scalar) {
+              values( "0.965" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[76]|!input0[76]|!ctrl);
+    }
+    pin(output[75]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[75];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.975" );
+            }
+            cell_fall(scalar) {
+              values( "0.979" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[75];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.967" );
+            }
+            cell_fall(scalar) {
+              values( "0.961" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[75]|!input0[75]|!ctrl);
+    }
+    pin(output[74]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[74];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.975" );
+            }
+            cell_fall(scalar) {
+              values( "0.978" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[74];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.966" );
+            }
+            cell_fall(scalar) {
+              values( "0.959" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[74]|!input0[74]|!ctrl);
+    }
+    pin(output[73]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[73];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.982" );
+            }
+            cell_fall(scalar) {
+              values( "0.983" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[73];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.973" );
+            }
+            cell_fall(scalar) {
+              values( "0.963" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[73]|!input0[73]|!ctrl);
+    }
+    pin(output[72]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[72];
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.979" );
+            }
+            cell_fall(scalar) {
+              values( "0.983" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[72];
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.953" );
+            }
+            cell_fall(scalar) {
+              values( "0.962" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.966" );
+            }
+            cell_fall(scalar) {
+              values( "0.969" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (input1[72]|input0[72]|ctrl);
+    }
+    pin(output[71]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[71];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.974" );
+            }
+            cell_fall(scalar) {
+              values( "0.975" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[71];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.948" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[71]|!input0[71]|!ctrl);
+    }
+    pin(output[70]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[70];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.983" );
+            }
+            cell_fall(scalar) {
+              values( "0.985" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[70];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.974" );
+            }
+            cell_fall(scalar) {
+              values( "0.965" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[70]|!input0[70]|!ctrl);
+    }
+    pin(output[69]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[69];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.983" );
+            }
+            cell_fall(scalar) {
+              values( "0.984" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[69];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.975" );
+            }
+            cell_fall(scalar) {
+              values( "0.966" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[69]|!input0[69]|!ctrl);
+    }
+    pin(output[68]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[68];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.983" );
+            }
+            cell_fall(scalar) {
+              values( "0.984" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[68];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.973" );
+            }
+            cell_fall(scalar) {
+              values( "0.963" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[68]|!input0[68]|!ctrl);
+    }
+    pin(output[67]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[67];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.983" );
+            }
+            cell_fall(scalar) {
+              values( "0.986" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[67];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.974" );
+            }
+            cell_fall(scalar) {
+              values( "0.964" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[67]|!input0[67]|!ctrl);
+    }
+    pin(output[66]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[66];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.981" );
+            }
+            cell_fall(scalar) {
+              values( "0.983" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[66];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.972" );
+            }
+            cell_fall(scalar) {
+              values( "0.962" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[66]|!input0[66]|!ctrl);
+    }
+    pin(output[65]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[65];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.984" );
+            }
+            cell_fall(scalar) {
+              values( "0.985" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[65];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.975" );
+            }
+            cell_fall(scalar) {
+              values( "0.967" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[65]|!input0[65]|!ctrl);
+    }
+    pin(output[64]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[64];
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.982" );
+            }
+            cell_fall(scalar) {
+              values( "0.987" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[64];
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.953" );
+            }
+            cell_fall(scalar) {
+              values( "0.962" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.968" );
+            }
+            cell_fall(scalar) {
+              values( "0.975" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (input1[64]|input0[64]|ctrl);
+    }
+    pin(output[63]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[63];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.979" );
+            }
+            cell_fall(scalar) {
+              values( "0.980" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[63];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.973" );
+            }
+            cell_fall(scalar) {
+              values( "0.963" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[63]|!input0[63]|!ctrl);
+    }
+    pin(output[62]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[62];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.980" );
+            }
+            cell_fall(scalar) {
+              values( "0.981" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[62];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.975" );
+            }
+            cell_fall(scalar) {
+              values( "0.965" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[62]|!input0[62]|!ctrl);
+    }
+    pin(output[61]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[61];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.982" );
+            }
+            cell_fall(scalar) {
+              values( "0.984" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[61];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.973" );
+            }
+            cell_fall(scalar) {
+              values( "0.963" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[61]|!input0[61]|!ctrl);
+    }
+    pin(output[60]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[60];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.980" );
+            }
+            cell_fall(scalar) {
+              values( "0.981" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[60];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.973" );
+            }
+            cell_fall(scalar) {
+              values( "0.965" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[60]|!input0[60]|!ctrl);
+    }
+    pin(output[59]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[59];
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.982" );
+            }
+            cell_fall(scalar) {
+              values( "0.980" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[59];
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.953" );
+            }
+            cell_fall(scalar) {
+              values( "0.962" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.971" );
+            }
+            cell_fall(scalar) {
+              values( "0.969" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (input1[59]|input0[59]|ctrl);
+    }
+    pin(output[58]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[58];
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.982" );
+            }
+            cell_fall(scalar) {
+              values( "0.981" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[58];
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.953" );
+            }
+            cell_fall(scalar) {
+              values( "0.962" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.972" );
+            }
+            cell_fall(scalar) {
+              values( "0.972" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (input1[58]|input0[58]|ctrl);
+    }
+    pin(output[57]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[57];
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.983" );
+            }
+            cell_fall(scalar) {
+              values( "0.986" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[57];
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.953" );
+            }
+            cell_fall(scalar) {
+              values( "0.962" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.970" );
+            }
+            cell_fall(scalar) {
+              values( "0.973" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (input1[57]|input0[57]|ctrl);
+    }
+    pin(output[56]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[56];
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.979" );
+            }
+            cell_fall(scalar) {
+              values( "0.981" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[56];
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.953" );
+            }
+            cell_fall(scalar) {
+              values( "0.962" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.969" );
+            }
+            cell_fall(scalar) {
+              values( "0.970" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (input1[56]|input0[56]|ctrl);
+    }
+    pin(output[55]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[55];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.974" );
+            }
+            cell_fall(scalar) {
+              values( "0.976" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[55];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.966" );
+            }
+            cell_fall(scalar) {
+              values( "0.958" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[55]|!input0[55]|!ctrl);
+    }
+    pin(output[54]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[54];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.964" );
+            }
+            cell_fall(scalar) {
+              values( "0.967" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[54];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.955" );
+            }
+            cell_fall(scalar) {
+              values( "0.943" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[54]|!input0[54]|!ctrl);
+    }
+    pin(output[53]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[53];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.974" );
+            }
+            cell_fall(scalar) {
+              values( "0.979" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[53];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.956" );
+            }
+            cell_fall(scalar) {
+              values( "0.946" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[53]|!input0[53]|!ctrl);
+    }
+    pin(output[52]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[52];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.971" );
+            }
+            cell_fall(scalar) {
+              values( "0.972" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[52];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.961" );
+            }
+            cell_fall(scalar) {
+              values( "0.948" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[52]|!input0[52]|!ctrl);
+    }
+    pin(output[51]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[51];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.982" );
+            }
+            cell_fall(scalar) {
+              values( "0.983" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[51];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.973" );
+            }
+            cell_fall(scalar) {
+              values( "0.964" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[51]|!input0[51]|!ctrl);
+    }
+    pin(output[50]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[50];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.983" );
+            }
+            cell_fall(scalar) {
+              values( "0.983" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[50];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.976" );
+            }
+            cell_fall(scalar) {
+              values( "0.967" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[50]|!input0[50]|!ctrl);
+    }
+    pin(output[49]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[49];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.969" );
+            }
+            cell_fall(scalar) {
+              values( "0.969" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[49];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.960" );
+            }
+            cell_fall(scalar) {
+              values( "0.946" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[49]|!input0[49]|!ctrl);
+    }
+    pin(output[48]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[48];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.983" );
+            }
+            cell_fall(scalar) {
+              values( "0.985" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[48];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.974" );
+            }
+            cell_fall(scalar) {
+              values( "0.964" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[48]|!input0[48]|!ctrl);
+    }
+    pin(output[47]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[47];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.977" );
+            }
+            cell_fall(scalar) {
+              values( "0.977" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[47];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.971" );
+            }
+            cell_fall(scalar) {
+              values( "0.961" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[47]|!input0[47]|!ctrl);
+    }
+    pin(output[46]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[46];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.982" );
+            }
+            cell_fall(scalar) {
+              values( "0.982" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[46];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.976" );
+            }
+            cell_fall(scalar) {
+              values( "0.967" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[46]|!input0[46]|!ctrl);
+    }
+    pin(output[45]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[45];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.978" );
+            }
+            cell_fall(scalar) {
+              values( "0.979" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[45];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.970" );
+            }
+            cell_fall(scalar) {
+              values( "0.961" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[45]|!input0[45]|!ctrl);
+    }
+    pin(output[44]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[44];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.982" );
+            }
+            cell_fall(scalar) {
+              values( "0.983" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[44];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.975" );
+            }
+            cell_fall(scalar) {
+              values( "0.967" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[44]|!input0[44]|!ctrl);
+    }
+    pin(output[43]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[43];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.970" );
+            }
+            cell_fall(scalar) {
+              values( "0.970" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[43];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.961" );
+            }
+            cell_fall(scalar) {
+              values( "0.949" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[43]|!input0[43]|!ctrl);
+    }
+    pin(output[42]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[42];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.981" );
+            }
+            cell_fall(scalar) {
+              values( "0.981" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[42];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.973" );
+            }
+            cell_fall(scalar) {
+              values( "0.963" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[42]|!input0[42]|!ctrl);
+    }
+    pin(output[41]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[41];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.984" );
+            }
+            cell_fall(scalar) {
+              values( "0.980" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[41];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.971" );
+            }
+            cell_fall(scalar) {
+              values( "0.956" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[41]|!input0[41]|!ctrl);
+    }
+    pin(output[40]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[40];
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.988" );
+            }
+            cell_fall(scalar) {
+              values( "0.991" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[40];
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.953" );
+            }
+            cell_fall(scalar) {
+              values( "0.962" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.969" );
+            }
+            cell_fall(scalar) {
+              values( "0.972" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (input1[40]|input0[40]|ctrl);
+    }
+    pin(output[39]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[39];
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.982" );
+            }
+            cell_fall(scalar) {
+              values( "0.983" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[39];
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.953" );
+            }
+            cell_fall(scalar) {
+              values( "0.962" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.971" );
+            }
+            cell_fall(scalar) {
+              values( "0.971" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (input1[39]|input0[39]|ctrl);
+    }
+    pin(output[38]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[38];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.978" );
+            }
+            cell_fall(scalar) {
+              values( "0.979" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[38];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.970" );
+            }
+            cell_fall(scalar) {
+              values( "0.962" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[38]|!input0[38]|!ctrl);
+    }
+    pin(output[37]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[37];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.983" );
+            }
+            cell_fall(scalar) {
+              values( "0.983" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[37];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.976" );
+            }
+            cell_fall(scalar) {
+              values( "0.966" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[37]|!input0[37]|!ctrl);
+    }
+    pin(output[36]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[36];
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.980" );
+            }
+            cell_fall(scalar) {
+              values( "0.984" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[36];
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.953" );
+            }
+            cell_fall(scalar) {
+              values( "0.962" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.969" );
+            }
+            cell_fall(scalar) {
+              values( "0.972" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (input1[36]|input0[36]|ctrl);
+    }
+    pin(output[35]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[35];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.967" );
+            }
+            cell_fall(scalar) {
+              values( "0.968" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[35];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.959" );
+            }
+            cell_fall(scalar) {
+              values( "0.946" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[35]|!input0[35]|!ctrl);
+    }
+    pin(output[34]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[34];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.964" );
+            }
+            cell_fall(scalar) {
+              values( "0.963" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[34];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.958" );
+            }
+            cell_fall(scalar) {
+              values( "0.944" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[34]|!input0[34]|!ctrl);
+    }
+    pin(output[33]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[33];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.980" );
+            }
+            cell_fall(scalar) {
+              values( "0.982" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[33];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.973" );
+            }
+            cell_fall(scalar) {
+              values( "0.963" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[33]|!input0[33]|!ctrl);
+    }
+    pin(output[32]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[32];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.969" );
+            }
+            cell_fall(scalar) {
+              values( "0.969" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[32];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.960" );
+            }
+            cell_fall(scalar) {
+              values( "0.947" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[32]|!input0[32]|!ctrl);
+    }
+    pin(output[31]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[31];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.980" );
+            }
+            cell_fall(scalar) {
+              values( "0.981" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[31];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.972" );
+            }
+            cell_fall(scalar) {
+              values( "0.963" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[31]|!input0[31]|!ctrl);
+    }
+    pin(output[30]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[30];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.964" );
+            }
+            cell_fall(scalar) {
+              values( "0.966" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[30];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.955" );
+            }
+            cell_fall(scalar) {
+              values( "0.944" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[30]|!input0[30]|!ctrl);
+    }
+    pin(output[29]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[29];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.965" );
+            }
+            cell_fall(scalar) {
+              values( "0.968" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[29];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.955" );
+            }
+            cell_fall(scalar) {
+              values( "0.944" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[29]|!input0[29]|!ctrl);
+    }
+    pin(output[28]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[28];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.980" );
+            }
+            cell_fall(scalar) {
+              values( "0.981" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[28];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.972" );
+            }
+            cell_fall(scalar) {
+              values( "0.963" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[28]|!input0[28]|!ctrl);
+    }
+    pin(output[27]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[27];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.980" );
+            }
+            cell_fall(scalar) {
+              values( "0.980" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[27];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.974" );
+            }
+            cell_fall(scalar) {
+              values( "0.965" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[27]|!input0[27]|!ctrl);
+    }
+    pin(output[26]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[26];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.985" );
+            }
+            cell_fall(scalar) {
+              values( "0.988" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[26];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.972" );
+            }
+            cell_fall(scalar) {
+              values( "0.963" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[26]|!input0[26]|!ctrl);
+    }
+    pin(output[25]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[25];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.971" );
+            }
+            cell_fall(scalar) {
+              values( "0.971" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[25];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.964" );
+            }
+            cell_fall(scalar) {
+              values( "0.950" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[25]|!input0[25]|!ctrl);
+    }
+    pin(output[24]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[24];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.982" );
+            }
+            cell_fall(scalar) {
+              values( "0.982" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[24];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.975" );
+            }
+            cell_fall(scalar) {
+              values( "0.966" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[24]|!input0[24]|!ctrl);
+    }
+    pin(output[23]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[23];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.980" );
+            }
+            cell_fall(scalar) {
+              values( "0.979" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[23];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.973" );
+            }
+            cell_fall(scalar) {
+              values( "0.963" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[23]|!input0[23]|!ctrl);
+    }
+    pin(output[22]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[22];
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.982" );
+            }
+            cell_fall(scalar) {
+              values( "0.984" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[22];
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.953" );
+            }
+            cell_fall(scalar) {
+              values( "0.962" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.970" );
+            }
+            cell_fall(scalar) {
+              values( "0.972" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (input1[22]|input0[22]|ctrl);
+    }
+    pin(output[21]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[21];
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.986" );
+            }
+            cell_fall(scalar) {
+              values( "0.988" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[21];
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.953" );
+            }
+            cell_fall(scalar) {
+              values( "0.962" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.968" );
+            }
+            cell_fall(scalar) {
+              values( "0.973" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (input1[21]|input0[21]|ctrl);
+    }
+    pin(output[20]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[20];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.978" );
+            }
+            cell_fall(scalar) {
+              values( "0.976" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[20];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.974" );
+            }
+            cell_fall(scalar) {
+              values( "0.963" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[20]|!input0[20]|!ctrl);
+    }
+    pin(output[19]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[19];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.973" );
+            }
+            cell_fall(scalar) {
+              values( "0.973" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[19];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.973" );
+            }
+            cell_fall(scalar) {
+              values( "0.963" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[19]|!input0[19]|!ctrl);
+    }
+    pin(output[18]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[18];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.965" );
+            }
+            cell_fall(scalar) {
+              values( "0.967" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[18];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.966" );
+            }
+            cell_fall(scalar) {
+              values( "0.959" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[18]|!input0[18]|!ctrl);
+    }
+    pin(output[17]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[17];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.970" );
+            }
+            cell_fall(scalar) {
+              values( "0.969" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[17];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.971" );
+            }
+            cell_fall(scalar) {
+              values( "0.961" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[17]|!input0[17]|!ctrl);
+    }
+    pin(output[16]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[16];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.968" );
+            }
+            cell_fall(scalar) {
+              values( "0.968" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[16];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.969" );
+            }
+            cell_fall(scalar) {
+              values( "0.959" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[16]|!input0[16]|!ctrl);
+    }
+    pin(output[15]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[15];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.970" );
+            }
+            cell_fall(scalar) {
+              values( "0.971" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[15];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.969" );
+            }
+            cell_fall(scalar) {
+              values( "0.960" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[15]|!input0[15]|!ctrl);
+    }
+    pin(output[14]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[14];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.964" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[14];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.953" );
+            }
+            cell_fall(scalar) {
+              values( "0.941" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[14]|!input0[14]|!ctrl);
+    }
+    pin(output[13]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[13];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.974" );
+            }
+            cell_fall(scalar) {
+              values( "0.976" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[13];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.966" );
+            }
+            cell_fall(scalar) {
+              values( "0.958" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[13]|!input0[13]|!ctrl);
+    }
+    pin(output[12]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[12];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.981" );
+            }
+            cell_fall(scalar) {
+              values( "0.981" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[12];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.973" );
+            }
+            cell_fall(scalar) {
+              values( "0.962" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[12]|!input0[12]|!ctrl);
+    }
+    pin(output[11]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[11];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.972" );
+            }
+            cell_fall(scalar) {
+              values( "0.972" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[11];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.964" );
+            }
+            cell_fall(scalar) {
+              values( "0.951" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[11]|!input0[11]|!ctrl);
+    }
+    pin(output[10]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[10];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.979" );
+            }
+            cell_fall(scalar) {
+              values( "0.980" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[10];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.973" );
+            }
+            cell_fall(scalar) {
+              values( "0.964" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[10]|!input0[10]|!ctrl);
+    }
+    pin(output[9]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[9];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.979" );
+            }
+            cell_fall(scalar) {
+              values( "0.980" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[9];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.972" );
+            }
+            cell_fall(scalar) {
+              values( "0.963" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[9]|!input0[9]|!ctrl);
+    }
+    pin(output[8]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[8];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.986" );
+            }
+            cell_fall(scalar) {
+              values( "0.989" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[8];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.975" );
+            }
+            cell_fall(scalar) {
+              values( "0.966" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[8]|!input0[8]|!ctrl);
+    }
+    pin(output[7]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[7];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.980" );
+            }
+            cell_fall(scalar) {
+              values( "0.980" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[7];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.972" );
+            }
+            cell_fall(scalar) {
+              values( "0.962" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[7]|!input0[7]|!ctrl);
+    }
+    pin(output[6]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[6];
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.972" );
+            }
+            cell_fall(scalar) {
+              values( "0.977" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[6];
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.953" );
+            }
+            cell_fall(scalar) {
+              values( "0.962" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.956" );
+            }
+            cell_fall(scalar) {
+              values( "0.959" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (input1[6]|input0[6]|ctrl);
+    }
+    pin(output[5]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[5];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.978" );
+            }
+            cell_fall(scalar) {
+              values( "0.978" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[5];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.971" );
+            }
+            cell_fall(scalar) {
+              values( "0.961" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[5]|!input0[5]|!ctrl);
+    }
+    pin(output[4]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[4];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.981" );
+            }
+            cell_fall(scalar) {
+              values( "0.980" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[4];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.974" );
+            }
+            cell_fall(scalar) {
+              values( "0.964" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[4]|!input0[4]|!ctrl);
+    }
+    pin(output[3]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[3];
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.977" );
+            }
+            cell_fall(scalar) {
+              values( "0.975" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[3];
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.953" );
+            }
+            cell_fall(scalar) {
+              values( "0.962" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.965" );
+            }
+            cell_fall(scalar) {
+              values( "0.962" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (input1[3]|input0[3]|ctrl);
+    }
+    pin(output[2]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[2];
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.987" );
+            }
+            cell_fall(scalar) {
+              values( "0.989" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[2];
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.953" );
+            }
+            cell_fall(scalar) {
+              values( "0.962" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : positive_unate;
+            cell_rise(scalar) {
+              values( "0.970" );
+            }
+            cell_fall(scalar) {
+              values( "0.972" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (input1[2]|input0[2]|ctrl);
+    }
+    pin(output[1]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[1];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.969" );
+            }
+            cell_fall(scalar) {
+              values( "0.968" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[1];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.960" );
+            }
+            cell_fall(scalar) {
+              values( "0.947" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[1]|!input0[1]|!ctrl);
+    }
+    pin(output[0]) {
+      direction : output;
+      capacitance : 0.000;
+      max_capacitance : 0.024;
+
+        timing() {
+            related_pin : input1[0];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.980" );
+            }
+            cell_fall(scalar) {
+              values( "0.981" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : input0[0];
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.962" );
+            }
+            cell_fall(scalar) {
+              values( "0.953" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+
+        timing() {
+            related_pin : ctrl;
+            timing_type : combinational;
+            timing_sense : negative_unate;
+            cell_rise(scalar) {
+              values( "0.971" );
+            }
+            cell_fall(scalar) {
+              values( "0.962" );
+            }
+            rise_transition(DriveTemplate) {
+              values( "0.065, 0.262, 0.851, 2.618, 7.854" );
+            }
+            fall_transition(DriveTemplate) {
+              values( "0.042, 0.169, 0.550, 1.694, 5.081" );
+            }
+      }
+      function : (!input1[0]|!input0[0]|!ctrl);
+    }
+  }
+
+  bus( input0) {
+    bus_type : "AsyncMux_width80_input0_79to0";
+    direction : input;
+    pin(input0[79]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[78]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[77]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[76]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[75]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[74]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[73]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[72]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[71]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[70]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[69]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[68]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[67]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[66]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[65]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[64]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[63]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[62]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[61]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[60]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[59]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[58]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[57]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[56]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[55]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[54]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[53]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[52]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[51]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[50]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[49]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[48]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[47]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[46]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[45]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[44]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[43]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[42]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[41]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[40]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[39]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[38]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[37]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[36]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[35]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[34]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[33]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[32]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[31]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[30]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[29]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[28]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[27]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[26]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[25]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[24]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[23]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[22]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[21]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[20]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[19]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[18]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[17]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[16]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[15]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[14]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[13]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[12]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[11]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[10]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[9]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[8]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[7]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[6]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[5]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[4]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[3]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[2]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[1]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input0[0]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+  }
+
+  bus( input1) {
+    bus_type : "AsyncMux_width80_input1_79to0";
+    direction : input;
+    pin(input1[79]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[78]) {
+      direction : input;
+      capacitance : 0.007;
+    }
+    pin(input1[77]) {
+      direction : input;
+      capacitance : 0.024;
+    }
+    pin(input1[76]) {
+      direction : input;
+      capacitance : 0.023;
+    }
+    pin(input1[75]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[74]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[73]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[72]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[71]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[70]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[69]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[68]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[67]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[66]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[65]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[64]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[63]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[62]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[61]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[60]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[59]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[58]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[57]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[56]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[55]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[54]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[53]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input1[52]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[51]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[50]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[49]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[48]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[47]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[46]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[45]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[44]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[43]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[42]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[41]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input1[40]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input1[39]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[38]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[37]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[36]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[35]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[34]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[33]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[32]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[31]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[30]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[29]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[28]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[27]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[26]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input1[25]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[24]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[23]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[22]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[21]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input1[20]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[19]) {
+      direction : input;
+      capacitance : 0.022;
+    }
+    pin(input1[18]) {
+      direction : input;
+      capacitance : 0.022;
+    }
+    pin(input1[17]) {
+      direction : input;
+      capacitance : 0.022;
+    }
+    pin(input1[16]) {
+      direction : input;
+      capacitance : 0.022;
+    }
+    pin(input1[15]) {
+      direction : input;
+      capacitance : 0.022;
+    }
+    pin(input1[14]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[13]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[12]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[11]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[10]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[9]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[8]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input1[7]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[6]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[5]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[4]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[3]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[2]) {
+      direction : input;
+      capacitance : 0.003;
+    }
+    pin(input1[1]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+    pin(input1[0]) {
+      direction : input;
+      capacitance : 0.004;
+    }
+  }
+  pin(ctrl) {
+    direction : input;
+    capacitance : 0.024;
+  }
+
+ }
+} /* end of lib */

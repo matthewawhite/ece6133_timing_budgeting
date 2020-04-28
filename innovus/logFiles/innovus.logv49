@@ -1,0 +1,54 @@
+[04/23 19:16:30      0s] 
+[04/23 19:16:30      0s] Cadence Innovus(TM) Implementation System.
+[04/23 19:16:30      0s] Copyright 2019 Cadence Design Systems, Inc. All rights reserved worldwide.
+[04/23 19:16:30      0s] 
+[04/23 19:16:30      0s] Version:	v19.11-s128_1, built Tue Aug 20 20:54:34 PDT 2019
+[04/23 19:16:30      0s] Options:	-no_gui 
+[04/23 19:16:30      0s] Date:		Thu Apr 23 19:16:30 2020
+[04/23 19:16:30      0s] Host:		ece-linlabsrv01.ece.gatech.edu (x86_64 w/Linux 3.10.0-1062.7.1.el7.x86_64) (14cores*112cpus*Intel(R) Xeon(R) Gold 5117 CPU @ 2.00GHz 19712KB)
+[04/23 19:16:30      0s] OS:		Red Hat Enterprise Linux Server release 7.8 (Maipo)
+[04/23 19:16:30      0s] 
+[04/23 19:16:30      0s] License:
+[04/23 19:16:30      0s] 		invs	Innovus Implementation System	19.1	checkout succeeded
+[04/23 19:16:30      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[04/23 19:16:42     11s] @(#)CDS: Innovus v19.11-s128_1 (64bit) 08/20/2019 20:54 (Linux 2.6.32-431.11.2.el6.x86_64)
+[04/23 19:16:42     11s] @(#)CDS: NanoRoute 19.11-s128_1 NR190815-2055/19_11-UB (database version 18.20, 469.7.1) {superthreading v1.51}
+[04/23 19:16:42     11s] @(#)CDS: AAE 19.11-s034 (64bit) 08/20/2019 (Linux 2.6.32-431.11.2.el6.x86_64)
+[04/23 19:16:42     11s] @(#)CDS: CTE 19.11-s040_1 () Aug  1 2019 08:53:57 ( )
+[04/23 19:16:42     11s] @(#)CDS: SYNTECH 19.11-e010_1 () Jul 15 2019 20:31:02 ( )
+[04/23 19:16:42     11s] @(#)CDS: CPE v19.11-s006
+[04/23 19:16:42     11s] @(#)CDS: IQuantus/TQuantus 19.1.2-s245 (64bit) Thu Aug 1 10:22:01 PDT 2019 (Linux 2.6.32-431.11.2.el6.x86_64)
+[04/23 19:16:42     11s] @(#)CDS: OA 22.60-p020 Mon May 13 19:21:36 2019
+[04/23 19:16:42     11s] @(#)CDS: SGN 18.10-d003 (18-Jul-2018) (64 bit executable, Qt5.9.1)
+[04/23 19:16:42     11s] @(#)CDS: RCDB 11.14.18
+[04/23 19:16:42     11s] @(#)CDS: STYLUS 19.10-s008_1 (06/27/2019 02:55 PDT)
+[04/23 19:16:42     11s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_161117_ece-linlabsrv01.ece.gatech.edu_mwhite93_O9GBTV.
+
+[04/23 19:16:42     11s] Change the soft stacksize limit to 0.2%RAM (383 mbytes). Set global soft_stack_size_limit to change the value.
+[04/23 19:16:42     11s] 
+[04/23 19:16:42     11s] **INFO:  MMMC transition support version v31-84 
+[04/23 19:16:42     11s] 
+[04/23 19:16:42     11s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[04/23 19:16:42     11s] <CMD> suppressMessage ENCEXT-2799
+[04/23 19:17:02     11s] <CMD> man get_attribute
+[04/23 19:17:21     11s] **ERROR: (TCLCMD-119):	No module selected
+
+[04/23 19:18:00     12s] invalid command name "clearls"
+[04/23 19:19:47     12s] **WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'gscl45nm/INVX1/A'
+[04/23 19:19:47     12s] **ERROR: (TCLCMD-917):	Cannot find 'library cellpins' that match 'gscl45nm/INVX1/A'
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'gscl45nm/INVX1/'
+[04/23 19:19:53     12s] **ERROR: (TCLCMD-917):	Cannot find 'library cellpins' that match 'gscl45nm/INVX1/'
+**WARN: (TCLCMD-513):	The software could not find a matching object of the specified type for the pattern 'gscl45nm/'
+[04/23 19:19:55     12s] **ERROR: (TCLCMD-917):	Cannot find 'library cellpins' that match 'gscl45nm/'
+**ERROR: (TCLCMD-917):	Cannot find 'pins' that match 'gscl45nm'
+
+[04/23 19:24:08     12s] *** Memory Usage v#1 (Current mem = 539.613M, initial mem = 256.805M) ***
+[04/23 19:24:08     12s] 
+[04/23 19:24:08     12s] *** Summary of all messages that are not suppressed in this session:
+[04/23 19:24:08     12s] Severity  ID               Count  Summary                                  
+[04/23 19:24:08     12s] ERROR     TCLCMD-119           1  No module selected                       
+[04/23 19:24:08     12s] WARNING   TCLCMD-513           3  The software could not find a matching o...
+[04/23 19:24:08     12s] ERROR     TCLCMD-917           4  Cannot find '%s' that match '%s'         
+[04/23 19:24:08     12s] *** Message Summary: 3 warning(s), 5 error(s)
+[04/23 19:24:08     12s] 
+[04/23 19:24:08     12s] --- Ending "Innovus" (totcpu=0:00:12.3, real=0:07:38, mem=539.6M) ---

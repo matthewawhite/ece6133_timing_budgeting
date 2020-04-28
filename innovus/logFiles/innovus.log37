@@ -1,0 +1,2059 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v17.12-s095_1, built Thu Nov 9 12:10:01 PST 2017
+Options:	-no_gui 
+Date:		Thu Apr 23 16:05:41 2020
+Host:		ece-linlabsrv01.ece.gatech.edu (x86_64 w/Linux 3.10.0-1062.7.1.el7.x86_64) (14cores*112cpus*Intel(R) Xeon(R) Gold 5117 CPU @ 2.00GHz 19712KB)
+OS:		Red Hat Enterprise Linux Server release 7.8 (Maipo)
+
+License:
+		invs	Innovus Implementation System	17.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (383 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> set init_verilog PRESENT_ENC_MAPPED.v
+<CMD> set init_lef_file gscl45nm.lef
+<CMD> set init_mmmc_file Default.view
+<CMD> init_design
+#% Begin Load MMMC data ... (date=04/23 16:06:15, mem=359.9M)
+#% End Load MMMC data ... (date=04/23 16:06:15, total cpu=0:00:00.0, real=0:00:00.0, peak res=360.0M, current mem=360.0M)
+
+Loading LEF file gscl45nm.lef ...
+**WARN: (IMPLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_POLY', 
+Set DBUPerIGU to M2 pitch 380.
+
+viaInitial starts at Thu Apr 23 16:06:15 2020
+viaInitial ends at Thu Apr 23 16:06:15 2020
+Loading view definition file from Default.view
+Reading gscl45nm_ls timing library '/nethome/mwhite93/Documents/6133/ece6133_timing_budgeting/innovus/gscl45nm.tlf' ...
+**WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A' of cell 'AND2X1' is not defined in the library. (File /nethome/mwhite93/Documents/6133/ece6133_timing_budgeting/innovus/gscl45nm.tlf)
+**WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'B' of cell 'AND2X1' is not defined in the library. (File /nethome/mwhite93/Documents/6133/ece6133_timing_budgeting/innovus/gscl45nm.tlf)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Y' of cell 'AND2X1' is not defined in the library. (File /nethome/mwhite93/Documents/6133/ece6133_timing_budgeting/innovus/gscl45nm.tlf)
+**WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A' of cell 'AND2X2' is not defined in the library. (File /nethome/mwhite93/Documents/6133/ece6133_timing_budgeting/innovus/gscl45nm.tlf)
+**WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'B' of cell 'AND2X2' is not defined in the library. (File /nethome/mwhite93/Documents/6133/ece6133_timing_budgeting/innovus/gscl45nm.tlf)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Y' of cell 'AND2X2' is not defined in the library. (File /nethome/mwhite93/Documents/6133/ece6133_timing_budgeting/innovus/gscl45nm.tlf)
+**WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A' of cell 'AOI21X1' is not defined in the library. (File /nethome/mwhite93/Documents/6133/ece6133_timing_budgeting/innovus/gscl45nm.tlf)
+**WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'B' of cell 'AOI21X1' is not defined in the library. (File /nethome/mwhite93/Documents/6133/ece6133_timing_budgeting/innovus/gscl45nm.tlf)
+**WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'C' of cell 'AOI21X1' is not defined in the library. (File /nethome/mwhite93/Documents/6133/ece6133_timing_budgeting/innovus/gscl45nm.tlf)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Y' of cell 'AOI21X1' is not defined in the library. (File /nethome/mwhite93/Documents/6133/ece6133_timing_budgeting/innovus/gscl45nm.tlf)
+**WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A' of cell 'AOI22X1' is not defined in the library. (File /nethome/mwhite93/Documents/6133/ece6133_timing_budgeting/innovus/gscl45nm.tlf)
+**WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'B' of cell 'AOI22X1' is not defined in the library. (File /nethome/mwhite93/Documents/6133/ece6133_timing_budgeting/innovus/gscl45nm.tlf)
+**WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'C' of cell 'AOI22X1' is not defined in the library. (File /nethome/mwhite93/Documents/6133/ece6133_timing_budgeting/innovus/gscl45nm.tlf)
+**WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'D' of cell 'AOI22X1' is not defined in the library. (File /nethome/mwhite93/Documents/6133/ece6133_timing_budgeting/innovus/gscl45nm.tlf)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Y' of cell 'AOI22X1' is not defined in the library. (File /nethome/mwhite93/Documents/6133/ece6133_timing_budgeting/innovus/gscl45nm.tlf)
+**WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A' of cell 'BUFX2' is not defined in the library. (File /nethome/mwhite93/Documents/6133/ece6133_timing_budgeting/innovus/gscl45nm.tlf)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Y' of cell 'BUFX2' is not defined in the library. (File /nethome/mwhite93/Documents/6133/ece6133_timing_budgeting/innovus/gscl45nm.tlf)
+**WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A' of cell 'BUFX4' is not defined in the library. (File /nethome/mwhite93/Documents/6133/ece6133_timing_budgeting/innovus/gscl45nm.tlf)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Y' of cell 'BUFX4' is not defined in the library. (File /nethome/mwhite93/Documents/6133/ece6133_timing_budgeting/innovus/gscl45nm.tlf)
+**WARN: (TECHLIB-436):	Attribute 'fanout_load' on 'input/inout' pin 'A' of cell 'CLKBUF1' is not defined in the library. (File /nethome/mwhite93/Documents/6133/ece6133_timing_budgeting/innovus/gscl45nm.tlf)
+Message <TECHLIB-436> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+Read 31 cells in library 'gscl45nm' 
+*** End library_loading (cpu=0.00min, real=0.00min, mem=18.7M, fe_cpu=0.20min, fe_real=0.57min, fe_mem=451.1M) ***
+#% Begin Load netlist data ... (date=04/23 16:06:15, mem=394.4M)
+*** Begin netlist parsing (mem=451.1M) ***
+**WARN: (IMPVL-159):	Pin 'gnd' of cell 'XOR2X1' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'vdd' of cell 'XOR2X1' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'gnd' of cell 'XNOR2X1' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'vdd' of cell 'XNOR2X1' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'gnd' of cell 'TBUFX2' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'vdd' of cell 'TBUFX2' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'gnd' of cell 'TBUFX1' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'vdd' of cell 'TBUFX1' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'gnd' of cell 'OR2X2' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'vdd' of cell 'OR2X2' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'gnd' of cell 'OR2X1' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'vdd' of cell 'OR2X1' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'gnd' of cell 'OAI21X1' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'vdd' of cell 'OAI21X1' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'gnd' of cell 'NOR3X1' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'vdd' of cell 'NOR3X1' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'gnd' of cell 'NOR2X1' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'vdd' of cell 'NOR2X1' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'gnd' of cell 'NAND3X1' is defined in LEF but not in the timing library.
+**WARN: (IMPVL-159):	Pin 'vdd' of cell 'NAND3X1' is defined in LEF but not in the timing library.
+**WARN: (EMS-27):	Message (IMPVL-159) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+Created 31 new cells from 1 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist 'PRESENT_ENC_MAPPED.v'
+
+*** Memory Usage v#1 (Current mem = 451.133M, initial mem = 179.902M) ***
+*** End netlist parsing (cpu=0:00:00.0, real=0:00:00.0, mem=451.1M) ***
+#% End Load netlist data ... (date=04/23 16:06:15, total cpu=0:00:00.0, real=0:00:00.0, peak res=394.4M, current mem=373.6M)
+Top level cell is PresentEnc.
+Hooked 31 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell PresentEnc ...
+*** Netlist is unique.
+Set DBUPerIGU to techSite CoreSite width 760.
+** info: there are 59 modules.
+** info: there are 1840 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 490.809M, initial mem = 179.902M) ***
+Horizontal Layer M1 offset = 190 (guessed)
+Vertical Layer M2 offset = 190 (guessed)
+Suggestion: specify LAYER OFFSET in LEF file
+Reason: hard to extract LAYER OFFSET from standard cells
+Generated pitch 1.68 in metal10 is different from 1.71 defined in technology file in preferred direction.
+Generated pitch 0.84 in metal8 is different from 0.855 defined in technology file in preferred direction.
+Generated pitch 0.95 in metal7 is different from 0.855 defined in technology file in preferred direction.
+Generated pitch 0.28 in metal6 is different from 0.285 defined in technology file in preferred direction.
+Generated pitch 0.28 in metal4 is different from 0.285 defined in technology file in preferred direction.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+*Info: initialize multi-corner CTS.
+Reading timing constraints file 'constraints.sdc' ...
+Current (total cpu=0:00:12.3, real=0:00:34.0, peak res=497.4M, current mem=497.4M)
+ERROR (CTE-2): scripts aborted prematurely, turning off message_verbosity.
+
+
+ERROR (CTE-27): Reading of timing constraints file aborted prematurely missing operand at _@_
+in expression "10 *_@_"
+    (parsing expression "10 *")
+    invoked from within
+"expr 10 * [load_of gscl45nm/INVX1/A]"
+    invoked from within
+"set_load [expr 10 * [load_of gscl45nm/INVX1/A]] [all_outputs]"
+    (file "constraints.sdc" line 11)
+---
+    invoked from within
+"__source constraints.sdc"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel #0 __source constraints.sdc"
+    ("eval" body line 1)
+    invoked from within
+"eval "uplevel #0 $::syn2ambit::source_cmd $::syn2ambit::tcl_file_G"".
+
+WARNING (CTE-25): Line: 11 of File constraints.sdc : Skipped unsupported command: load_of
+
+
+Total number of combinational cells: 25
+Total number of sequential cells: 4
+Total number of tristate cells: 2
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUFX2 BUFX4
+Total number of usable buffers: 2
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: INVX2 INVX1 INVX4 INVX8
+Total number of usable inverters: 4
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: CLKBUF1 CLKBUF2 CLKBUF3
+Total number of identified usable delay cells: 3
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+Extraction setup Started 
+Initializing multi-corner RC extraction with 1 active RC Corners ...
+**WARN: (IMPEXT-2773):	The via resistance between layers M0 and M1 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M1 and M2 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M2 and M3 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M3 and M4 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M4 and M5 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M5 and M6 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M6 and M7 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M7 and M8 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M8 and M9 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2773):	The via resistance between layers M9 and M10 could not be determined from the LEF technology file because the via resistance specification is missing. A default of 4 Ohms will be used as via resistance between these layers.
+Type 'man IMPEXT-2773' for more detail.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M1 is not defined in the cap table. Therefore, the LEF value 0.38 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M2 is not defined in the cap table. Therefore, the LEF value 0.25 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M3 is not defined in the cap table. Therefore, the LEF value 0.25 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M4 is not defined in the cap table. Therefore, the LEF value 0.25 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M5 is not defined in the cap table. Therefore, the LEF value 0.25 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M6 is not defined in the cap table. Therefore, the LEF value 0.25 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M7 is not defined in the cap table. Therefore, the LEF value 0.25 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M8 is not defined in the cap table. Therefore, the LEF value 0.25 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M9 is not defined in the cap table. Therefore, the LEF value 0.21 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+**WARN: (IMPEXT-2766):	The sheet resistance for layer M10 is not defined in the cap table. Therefore, the LEF value 0.21 will be used instead. To avoid this message, update the relevant cap table to include the sheet resistance for the specified layer and read it back in.
+Summary of Active RC-Corners : 
+ 
+ Analysis View: present_enc_av
+    RC-Corner Name        : default_rc_corner
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from Cap Table]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from Cap Table]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPLF-155            1  ViaRule only supports routing/cut layer,...
+WARNING   IMPEXT-2766         10  The sheet resistance for layer %s is not...
+WARNING   IMPEXT-2773         10  The via resistance between layers %s and...
+WARNING   IMPVL-159           62  Pin '%s' of cell '%s' is defined in LEF ...
+WARNING   TECHLIB-436         20  Attribute '%s' on '%s' pin '%s' of cell ...
+*** Message Summary: 103 warning(s), 0 error(s)
+
+<CMD> floorPlan -r {1 [0.7 [0 0 0 0]]}
+Horizontal Layer M1 offset = 190 (guessed)
+Vertical Layer M2 offset = 190 (guessed)
+Suggestion: specify LAYER OFFSET in LEF file
+Reason: hard to extract LAYER OFFSET from standard cells
+Generated pitch 1.68 in metal10 is different from 1.71 defined in technology file in preferred direction.
+Generated pitch 0.84 in metal8 is different from 0.855 defined in technology file in preferred direction.
+Generated pitch 0.95 in metal7 is different from 0.855 defined in technology file in preferred direction.
+Generated pitch 0.28 in metal6 is different from 0.285 defined in technology file in preferred direction.
+Generated pitch 0.28 in metal4 is different from 0.285 defined in technology file in preferred direction.
+**WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
+<CMD> createGuide regText 0 0 75 75
+<CMD> createGuide regKey 0 0 75 75
+<CMD> createGuide mux_80 0 0 75 75
+<CMD> createGuide mux_64 0 0 75 75
+<CMD> definePartition -hinst regText
+Creating partition Reg_width64.
+<CMD> definePartition -hinst regKey
+Creating partition Reg_width80.
+<CMD> definePartition -hinst mux_80
+Creating partition AsyncMux_width80.
+<CMD> definePartition -hinst mux_64
+Creating partition AsyncMux_width64.
+<CMD> place_design
+*** Starting placeDesign default flow ***
+*** Start deleteBufferTree ***
+Info: Detect buffers to remove automatically.
+Analyzing netlist ...
+Updating netlist
+AAE DB initialization (MEM=661.16 CPU=0:00:00.1 REAL=0:00:00.0) 
+siFlow : Timing analysis mode is single, using late cdB files
+
+*summary: 408 instances (buffers/inverters) removed
+*** Finish deleteBufferTree (0:00:00.3) ***
+**INFO: Enable pre-place timing setting for timing analysis
+Set Using Default Delay Limit as 101.
+**WARN: (IMPDC-1629):	The default delay limit was set to 101. This is less than the default of 1000 and may result in inaccurate delay calculation for nets with a fanout higher than the setting.  If needed, the default delay limit may be adjusted by running the command 'set delaycal_use_default_delay_limit'.
+Set Default Net Delay as 0 ps.
+Set Default Net Load as 0 pF. 
+**INFO: Analyzing IO path groups for slack adjustment
+Effort level <high> specified for reg2reg_tmp.79792 path_group
+#################################################################################
+# Design Stage: PreRoute
+# Design Name: PresentEnc
+# Design Mode: 90nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: No SPEF/RCDB
+# Signoff Settings: SI Off 
+#################################################################################
+Calculate delays in Single mode...
+Start delay calculation (fullDC) (1 T). (MEM=873.457)
+Total number of fetched objects 1579
+End delay calculation. (MEM=929.754 CPU=0:00:00.1 REAL=0:00:00.0)
+End delay calculation (fullDC). (MEM=832.383 CPU=0:00:00.3 REAL=0:00:00.0)
+**INFO: Disable pre-place timing setting for timing analysis
+Set Using Default Delay Limit as 1000.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+**INFO: Pre-place timing setting for timing analysis already disabled
+Deleted 0 physical inst  (cell - / prefix -).
+Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+Extracting macro/IO cell pins and blockage ...... 
+Pin and blockage extraction finished
+*** Starting "NanoPlace(TM) placement v#10 (mem=818.2M)" ...
+total jobs 77
+multi thread init TemplateIndex for each ta. thread num 1
+Wait...
+*** Build Buffered Sizing Timing Model
+(cpu=0:00:00.0 mem=818.2M) ***
+*** Build Virtual Sizing Timing Model
+(cpu=0:00:00.0 mem=818.2M) ***
+No user setting net weight.
+Options: timingDriven clkGateAware ignoreScan pinGuide congEffort=auto gpeffort=medium 
+Scan chains were not defined.
+#std cell=1432 (0 fixed + 1432 movable) #block=0 (0 floating + 0 preplaced)
+#ioInst=0 #net=1579 #term=4621 #term/net=2.93, #fixedIo=0, #floatIo=0, #fixedPin=0, #floatPin=212
+stdCell: 1432 single + 0 double + 0 multi
+Total standard cell length = 1.9553 (mm), area = 0.0048 (mm^2)
+**Info: (IMPSP-307): Design contains fractional 20 cells.
+Estimated cell power/ground rail width = 0.308 um
+
+
+
+Average module density = 25.585.
+Density for module 'mux_64' = 0.534.
+       = stdcell_area 352 sites (330 um^2) / alloc_area 659 sites (619 um^2).
+Density for module 'mux_80' = 0.534.
+       = stdcell_area 440 sites (413 um^2) / alloc_area 824 sites (774 um^2).
+Density for module 'regKey' = 0.534.
+       = stdcell_area 1322 sites (1240 um^2) / alloc_area 2475 sites (2323 um^2).
+Density for module 'regText' = 0.534.
+       = stdcell_area 1058 sites (993 um^2) / alloc_area 1981 sites (1859 um^2).
+Density for the rest of the design = 65.817.
+       = stdcell_area 1974 sites (1853 um^2) / alloc_area 30 sites (28 um^2).
+Density for the design = 0.862.
+       = stdcell_area 5146 sites (4830 um^2) / alloc_area 5970 sites (5603 um^2).
+Pin Density = 0.7740.
+            = total # of pins 4621 / total area 5970.
+
+
+
+
+=== lastAutoLevel = 6 
+Clock gating cells determined by native netlist tracing.
+Iteration  1: Total net bbox = 3.448e-11 (2.53e-11 9.13e-12)
+              Est.  stn bbox = 3.539e-11 (2.61e-11 9.31e-12)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 783.2M
+Iteration  2: Total net bbox = 3.448e-11 (2.53e-11 9.13e-12)
+              Est.  stn bbox = 3.539e-11 (2.61e-11 9.31e-12)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 783.2M
+Iteration  3: Total net bbox = 2.683e+02 (2.67e+02 1.00e+00)
+              Est.  stn bbox = 3.035e+02 (3.02e+02 1.29e+00)
+              cpu = 0:00:00.1 real = 0:00:00.0 mem = 799.2M
+Active setup views:
+    present_enc_av
+Iteration  4: Total net bbox = 6.522e+03 (3.62e+03 2.90e+03)
+              Est.  stn bbox = 7.541e+03 (4.14e+03 3.40e+03)
+              cpu = 0:00:00.7 real = 0:00:00.0 mem = 799.2M
+Iteration  5: Total net bbox = 8.140e+03 (4.89e+03 3.25e+03)
+              Est.  stn bbox = 9.414e+03 (5.54e+03 3.88e+03)
+              cpu = 0:00:00.9 real = 0:00:01.0 mem = 799.2M
+Iteration  6: Total net bbox = 1.086e+04 (6.87e+03 4.00e+03)
+              Est.  stn bbox = 1.231e+04 (7.61e+03 4.70e+03)
+              cpu = 0:00:00.5 real = 0:00:01.0 mem = 799.2M
+Iteration  7: Total net bbox = 1.212e+04 (7.70e+03 4.42e+03)
+              Est.  stn bbox = 1.358e+04 (8.42e+03 5.16e+03)
+              cpu = 0:00:00.8 real = 0:00:01.0 mem = 799.2M
+Iteration  8: Total net bbox = 1.059e+04 (4.85e+03 5.74e+03)
+              Est.  stn bbox = 1.194e+04 (5.49e+03 6.45e+03)
+              cpu = 0:00:00.8 real = 0:00:00.0 mem = 799.2M
+Iteration  9: Total net bbox = 2.860e+04 (1.51e+04 1.35e+04)
+              Est.  stn bbox = 3.087e+04 (1.63e+04 1.46e+04)
+              cpu = 0:00:00.1 real = 0:00:00.0 mem = 800.2M
+Iteration 10: Total net bbox = 2.860e+04 (1.51e+04 1.35e+04)
+              Est.  stn bbox = 3.087e+04 (1.63e+04 1.46e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 800.2M
+Iteration 11: Total net bbox = 2.860e+04 (1.51e+04 1.35e+04)
+              Est.  stn bbox = 3.087e+04 (1.63e+04 1.46e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 800.2M
+*** cost = 2.860e+04 (1.51e+04 1.35e+04) (cpu for global=0:00:03.9) real=0:00:04.0***
+Info: 0 clock gating cells identified, 0 (on average) moved 0/2
+Solver runtime cpu: 0:00:03.7 real: 0:00:03.7
+Core Placement runtime cpu: 0:00:03.8 real: 0:00:04.0
+**WARN: (IMPSP-9517):	Partitions detected, skip scanReorder.
+**Info: (IMPSP-307): Design contains fractional 20 cells.
+
+*** Starting refinePlace (0:00:17.4 mem=800.2M) ***
+Total net bbox length = 2.860e+04 (1.513e+04 1.347e+04) (ext = 1.773e+04)
+Density distribution unevenness ratio = 26.529%
+**WARN: (IMPSP-266):	Constraint box too small for instance 'regText/reg_reg[1]'.
+**WARN: (IMPSP-266):	Constraint box too small for instance 'regText/reg_reg[0]'.
+**WARN: (IMPSP-266):	Constraint box too small for instance 'regText/reg_reg[62]'.
+**WARN: (IMPSP-266):	Constraint box too small for instance 'regKey/reg_reg[78]'.
+**WARN: (IMPSP-266):	Constraint box too small for instance 'regKey/reg_reg[17]'.
+**WARN: (IMPSP-266):	Constraint box too small for instance 'regText/reg_reg[63]'.
+**WARN: (IMPSP-266):	Constraint box too small for instance 'regText/reg_reg[24]'.
+**WARN: (IMPSP-266):	Constraint box too small for instance 'regKey/reg_reg[18]'.
+**WARN: (IMPSP-266):	Constraint box too small for instance 'regText/reg_reg[16]'.
+**WARN: (IMPSP-266):	Constraint box too small for instance 'regText/reg_reg[47]'.
+**WARN: (IMPSP-266):	Constraint box too small for instance 'regKey/reg_reg[59]'.
+**WARN: (IMPSP-266):	Constraint box too small for instance 'regKey/reg_reg[0]'.
+**WARN: (IMPSP-266):	Constraint box too small for instance 'regKey/reg_reg[79]'.
+**WARN: (IMPSP-266):	Constraint box too small for instance 'regKey/reg_reg[42]'.
+**WARN: (IMPSP-266):	Constraint box too small for instance 'regText/reg_reg[48]'.
+**WARN: (IMPSP-266):	Constraint box too small for instance 'regKey/reg_reg[16]'.
+**WARN: (IMPSP-266):	Constraint box too small for instance 'regText/reg_reg[22]'.
+**WARN: (IMPSP-266):	Constraint box too small for instance 'regText/reg_reg[54]'.
+**WARN: (IMPSP-266):	Constraint box too small for instance 'regText/reg_reg[20]'.
+**WARN: (IMPSP-266):	Constraint box too small for instance 'regText/reg_reg[26]'.
+**WARN: (EMS-27):	Message (IMPSP-266) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+**WARN: (IMPSP-2040):	Within search radius 316.160 um from center (2.280 41.990), there is no legal location for instance "regText/reg_reg[1]" ( cell: "DFFSR" ) due to "Other_Violations".
+Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
+
+**WARN: (IMPSP-2040):	Within search radius 316.160 um from center (3.040 34.580), there is no legal location for instance "regText/reg_reg[0]" ( cell: "DFFSR" ) due to "Other_Violations".
+Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
+
+**WARN: (IMPSP-2040):	Within search radius 316.160 um from center (4.560 37.050), there is no legal location for instance "regText/reg_reg[62]" ( cell: "DFFSR" ) due to "Other_Violations".
+Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
+
+**WARN: (IMPSP-2040):	Within search radius 316.160 um from center (6.080 44.460), there is no legal location for instance "regKey/reg_reg[78]" ( cell: "DFFSR" ) due to "Other_Violations".
+Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
+
+**WARN: (IMPSP-2040):	Within search radius 316.160 um from center (7.220 29.640), there is no legal location for instance "regKey/reg_reg[17]" ( cell: "DFFSR" ) due to "Other_Violations".
+Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
+
+**WARN: (IMPSP-2040):	Within search radius 316.160 um from center (9.500 59.280), there is no legal location for instance "regText/reg_reg[63]" ( cell: "DFFSR" ) due to "Other_Violations".
+Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
+
+**WARN: (IMPSP-2040):	Within search radius 316.160 um from center (9.880 37.050), there is no legal location for instance "regText/reg_reg[24]" ( cell: "DFFSR" ) due to "Other_Violations".
+Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
+
+**WARN: (IMPSP-2040):	Within search radius 316.160 um from center (10.640 32.110), there is no legal location for instance "regKey/reg_reg[18]" ( cell: "DFFSR" ) due to "Other_Violations".
+Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
+
+**WARN: (IMPSP-2040):	Within search radius 316.160 um from center (12.160 29.640), there is no legal location for instance "regText/reg_reg[16]" ( cell: "DFFSR" ) due to "Other_Violations".
+Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
+
+**WARN: (IMPSP-2040):	Within search radius 316.160 um from center (12.920 61.750), there is no legal location for instance "regText/reg_reg[47]" ( cell: "DFFSR" ) due to "Other_Violations".
+Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
+
+**WARN: (IMPSP-2040):	Within search radius 316.160 um from center (13.680 39.520), there is no legal location for instance "regKey/reg_reg[59]" ( cell: "DFFSR" ) due to "Other_Violations".
+Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
+
+**WARN: (IMPSP-2040):	Within search radius 316.160 um from center (14.060 37.050), there is no legal location for instance "regKey/reg_reg[0]" ( cell: "DFFSR" ) due to "Other_Violations".
+Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
+
+**WARN: (IMPSP-2040):	Within search radius 316.160 um from center (14.060 56.810), there is no legal location for instance "regKey/reg_reg[79]" ( cell: "DFFSR" ) due to "Other_Violations".
+Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
+
+**WARN: (IMPSP-2040):	Within search radius 316.160 um from center (14.440 46.930), there is no legal location for instance "regKey/reg_reg[42]" ( cell: "DFFSR" ) due to "Other_Violations".
+Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
+
+**WARN: (IMPSP-2040):	Within search radius 316.160 um from center (15.200 64.220), there is no legal location for instance "regText/reg_reg[48]" ( cell: "DFFSR" ) due to "Other_Violations".
+Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
+
+**WARN: (IMPSP-2040):	Within search radius 316.160 um from center (15.580 14.820), there is no legal location for instance "regKey/reg_reg[16]" ( cell: "DFFSR" ) due to "Other_Violations".
+Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
+
+**WARN: (IMPSP-2040):	Within search radius 316.160 um from center (15.580 19.760), there is no legal location for instance "regText/reg_reg[22]" ( cell: "DFFSR" ) due to "Other_Violations".
+Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
+
+**WARN: (IMPSP-2040):	Within search radius 316.160 um from center (16.340 34.580), there is no legal location for instance "regText/reg_reg[54]" ( cell: "DFFSR" ) due to "Other_Violations".
+Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
+
+**WARN: (IMPSP-2040):	Within search radius 316.160 um from center (16.720 17.290), there is no legal location for instance "regText/reg_reg[20]" ( cell: "DFFSR" ) due to "Other_Violations".
+Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
+
+**WARN: (IMPSP-2040):	Within search radius 316.160 um from center (1.520 22.230), there is no legal location for instance "count/cnt_reg[4]" ( cell: "DFFSR" ) due to "Placement_Blockage_Violation".
+Most likely the library cell is bad or layout within that area has no legal location available.  Correct the design area or the layout of cell to resolve this error.
+
+**WARN: (EMS-27):	Message (IMPSP-2040) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+**ERROR: (IMPSP-2021):	Could not legalize <1432> instances in the design. Check warning message IMPSP-270, IMPSP-452, IMPSP-2024, IMPSP-2039, IMPSP-2040, IMPSP-2042 or IMPSP-2020 in log file for more details.
+Type 'man IMPSP-2021' for more detail.
+Move report: Detail placement moves 1432 insts, mean move: 11.75 um, max move: 39.75 um
+	Max move on inst (regKey/reg_reg[76]): (32.79, 44.53) --> (20.14, 71.63)
+	Runtime: CPU: 0:00:00.4 REAL: 0:00:01.0 MEM: 804.2MB
+Summary Report:
+Instances move: 1432 (out of 1432 movable)
+Instances flipped: 0
+Mean displacement: 11.75 um
+Max displacement: 39.75 um (Instance: regKey/reg_reg[76]) (32.787, 44.5255) -> (20.14, 71.63)
+	Length: 11 sites, height: 1 rows, site name: CoreSite, cell type: DFFSR, constraint:Fence
+	Violation at original loc: Region/Fence Violation
+Total net bbox length = 3.275e+04 (1.670e+04 1.605e+04) (ext = 1.630e+04)
+Runtime: CPU: 0:00:00.4 REAL: 0:00:01.0 MEM: 804.2MB
+*** Finished refinePlace (0:00:17.8 mem=804.2M) ***
+*** End of Placement (cpu=0:00:04.5, real=0:00:06.0, mem=804.2M) ***
+**Info: (IMPSP-307): Design contains fractional 20 cells.
+
+default core: bins with density >  0.75 = 66.7 % ( 8 / 12 )
+Density distribution unevenness ratio = 10.560%
+*** Free Virtual Timing Model ...(mem=804.2M)
+Starting congestion repair ...
+[NR-eGR] honorMsvRouteConstraint: false
+[NR-eGR] honorClockSpecNDR      : 0
+[NR-eGR] minRouteLayer          : 2
+[NR-eGR] maxRouteLayer          : 127
+[NR-eGR] numTracksPerClockWire  : 0
+[NR-eGR] Layer1 has no routable track
+[NR-eGR] Layer2 has single uniform track structure
+[NR-eGR] Layer3 has single uniform track structure
+[NR-eGR] Layer4 has single uniform track structure
+[NR-eGR] Layer5 has single uniform track structure
+[NR-eGR] Layer6 has single uniform track structure
+[NR-eGR] Layer7 has single uniform track structure
+[NR-eGR] Layer8 has single uniform track structure
+[NR-eGR] Layer9 has single uniform track structure
+[NR-eGR] Layer10 has single uniform track structure
+[NR-eGR] numRoutingBlks=0 numInstBlks=151 numPGBlocks=0 numBumpBlks=0 numBoundaryFakeBlks=0
+[NR-eGR] numPreroutedNet = 0  numPreroutedWires = 0
+[NR-eGR] Read numTotalNets=1435  numIgnoredNets=0
+[NR-eGR] There are 1 clock nets ( 0 with NDR ).
+[NR-eGR] ============ Routing rule table ============
+[NR-eGR] Rule id 0. Nets 1435 
+[NR-eGR] id=0  ndrTrackId=0  ndrViaId=-1  extraSpace=0  numShields=0  maxHorDemand=1  maxVerDemand=1
+[NR-eGR] Pitch:  L1=260  L2=380  L3=380  L4=560  L5=570  L6=560  L7=1900  L8=1680  L9=3420  L10=3360
+[NR-eGR] ========================================
+[NR-eGR] 
+[NR-eGR] Layer group 1: route 1435 net(s) in layer range [2, 10]
+[NR-eGR] earlyGlobalRoute overflow of layer group 1: 0.00% H + 0.00% V. EstWL: 1.893749e+04um
+[NR-eGR] 
+[NR-eGR] Congestion Analysis Layer By layer: (blocked Gcells are excluded) 
+[NR-eGR]                OverCon            
+[NR-eGR]                 #Gcell     %Gcell
+[NR-eGR] Layer              (0)    OverCon 
+[NR-eGR] ------------------------------------
+[NR-eGR] Layer1       0( 0.00%)   ( 0.00%) 
+[NR-eGR] Layer2       0( 0.00%)   ( 0.00%) 
+[NR-eGR] Layer3       0( 0.00%)   ( 0.00%) 
+[NR-eGR] Layer4       0( 0.00%)   ( 0.00%) 
+[NR-eGR] Layer5       0( 0.00%)   ( 0.00%) 
+[NR-eGR] Layer6       0( 0.00%)   ( 0.00%) 
+[NR-eGR] Layer7       0( 0.00%)   ( 0.00%) 
+[NR-eGR] Layer8       0( 0.00%)   ( 0.00%) 
+[NR-eGR] Layer9       0( 0.00%)   ( 0.00%) 
+[NR-eGR] Layer10       0( 0.00%)   ( 0.00%) 
+[NR-eGR] ------------------------------------
+[NR-eGR] Total        0( 0.00%)   ( 0.00%) 
+[NR-eGR] 
+[NR-eGR] Overflow after earlyGlobalRoute (GR compatible) 0.00% H + 0.00% V
+[NR-eGR] Overflow after earlyGlobalRoute 0.00% H + 0.00% V
+Local HotSpot Analysis: normalized max congestion hotspot area = 0.00, normalized total congestion hotspot area = 0.00 (area is in unit of 4 std-cell row bins)
+Skipped repairing congestion.
+[NR-eGR] --------------------------------------------------------------------------
+[NR-eGR] Layer1(metal1)(F) length: 0.000000e+00um, number of vias: 4265
+[NR-eGR] Layer2(metal2)(V) length: 5.596306e+03um, number of vias: 5774
+[NR-eGR] Layer3(metal3)(H) length: 5.664061e+03um, number of vias: 1841
+[NR-eGR] Layer4(metal4)(V) length: 4.391567e+03um, number of vias: 1656
+[NR-eGR] Layer5(metal5)(H) length: 4.199529e+03um, number of vias: 44
+[NR-eGR] Layer6(metal6)(V) length: 3.070400e+02um, number of vias: 16
+[NR-eGR] Layer7(metal7)(H) length: 9.443000e+01um, number of vias: 2
+[NR-eGR] Layer8(metal8)(V) length: 1.140000e+01um, number of vias: 2
+[NR-eGR] Layer9(metal9)(H) length: 3.360000e+00um, number of vias: 0
+[NR-eGR] Layer10(metal10)(V) length: 0.000000e+00um, number of vias: 0
+[NR-eGR] Total length: 2.026769e+04um, number of vias: 13600
+[NR-eGR] --------------------------------------------------------------------------
+[NR-eGR] Total clock nets wire length: 7.884795e+02um 
+[NR-eGR] --------------------------------------------------------------------------
+End of congRepair (cpu=0:00:00.1, real=0:00:00.0)
+*** Finishing placeDesign default flow ***
+**placeDesign ... cpu = 0: 0: 6, real = 0: 0: 7, mem = 779.2M **
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPDC-1629           1  The default delay limit was set to %d. T...
+WARNING   IMPSP-266          722  Constraint box too small for instance '%...
+WARNING   IMPSP-9517           1  Partitions detected, skip scanReorder.   
+ERROR     IMPSP-2021           1  Could not legalize <%d> instances in the...
+WARNING   IMPSP-2040          38  Within search radius %.3f um from center...
+*** Message Summary: 762 warning(s), 1 error(s)
+
+<CMD> routeDesign -globalDetail
+#% Begin routeDesign (date=04/23 16:06:22, mem=571.3M)
+#routeDesign: cpu time = 00:00:00, elapsed time = 00:00:00, memory = 545.29 (MB), peak = 571.26 (MB)
+#WARNING (NRIG-96) Selected single pass global detail route "-globalDetail". Clock eco and post optimizations will not be run. See "man NRIG-96" for more details.
+#default_rc_corner has no qx tech file defined
+#No active RC corner or QRC tech file is missing.
+#**INFO: setDesignMode -flowEffort standard
+#**INFO: mulit-cut via swapping is disabled by user.
+#**INFO: All auto set options tuned by routeDesign will be restored to their original settings on command completion.
+#**INFO: auto set of routeReserveSpaceForMultiCut to true
+#**INFO: auto set of routeConcurrentMinimizeViaCountEffort to high
+**Info: (IMPSP-307): Design contains fractional 20 cells.
+Begin checking placement ... (start mem=779.2M, init mem=779.2M)
+Overlapping with other instance:	124
+Orientation Violation:	719
+*info: Placed = 1432          
+*info: Unplaced = 0           
+Placement Density:86.19%(4830/5603)
+Placement Density (including fixed std cells):86.19%(4830/5603)
+Finished checkPlace (cpu: total=0:00:00.0, vio checks=0:00:00.0; mem=779.2M)
+#WARNING (NRIG-77) Found placement violations. Please investigate and correct before routing. Routing with placement violations can cause long runtime and may be irresolvable.
+#Use routeDesign -placementCheck to stop on violations. Use routeDesign -noPlacementCheck to skip the check.
+#**INFO: auto set of routeWithTimingDriven to true
+#**INFO: auto set of routeWithSiDriven to true
+**WARN: (IMPCK-8086):	The command changeUseClockNetStatus is obsolete and will be removed in the next release. This command still works in this release, but by the next release you must transition to the CCOpt-based CTS flow.
+
+changeUseClockNetStatus Option :  -noFixedNetWires 
+*** Changed status on (0) nets in Clock.
+*** End changeUseClockNetStatus (cpu=0:00:00.0, real=0:00:00.0, mem=779.2M) ***
+% Begin globalDetailRoute (date=04/23 16:06:22, mem=545.5M)
+
+globalDetailRoute
+
+#setNanoRouteMode -routeConcurrentMinimizeViaCountEffort "high"
+#setNanoRouteMode -routeReserveSpaceForMultiCut true
+#setNanoRouteMode -routeWithSiDriven true
+#setNanoRouteMode -routeWithTimingDriven true
+#Start globalDetailRoute on Thu Apr 23 16:06:22 2020
+#
+#Generating timing data, please wait...
+#1579 total nets, 0 already routed, 0 will ignore in trialRoute
+**WARN: (IMPEXT-3530):	The process node is not set. Use the command setDesignMode -process <process node> prior to extraction for maximum accuracy and optimal automatic threshold setting.
+**WARN: (IMPEXT-6197):	The Cap table file is not specified. This will result in lower parasitic accuracy when using preRoute extraction or postRoute extraction with effort level 'low'. It is recommended to generate the Cap table file using the 'generateCapTbl' command and specify it before extraction using 'create_rc_corner/update_rc_corner -cap_table'.
+#Dump tif for version 2.1
+**WARN: (IMPEXT-2882):	Unable to find the resistance for via 'M2_M1_viaB' in Cap table or LEF or OA files. The default value of 4.0 ohms is being assigned. To avoid this, check the Cap table and LEF and OA files, provide the resistance and read the files again.
+**WARN: (IMPEXT-2882):	Unable to find the resistance for via 'M3_M2_viaB' in Cap table or LEF or OA files. The default value of 4.0 ohms is being assigned. To avoid this, check the Cap table and LEF and OA files, provide the resistance and read the files again.
+**WARN: (IMPEXT-2882):	Unable to find the resistance for via 'M4_M3_viaB' in Cap table or LEF or OA files. The default value of 4.0 ohms is being assigned. To avoid this, check the Cap table and LEF and OA files, provide the resistance and read the files again.
+**WARN: (IMPEXT-2882):	Unable to find the resistance for via 'M5_M4_via' in Cap table or LEF or OA files. The default value of 4.0 ohms is being assigned. To avoid this, check the Cap table and LEF and OA files, provide the resistance and read the files again.
+**WARN: (IMPEXT-2882):	Unable to find the resistance for via 'M6_M5_via' in Cap table or LEF or OA files. The default value of 4.0 ohms is being assigned. To avoid this, check the Cap table and LEF and OA files, provide the resistance and read the files again.
+**WARN: (IMPEXT-2882):	Unable to find the resistance for via 'M7_M6_via' in Cap table or LEF or OA files. The default value of 4.0 ohms is being assigned. To avoid this, check the Cap table and LEF and OA files, provide the resistance and read the files again.
+**WARN: (IMPEXT-2882):	Unable to find the resistance for via 'M8_M7_via' in Cap table or LEF or OA files. The default value of 4.0 ohms is being assigned. To avoid this, check the Cap table and LEF and OA files, provide the resistance and read the files again.
+**WARN: (IMPEXT-2882):	Unable to find the resistance for via 'M9_M8_via' in Cap table or LEF or OA files. The default value of 4.0 ohms is being assigned. To avoid this, check the Cap table and LEF and OA files, provide the resistance and read the files again.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net clk. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net clk. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[63]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[60]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[59]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[58]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[56]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[55]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[54]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[52]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[51]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[50]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[48]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[47]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[46]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[44]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[43]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[42]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[40]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[39]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+Total number of fetched objects 1579
+End delay calculation. (MEM=883.977 CPU=0:00:00.7 REAL=0:00:01.0)
+**WARN: (IMPEXT-3493):	The design extraction status has been reset by set_analysis_view/update_rc_corner or setExtractRCMode  command. The parasitic data can be regenerated either by extracting the design using the extractRC command or by loading the SPEF or RCDB file(s). To prevent resetting of the extraction status, avoid changing extraction modes.
+#Generating timing data took: cpu time = 00:00:01, elapsed time = 00:00:01, memory = 564.73 (MB), peak = 586.92 (MB)
+#Done generating timing data.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/plaintext[63] of net plaintext[63] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/plaintext[62] of net plaintext[62] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/plaintext[61] of net plaintext[61] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/plaintext[60] of net plaintext[60] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/plaintext[59] of net plaintext[59] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/plaintext[58] of net plaintext[58] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/plaintext[57] of net plaintext[57] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/plaintext[56] of net plaintext[56] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/plaintext[55] of net plaintext[55] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/plaintext[54] of net plaintext[54] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/plaintext[53] of net plaintext[53] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/plaintext[52] of net plaintext[52] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/plaintext[51] of net plaintext[51] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/plaintext[50] of net plaintext[50] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/plaintext[49] of net plaintext[49] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/plaintext[48] of net plaintext[48] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/plaintext[47] of net plaintext[47] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/plaintext[46] of net plaintext[46] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/plaintext[45] of net plaintext[45] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (NRIG-39) NanoRoute cannot route to pin PIN/plaintext[44] of net plaintext[44] because it might be a logical pin and does not have physical shapes. To fix the problem, check the pin connection in the netlist and ensure the pin shapes exist in the floorplan.
+#WARNING (EMS-27) Message (NRIG-39) has exceeded the current message display limit of 20.
+#To increase the message display limit, refer to the product command reference manual.
+#WARNING (NRDB-976) The TRACK STEP 0.2800 for preferred direction tracks is smaller than the PITCH 0.2850 for LAYER metal4. This will cause routability problems for NanoRoute.
+#WARNING (NRDB-976) The TRACK STEP 0.2800 for preferred direction tracks is smaller than the PITCH 0.2850 for LAYER metal6. This will cause routability problems for NanoRoute.
+#WARNING (NRDB-976) The TRACK STEP 0.8400 for preferred direction tracks is smaller than the PITCH 0.8550 for LAYER metal8. This will cause routability problems for NanoRoute.
+#WARNING (NRDB-976) The TRACK STEP 1.6800 for preferred direction tracks is smaller than the PITCH 1.7100 for LAYER metal10. This will cause routability problems for NanoRoute.
+#Start reading timing information from file .timing_file_79792.tif.gz ...
+#Read in timing information for 212 ports, 1432 instances from timing file .timing_file_79792.tif.gz.
+#NanoRoute Version 17.12-s095_1 NR171102-1913/17_12-UB
+#Start routing data preparation on Thu Apr 23 16:06:23 2020
+#
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal1 is not specified for width 0.0650.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal2 is not specified for width 0.0700.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal1 is not specified for width 0.0650.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal2 is not specified for width 0.0700.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal2 is not specified for width 0.0700.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal3 is not specified for width 0.0700.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal2 is not specified for width 0.0700.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal3 is not specified for width 0.0700.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal3 is not specified for width 0.0700.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal4 is not specified for width 0.1400.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal3 is not specified for width 0.0700.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal4 is not specified for width 0.1400.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal4 is not specified for width 0.1400.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal5 is not specified for width 0.1400.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal4 is not specified for width 0.1400.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal5 is not specified for width 0.1400.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal5 is not specified for width 0.1400.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal6 is not specified for width 0.1400.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal5 is not specified for width 0.1400.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal6 is not specified for width 0.1400.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal6 is not specified for width 0.1400.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal7 is not specified for width 0.4000.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal6 is not specified for width 0.1400.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal7 is not specified for width 0.4000.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal7 is not specified for width 0.4000.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal8 is not specified for width 0.4000.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal7 is not specified for width 0.4000.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal8 is not specified for width 0.4000.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal8 is not specified for width 0.4000.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal9 is not specified for width 0.8000.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal8 is not specified for width 0.4000.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal9 is not specified for width 0.8000.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal9 is not specified for width 0.8000.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal10 is not specified for width 0.8000.
+#WARNING (NRDB-2077) The below via enclosure for LAYER metal9 is not specified for width 0.8000.
+#WARNING (NRDB-2078) The above via enclosure for LAYER metal10 is not specified for width 0.8000.
+#Minimum voltage of a net in the design = 0.000.
+#Maximum voltage of a net in the design = 1.100.
+#Voltage range [0.000 - 1.100] has 1790 nets.
+# metal1       H   Track-Pitch = 0.1900    Line-2-Via Pitch = 0.1300
+# metal2       V   Track-Pitch = 0.1900    Line-2-Via Pitch = 0.1450
+# metal3       H   Track-Pitch = 0.1900    Line-2-Via Pitch = 0.1400
+# metal4       V   Track-Pitch = 0.2800    Line-2-Via Pitch = 0.2800
+# metal5       H   Track-Pitch = 0.2850    Line-2-Via Pitch = 0.2800
+# metal6       V   Track-Pitch = 0.2800    Line-2-Via Pitch = 0.2800
+# metal7       H   Track-Pitch = 0.9500    Line-2-Via Pitch = 0.8000
+# metal8       V   Track-Pitch = 0.8400    Line-2-Via Pitch = 0.8000
+# metal9       H   Track-Pitch = 1.7100    Line-2-Via Pitch = 1.6000
+# metal10      V   Track-Pitch = 1.6800    Line-2-Via Pitch = 1.6000
+#WARNING (NRDB-2111) Found overlapping instances regKey/U259 regKey/reg_reg[53]. This may result in unnecessary runtime, added violations, timing issues, and fail sign-off verification.
+#Run checkPlace to display the placement violations and use routeDesign -placementCheck to prevent routing which placement issues.
+#WARNING (NRDB-2111) Found overlapping instances s_x_9/U34 s_x_9/U5. This may result in unnecessary runtime, added violations, timing issues, and fail sign-off verification.
+#Run checkPlace to display the placement violations and use routeDesign -placementCheck to prevent routing which placement issues.
+#WARNING (NRDB-2111) Found overlapping instances s_x_5/U26 s_x_5/U29. This may result in unnecessary runtime, added violations, timing issues, and fail sign-off verification.
+#Run checkPlace to display the placement violations and use routeDesign -placementCheck to prevent routing which placement issues.
+#WARNING (NRDB-2111) Found overlapping instances regText/U127 regText/reg_reg[37]. This may result in unnecessary runtime, added violations, timing issues, and fail sign-off verification.
+#Run checkPlace to display the placement violations and use routeDesign -placementCheck to prevent routing which placement issues.
+#WARNING (NRDB-2111) Found overlapping instances regKey/U303 regKey/reg_reg[72]. This may result in unnecessary runtime, added violations, timing issues, and fail sign-off verification.
+#Run checkPlace to display the placement violations and use routeDesign -placementCheck to prevent routing which placement issues.
+#WARNING (NRDB-2111) Found overlapping instances regText/U235 regText/U236. This may result in unnecessary runtime, added violations, timing issues, and fail sign-off verification.
+#Run checkPlace to display the placement violations and use routeDesign -placementCheck to prevent routing which placement issues.
+#WARNING (NRDB-2111) Found overlapping instances mux_80/U99 mux_80/U100. This may result in unnecessary runtime, added violations, timing issues, and fail sign-off verification.
+#Run checkPlace to display the placement violations and use routeDesign -placementCheck to prevent routing which placement issues.
+#WARNING (NRDB-2111) Found overlapping instances SM/U27 count/cnt_reg[2]. This may result in unnecessary runtime, added violations, timing issues, and fail sign-off verification.
+#Run checkPlace to display the placement violations and use routeDesign -placementCheck to prevent routing which placement issues.
+#WARNING (NRDB-2111) Found overlapping instances s_x_8/U31 s_x_8/U5. This may result in unnecessary runtime, added violations, timing issues, and fail sign-off verification.
+#Run checkPlace to display the placement violations and use routeDesign -placementCheck to prevent routing which placement issues.
+#WARNING (NRDB-2111) Found overlapping instances U249 s_x_14/U21. This may result in unnecessary runtime, added violations, timing issues, and fail sign-off verification.
+#Run checkPlace to display the placement violations and use routeDesign -placementCheck to prevent routing which placement issues.
+#WARNING (NRDB-2111) Found overlapping instances SM/U31 count/cnt_reg[3]. This may result in unnecessary runtime, added violations, timing issues, and fail sign-off verification.
+#Run checkPlace to display the placement violations and use routeDesign -placementCheck to prevent routing which placement issues.
+#WARNING (NRDB-2111) Found overlapping instances regKey/U89 regKey/reg_reg[11]. This may result in unnecessary runtime, added violations, timing issues, and fail sign-off verification.
+#Run checkPlace to display the placement violations and use routeDesign -placementCheck to prevent routing which placement issues.
+#WARNING (NRDB-2111) Found overlapping instances s_x_14/U14 s_x_14/U37. This may result in unnecessary runtime, added violations, timing issues, and fail sign-off verification.
+#Run checkPlace to display the placement violations and use routeDesign -placementCheck to prevent routing which placement issues.
+#WARNING (NRDB-2111) Found overlapping instances regText/U199 regText/U200. This may result in unnecessary runtime, added violations, timing issues, and fail sign-off verification.
+#Run checkPlace to display the placement violations and use routeDesign -placementCheck to prevent routing which placement issues.
+#WARNING (NRDB-2111) Found overlapping instances mixer/s1/U12 mixer/s1/U34. This may result in unnecessary runtime, added violations, timing issues, and fail sign-off verification.
+#Run checkPlace to display the placement violations and use routeDesign -placementCheck to prevent routing which placement issues.
+#WARNING (NRDB-2111) Found overlapping instances SM/U14 SM/U12. This may result in unnecessary runtime, added violations, timing issues, and fail sign-off verification.
+#Run checkPlace to display the placement violations and use routeDesign -placementCheck to prevent routing which placement issues.
+#WARNING (NRDB-2111) Found overlapping instances SM/U13 SM/U4. This may result in unnecessary runtime, added violations, timing issues, and fail sign-off verification.
+#Run checkPlace to display the placement violations and use routeDesign -placementCheck to prevent routing which placement issues.
+#WARNING (NRDB-2111) Found overlapping instances regText/U197 regText/U198. This may result in unnecessary runtime, added violations, timing issues, and fail sign-off verification.
+#Run checkPlace to display the placement violations and use routeDesign -placementCheck to prevent routing which placement issues.
+#WARNING (NRDB-2111) Found overlapping instances U278 s_x_0/U31. This may result in unnecessary runtime, added violations, timing issues, and fail sign-off verification.
+#Run checkPlace to display the placement violations and use routeDesign -placementCheck to prevent routing which placement issues.
+#WARNING (NRDB-2111) Found overlapping instances s_x_10/U11 s_x_10/U36. This may result in unnecessary runtime, added violations, timing issues, and fail sign-off verification.
+#Run checkPlace to display the placement violations and use routeDesign -placementCheck to prevent routing which placement issues.
+#WARNING (EMS-27) Message (NRDB-2111) has exceeded the current message display limit of 20.
+#To increase the message display limit, refer to the product command reference manual.
+#WARNING (NRDB-2110) Found 62 overlapping core instances, this may cause problems with pin access and increase routing run-time.
+#Regenerating Ggrids automatically.
+#Auto generating G-grids with size=15 tracks, using layer metal3's pitch = 0.1900.
+#Using automatically generated G-grids.
+#Done routing data preparation.
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 561.82 (MB), peak = 594.88 (MB)
+#Merging special wires...
+#
+#Finished routing data preparation on Thu Apr 23 16:06:23 2020
+#
+#Cpu time = 00:00:00
+#Elapsed time = 00:00:00
+#Increased memory = 6.86 (MB)
+#Total memory = 562.02 (MB)
+#Peak memory = 594.88 (MB)
+#
+#
+#Start global routing on Thu Apr 23 16:06:23 2020
+#
+#Number of eco nets is 0
+#
+#Start global routing data preparation on Thu Apr 23 16:06:23 2020
+#
+#Start routing resource analysis on Thu Apr 23 16:06:23 2020
+#
+#Routing resource analysis is done on Thu Apr 23 16:06:23 2020
+#
+#  Resource Analysis:
+#
+#               Routing  #Avail      #Track     #Total     %Gcell
+#  Layer      Direction   Track     Blocked      Gcell    Blocked
+#  --------------------------------------------------------------
+#  metal1         H         390           0         702    92.88%
+#  metal2         V         398           0         702     0.00%
+#  metal3         H         390           0         702     0.00%
+#  metal4         V         264           0         702     0.00%
+#  metal5         H         259           0         702     0.00%
+#  metal6         V         264           0         702     0.00%
+#  metal7         H          77           0         702     0.00%
+#  metal8         V          89           0         702     0.00%
+#  metal9         H          43           0         702     0.00%
+#  metal10        V          44           0         702     3.70%
+#  --------------------------------------------------------------
+#  Total                   2218       0.00%        7020     9.66%
+#
+#
+#
+#
+#Global routing data preparation is done on Thu Apr 23 16:06:23 2020
+#
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 562.49 (MB), peak = 594.88 (MB)
+#
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 562.51 (MB), peak = 594.88 (MB)
+#
+#start global routing iteration 1...
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 567.95 (MB), peak = 594.88 (MB)
+#
+#start global routing iteration 2...
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 568.63 (MB), peak = 594.88 (MB)
+#
+#
+#Total number of trivial nets (e.g. < 2 pins) = 355 (skipped).
+#Total number of routable nets = 1435.
+#Total number of nets in the design = 1790.
+#
+#1435 routable nets have only global wires.
+#
+#Routed nets constraints summary:
+#-----------------------------
+#        Rules   Unconstrained  
+#-----------------------------
+#      Default            1435  
+#-----------------------------
+#        Total            1435  
+#-----------------------------
+#
+#Routing constraints summary of the whole design:
+#-----------------------------
+#        Rules   Unconstrained  
+#-----------------------------
+#      Default            1435  
+#-----------------------------
+#        Total            1435  
+#-----------------------------
+#
+#
+#  Congestion Analysis: (blocked Gcells are excluded)
+#
+#                 OverCon          
+#                  #Gcell    %Gcell
+#     Layer           (1)   OverCon
+#  --------------------------------
+#  metal1        0(0.00%)   (0.00%)
+#  metal2        0(0.00%)   (0.00%)
+#  metal3        0(0.00%)   (0.00%)
+#  metal4        0(0.00%)   (0.00%)
+#  metal5        0(0.00%)   (0.00%)
+#  metal6        0(0.00%)   (0.00%)
+#  metal7        0(0.00%)   (0.00%)
+#  metal8        0(0.00%)   (0.00%)
+#  metal9        0(0.00%)   (0.00%)
+#  metal10       0(0.00%)   (0.00%)
+#  --------------------------------
+#     Total      0(0.00%)   (0.00%)
+#
+#  The worst congested Gcell overcon (routing demand over resource in number of tracks) = 1
+#  Overflow after GR: 0.00% H + 0.00% V
+#
+[hotspot] +------------+---------------+---------------+
+[hotspot] |            |   max hotspot | total hotspot |
+[hotspot] +------------+---------------+---------------+
+[hotspot] | normalized |          0.00 |          0.00 |
+[hotspot] +------------+---------------+---------------+
+Local HotSpot Analysis: normalized max congestion hotspot area = 0.00, normalized total congestion hotspot area = 0.00 (area is in unit of 4 std-cell row bins)
+#Complete Global Routing.
+#Total wire length = 17831 um.
+#Total half perimeter of net bounding box = 18108 um.
+#Total wire length on LAYER metal1 = 0 um.
+#Total wire length on LAYER metal2 = 6983 um.
+#Total wire length on LAYER metal3 = 8767 um.
+#Total wire length on LAYER metal4 = 1841 um.
+#Total wire length on LAYER metal5 = 239 um.
+#Total wire length on LAYER metal6 = 0 um.
+#Total wire length on LAYER metal7 = 0 um.
+#Total wire length on LAYER metal8 = 0 um.
+#Total wire length on LAYER metal9 = 0 um.
+#Total wire length on LAYER metal10 = 0 um.
+#Total number of vias = 7390
+#Up-Via Summary (total 7390):
+#           
+#-----------------------
+# metal1           4090
+# metal2           2960
+# metal3            320
+# metal4             20
+#-----------------------
+#                  7390 
+#
+#Max overcon = 0 track.
+#Total overcon = 0.00%.
+#Worst layer Gcell overcon rate = 0.00%.
+#
+#Global routing statistics:
+#Cpu time = 00:00:00
+#Elapsed time = 00:00:00
+#Increased memory = 7.11 (MB)
+#Total memory = 569.21 (MB)
+#Peak memory = 594.88 (MB)
+#
+#Finished global routing on Thu Apr 23 16:06:24 2020
+#
+#
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 566.45 (MB), peak = 594.88 (MB)
+#Start Track Assignment.
+#Done with 2026 horizontal wires in 1 hboxes and 2059 vertical wires in 1 hboxes.
+#Done with 553 horizontal wires in 1 hboxes and 510 vertical wires in 1 hboxes.
+#Done with 1 horizontal wires in 1 hboxes and 1 vertical wires in 1 hboxes.
+#
+#Track assignment summary:
+# layer   (wire length)   (overlap)     (long ovlp)	(with obs/pg/clk)  
+#------------------------------------------------------------------------
+# metal1         0.00 	  0.00%  	  0.00% 	  0.00%
+# metal2      7004.47 	  0.18%  	  0.00% 	  0.10%
+# metal3      8735.98 	  0.14%  	  0.00% 	  0.00%
+# metal4      1864.13 	  0.06%  	  0.00% 	  0.00%
+# metal5       238.17 	  0.00%  	  0.00% 	  0.00%
+# metal6         0.00 	  0.00%  	  0.00% 	  0.00%
+# metal7         0.00 	  0.00%  	  0.00% 	  0.00%
+# metal8         0.00 	  0.00%  	  0.00% 	  0.00%
+# metal9         0.00 	  0.00%  	  0.00% 	  0.00%
+# metal10        0.00 	  0.00%  	  0.00% 	  0.00%
+#------------------------------------------------------------------------
+# All       17842.74  	  0.15% 	  0.00% 	  0.00%
+#Complete Track Assignment.
+#Total wire length = 19332 um.
+#Total half perimeter of net bounding box = 18108 um.
+#Total wire length on LAYER metal1 = 881 um.
+#Total wire length on LAYER metal2 = 7035 um.
+#Total wire length on LAYER metal3 = 9299 um.
+#Total wire length on LAYER metal4 = 1877 um.
+#Total wire length on LAYER metal5 = 240 um.
+#Total wire length on LAYER metal6 = 0 um.
+#Total wire length on LAYER metal7 = 0 um.
+#Total wire length on LAYER metal8 = 0 um.
+#Total wire length on LAYER metal9 = 0 um.
+#Total wire length on LAYER metal10 = 0 um.
+#Total number of vias = 7390
+#Up-Via Summary (total 7390):
+#           
+#-----------------------
+# metal1           4090
+# metal2           2960
+# metal3            320
+# metal4             20
+#-----------------------
+#                  7390 
+#
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 567.94 (MB), peak = 594.88 (MB)
+#
+#Routing data preparation, pin analysis, global routing and track assignment statistics:
+#Cpu time = 00:00:01
+#Elapsed time = 00:00:01
+#Increased memory = 12.86 (MB)
+#Total memory = 567.97 (MB)
+#Peak memory = 594.88 (MB)
+#
+#Start Detail Routing..
+#start initial detail routing ...
+#   number of violations = 57
+#
+#    By Layer and Type :
+#	         MetSpc    Short     Loop   Totals
+#	metal1        2       50        0       52
+#	metal2        3        0        2        5
+#	Totals        5       50        2       57
+#cpu time = 00:00:15, elapsed time = 00:00:15, memory = 696.72 (MB), peak = 697.73 (MB)
+#start 1st optimization iteration ...
+#   number of violations = 3
+#
+#    By Layer and Type :
+#	         MetSpc    Short   Totals
+#	metal1        1        1        2
+#	metal2        1        0        1
+#	Totals        2        1        3
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 697.32 (MB), peak = 697.73 (MB)
+#start 2nd optimization iteration ...
+#   number of violations = 1
+#
+#    By Layer and Type :
+#	          Short   Totals
+#	metal1        1        1
+#	Totals        1        1
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 697.32 (MB), peak = 697.73 (MB)
+#start 3rd optimization iteration ...
+#   number of violations = 1
+#
+#    By Layer and Type :
+#	          Short   Totals
+#	metal1        1        1
+#	Totals        1        1
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 697.32 (MB), peak = 697.73 (MB)
+#start 4th optimization iteration ...
+#   number of violations = 1
+#
+#    By Layer and Type :
+#	          Short   Totals
+#	metal1        1        1
+#	Totals        1        1
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 697.32 (MB), peak = 697.73 (MB)
+#start 5th optimization iteration ...
+#   number of violations = 1
+#
+#    By Layer and Type :
+#	          Short   Totals
+#	metal1        1        1
+#	Totals        1        1
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 697.32 (MB), peak = 697.73 (MB)
+#start 6th optimization iteration ...
+#   number of violations = 1
+#
+#    By Layer and Type :
+#	          Short   Totals
+#	metal1        1        1
+#	Totals        1        1
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 697.35 (MB), peak = 697.73 (MB)
+#start 7th optimization iteration ...
+#   number of violations = 1
+#
+#    By Layer and Type :
+#	          Short   Totals
+#	metal1        1        1
+#	Totals        1        1
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 697.35 (MB), peak = 697.73 (MB)
+#start 8th optimization iteration ...
+#   number of violations = 1
+#
+#    By Layer and Type :
+#	          Short   Totals
+#	metal1        1        1
+#	Totals        1        1
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 697.35 (MB), peak = 697.73 (MB)
+#start 9th optimization iteration ...
+#   number of violations = 1
+#
+#    By Layer and Type :
+#	          Short   Totals
+#	metal1        1        1
+#	Totals        1        1
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 697.35 (MB), peak = 697.73 (MB)
+#start 10th optimization iteration ...
+#   number of violations = 1
+#
+#    By Layer and Type :
+#	          Short   Totals
+#	metal1        1        1
+#	Totals        1        1
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 697.35 (MB), peak = 697.73 (MB)
+#start 11th optimization iteration ...
+#   number of violations = 1
+#
+#    By Layer and Type :
+#	          Short   Totals
+#	metal1        1        1
+#	Totals        1        1
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 697.35 (MB), peak = 697.73 (MB)
+#start 12th optimization iteration ...
+#   number of violations = 1
+#
+#    By Layer and Type :
+#	         MetSpc   Totals
+#	metal1        1        1
+#	Totals        1        1
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 697.35 (MB), peak = 697.73 (MB)
+#Complete Detail Routing.
+#Total wire length = 19595 um.
+#Total half perimeter of net bounding box = 18108 um.
+#Total wire length on LAYER metal1 = 425 um.
+#Total wire length on LAYER metal2 = 6974 um.
+#Total wire length on LAYER metal3 = 8302 um.
+#Total wire length on LAYER metal4 = 3404 um.
+#Total wire length on LAYER metal5 = 491 um.
+#Total wire length on LAYER metal6 = 0 um.
+#Total wire length on LAYER metal7 = 0 um.
+#Total wire length on LAYER metal8 = 0 um.
+#Total wire length on LAYER metal9 = 0 um.
+#Total wire length on LAYER metal10 = 0 um.
+#Total number of vias = 9025
+#Up-Via Summary (total 9025):
+#           
+#-----------------------
+# metal1           4320
+# metal2           3628
+# metal3            982
+# metal4             95
+#-----------------------
+#                  9025 
+#
+#Total number of DRC violations = 1
+#Total number of overlapping instance violations = 1
+#Total number of violations on LAYER metal1 = 1
+#Total number of violations on LAYER metal2 = 0
+#Total number of violations on LAYER metal3 = 0
+#Total number of violations on LAYER metal4 = 0
+#Total number of violations on LAYER metal5 = 0
+#Total number of violations on LAYER metal6 = 0
+#Total number of violations on LAYER metal7 = 0
+#Total number of violations on LAYER metal8 = 0
+#Total number of violations on LAYER metal9 = 0
+#Total number of violations on LAYER metal10 = 0
+#Cpu time = 00:00:17
+#Elapsed time = 00:00:17
+#Increased memory = 6.25 (MB)
+#Total memory = 574.23 (MB)
+#Peak memory = 697.73 (MB)
+#
+#Start Post Routing Optimization.
+#start 1st post routing optimization iteration ...
+#    number of DRC violations = 1
+#
+#    By Layer and Type :
+#	         MetSpc   Totals
+#	metal1        1        1
+#	Totals        1        1
+#cpu time = 00:00:00, elapsed time = 00:00:00, memory = 575.06 (MB), peak = 697.73 (MB)
+#Complete Post Routing Optimization.
+#Cpu time = 00:00:00
+#Elapsed time = 00:00:00
+#Increased memory = 0.83 (MB)
+#Total memory = 575.06 (MB)
+#Peak memory = 697.73 (MB)
+#Total wire length = 19595 um.
+#Total half perimeter of net bounding box = 18108 um.
+#Total wire length on LAYER metal1 = 425 um.
+#Total wire length on LAYER metal2 = 6974 um.
+#Total wire length on LAYER metal3 = 8302 um.
+#Total wire length on LAYER metal4 = 3404 um.
+#Total wire length on LAYER metal5 = 491 um.
+#Total wire length on LAYER metal6 = 0 um.
+#Total wire length on LAYER metal7 = 0 um.
+#Total wire length on LAYER metal8 = 0 um.
+#Total wire length on LAYER metal9 = 0 um.
+#Total wire length on LAYER metal10 = 0 um.
+#Total number of vias = 9025
+#Up-Via Summary (total 9025):
+#           
+#-----------------------
+# metal1           4320
+# metal2           3628
+# metal3            982
+# metal4             95
+#-----------------------
+#                  9025 
+#
+#Total number of DRC violations = 1
+#Total number of overlapping instance violations = 1
+#Total number of violations on LAYER metal1 = 1
+#Total number of violations on LAYER metal2 = 0
+#Total number of violations on LAYER metal3 = 0
+#Total number of violations on LAYER metal4 = 0
+#Total number of violations on LAYER metal5 = 0
+#Total number of violations on LAYER metal6 = 0
+#Total number of violations on LAYER metal7 = 0
+#Total number of violations on LAYER metal8 = 0
+#Total number of violations on LAYER metal9 = 0
+#Total number of violations on LAYER metal10 = 0
+#
+#Start Post Route wire spreading..
+#
+#Start DRC checking..
+#   number of violations = 1
+#
+#    By Layer and Type :
+#	         MetSpc   Totals
+#	metal1        1        1
+#	Totals        1        1
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 623.11 (MB), peak = 697.73 (MB)
+#CELL_VIEW PresentEnc,init has 1 DRC violations
+#Total number of DRC violations = 1
+#Total number of overlapping instance violations = 1
+#Total number of violations on LAYER metal1 = 1
+#Total number of violations on LAYER metal2 = 0
+#Total number of violations on LAYER metal3 = 0
+#Total number of violations on LAYER metal4 = 0
+#Total number of violations on LAYER metal5 = 0
+#Total number of violations on LAYER metal6 = 0
+#Total number of violations on LAYER metal7 = 0
+#Total number of violations on LAYER metal8 = 0
+#Total number of violations on LAYER metal9 = 0
+#Total number of violations on LAYER metal10 = 0
+#
+#Start data preparation for wire spreading...
+#
+#Data preparation is done on Thu Apr 23 16:06:42 2020
+#
+#
+#Start Post Route Wire Spread.
+#Done with 622 horizontal wires in 1 hboxes and 524 vertical wires in 1 hboxes.
+#Complete Post Route Wire Spread.
+#
+#Total wire length = 19936 um.
+#Total half perimeter of net bounding box = 18108 um.
+#Total wire length on LAYER metal1 = 425 um.
+#Total wire length on LAYER metal2 = 7062 um.
+#Total wire length on LAYER metal3 = 8480 um.
+#Total wire length on LAYER metal4 = 3475 um.
+#Total wire length on LAYER metal5 = 494 um.
+#Total wire length on LAYER metal6 = 0 um.
+#Total wire length on LAYER metal7 = 0 um.
+#Total wire length on LAYER metal8 = 0 um.
+#Total wire length on LAYER metal9 = 0 um.
+#Total wire length on LAYER metal10 = 0 um.
+#Total number of vias = 9025
+#Up-Via Summary (total 9025):
+#           
+#-----------------------
+# metal1           4320
+# metal2           3628
+# metal3            982
+# metal4             95
+#-----------------------
+#                  9025 
+#
+#
+#Start DRC checking..
+#   number of violations = 1
+#
+#    By Layer and Type :
+#	         MetSpc   Totals
+#	metal1        1        1
+#	Totals        1        1
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 621.45 (MB), peak = 697.73 (MB)
+#CELL_VIEW PresentEnc,init has 1 DRC violations
+#Total number of DRC violations = 1
+#Total number of overlapping instance violations = 1
+#Total number of violations on LAYER metal1 = 1
+#Total number of violations on LAYER metal2 = 0
+#Total number of violations on LAYER metal3 = 0
+#Total number of violations on LAYER metal4 = 0
+#Total number of violations on LAYER metal5 = 0
+#Total number of violations on LAYER metal6 = 0
+#Total number of violations on LAYER metal7 = 0
+#Total number of violations on LAYER metal8 = 0
+#Total number of violations on LAYER metal9 = 0
+#Total number of violations on LAYER metal10 = 0
+#   number of violations = 1
+#
+#    By Layer and Type :
+#	         MetSpc   Totals
+#	metal1        1        1
+#	Totals        1        1
+#cpu time = 00:00:01, elapsed time = 00:00:01, memory = 573.34 (MB), peak = 697.73 (MB)
+#CELL_VIEW PresentEnc,init has 1 DRC violations
+#Total number of DRC violations = 1
+#Total number of overlapping instance violations = 1
+#Total number of violations on LAYER metal1 = 1
+#Total number of violations on LAYER metal2 = 0
+#Total number of violations on LAYER metal3 = 0
+#Total number of violations on LAYER metal4 = 0
+#Total number of violations on LAYER metal5 = 0
+#Total number of violations on LAYER metal6 = 0
+#Total number of violations on LAYER metal7 = 0
+#Total number of violations on LAYER metal8 = 0
+#Total number of violations on LAYER metal9 = 0
+#Total number of violations on LAYER metal10 = 0
+#Post Route wire spread is done.
+#Total wire length = 19936 um.
+#Total half perimeter of net bounding box = 18108 um.
+#Total wire length on LAYER metal1 = 425 um.
+#Total wire length on LAYER metal2 = 7062 um.
+#Total wire length on LAYER metal3 = 8480 um.
+#Total wire length on LAYER metal4 = 3475 um.
+#Total wire length on LAYER metal5 = 494 um.
+#Total wire length on LAYER metal6 = 0 um.
+#Total wire length on LAYER metal7 = 0 um.
+#Total wire length on LAYER metal8 = 0 um.
+#Total wire length on LAYER metal9 = 0 um.
+#Total wire length on LAYER metal10 = 0 um.
+#Total number of vias = 9025
+#Up-Via Summary (total 9025):
+#           
+#-----------------------
+# metal1           4320
+# metal2           3628
+# metal3            982
+# metal4             95
+#-----------------------
+#                  9025 
+#
+#detailRoute Statistics:
+#Cpu time = 00:00:19
+#Elapsed time = 00:00:19
+#Increased memory = 3.24 (MB)
+#Total memory = 571.22 (MB)
+#Peak memory = 697.73 (MB)
+#
+#globalDetailRoute statistics:
+#Cpu time = 00:00:21
+#Elapsed time = 00:00:21
+#Increased memory = 35.41 (MB)
+#Total memory = 580.99 (MB)
+#Peak memory = 697.73 (MB)
+#Number of warnings = 83
+#Total number of warnings = 85
+#Number of fails = 0
+#Total number of fails = 0
+#Complete globalDetailRoute on Thu Apr 23 16:06:43 2020
+#
+% End globalDetailRoute (date=04/23 16:06:43, total cpu=0:00:20.8, real=0:00:21.0, peak res=697.7M, current mem=581.0M)
+#routeDesign: cpu time = 00:00:21, elapsed time = 00:00:21, memory = 581.03 (MB), peak = 697.73 (MB)
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPEXT-6197          1  The Cap table file is not specified. Thi...
+WARNING   IMPEXT-2882          8  Unable to find the resistance for via '%...
+WARNING   IMPEXT-3493          1  The design extraction status has been re...
+WARNING   IMPEXT-3530          1  The process node is not set. Use the com...
+WARNING   IMPCK-8086           1  The command %s is obsolete and will be r...
+WARNING   IMPESI-3014         54  The RC network is incomplete for net %s....
+*** Message Summary: 66 warning(s), 0 error(s)
+
+#% End routeDesign (date=04/23 16:06:43, total cpu=0:00:20.8, real=0:00:21.0, peak res=697.7M, current mem=581.0M)
+<CMD> assignPtnPin
+#% Begin assignPtnPin (date=04/23 16:06:43, mem=581.0M)
+Starting pin assignment...
+The design is trial routed. Using routing cross-point as seed point for pin assignment.
+
+There are 159 ptnToPtn 2-pin nets in the design.
+There are 159 non-neighbor ptnToPtn 2-pin nets.
+
+There are 281 topToPtn 2-pin nets in the design.
+There are 122 unaligned topToPtn 2-pin nets.
+There are 15 layer mismatch topToPtn 2-pin nets.
+There are 144 non-neighbor topToPtn 2-pin nets.
+
+There are 440 total 2-pin nets in the design.
+There are 122 unaligned total 2-pin nets.
+There are 15 layer mismatch total 2-pin nets.
+There are 303 non-neighbor total 2-pin nets.
+
+Completed pin assignment.
+#% End assignPtnPin (date=04/23 16:06:43, total cpu=0:00:00.1, real=0:00:00.0, peak res=587.4M, current mem=587.4M)
+<CMD> set_global report_timing_format {arc arrival cell delay edge fanin fanout hpin instance load net pin pin_load required slew stolen timing_point wire_load}
+<CMD> setBudgetingMode -reportOrModifyBudget true
+<CMD> deriveTimingBudget
+#% Begin deriveTimingBudget (date=04/23 16:06:43, mem=587.4M)
+This command "deriveTimingBudget" required an extra checkout of license invs_hier.
+Additional license(s) checked out: 1 'Innovus_Hier_Opt' license(s)
+..Deriving timing budget for partitioned modules
+*** Derive timing budget will use the CTE timing engine ***
+**WARN: (GLOBAL-100):	Global 'timing_enable_backward_compatible_budgeting_mode' has become obsolete. It will be removed in the next release.
+Budgets will be derived for the MMMC views 
+
+::Rda_CDTV::setCDTVMode -keepInstInSdc
+::Rda_CDTV::setCDTVMode -traceConstantRoot
+::Rda_CDTV::setCDTVMode -reduceUnusedConstant
+::Rda_CDTV::setCDTVMode -noReduceFalsePath
+
+*Info: Begin of createActiveLogicView (mem=859.937500M)
+*Info: CDTV Extra options: 
+*Info: Creating Block Interface Virtual Partition.
+**WARN: (IMPILM-349):	setIlmMode -keepAsync false conflicts with setAnalysisMode -asyncChecks async setting. setIlmMode -keepAsync false will be used in the ILM flow.
+Type 'man IMPILM-349' for more detail.
+*Info: Using CTE mode ...
+*** Constant Propagation Marking in Setup Analysis Mode Begin (mem=862.0M) ***
+*** Found 151 constant pins (0:00:00.0) ***
+*** Constant Propagation Marking End (cpu=0:00:00.0 mem=866.7M) ***
+*** Clear Unused Logic Marking (cpu=0:00:00.0, mem=866.7M) ***
+*** Non CTE Mark Clock Nets Begin (mem=866.7M) ***
+*** Non CTE Mark Clock Nets End (cpu=0:00:00.0 mem=866.7M) ***
+Deriving Virtual Partition of (PresentEnc) using constraint mode present_enc_cm ...
+*** Clear Unused Logic Marking (cpu=0:00:00.0, mem=866.7M) ***
+*** Marking     9/1432 (0%) insts as TAIgnored.
+*** Marking     9/1579 (0%) nets as TAIgnored.
+*** Commit Timing View Marking (cpu=0:00:00.1, mem=862.0M) ***
+-----------------------------------------------------------------------------------
+	Create Active Logic View Summary
+-----------------------------------------------------------------------------------
+Reduced Instances         Reduced Registers 
+-----------------------------------------------------------------------------------
+9/1432 (0%)		0/151 (0%)
+-----------------------------------------------------------------------------------
+*** Build Timing Graph Begin (mem=740.203125M)
+Current (total cpu=0:00:39.2, real=0:01:02, peak res=697.7M, current mem=571.4M)
+*** Build Timing Graph End (cpu=0.15, mem=848.968750M)
+Ending "createActiveLogicView" (total cpu=0:00:00.3, real=0:00:01.0, peak res=587.4M, current mem=579.0M)
+Starting optVirtual -reset -skipRCInit (mem=849.0M) 
+**WARN: (IMPOPT-576):	212 nets have unplaced terms. 
+Type 'man IMPOPT-576' for more detail.
+**INFO: setDesignMode -flowEffort standard -> setting 'setOptMode -allEndPoints true' for the duration of this command.
+**Info: (IMPSP-307): Design contains fractional 20 cells.
+
+**Info: (IMPSP-307): Design contains fractional 20 cells.
+
+GigaOpt running with 1 threads.
+**Info: (IMPSP-307): Design contains fractional 20 cells.
+
+**WARN: (IMPOPT-665):	plaintext[63] : Net has unplaced terms or is connected to uplaced instances in design. 
+Type 'man IMPOPT-665' for more detail.
+**WARN: (IMPOPT-665):	plaintext[62] : Net has unplaced terms or is connected to uplaced instances in design. 
+Type 'man IMPOPT-665' for more detail.
+**WARN: (IMPOPT-665):	plaintext[61] : Net has unplaced terms or is connected to uplaced instances in design. 
+Type 'man IMPOPT-665' for more detail.
+**WARN: (IMPOPT-665):	plaintext[60] : Net has unplaced terms or is connected to uplaced instances in design. 
+Type 'man IMPOPT-665' for more detail.
+**WARN: (IMPOPT-665):	plaintext[59] : Net has unplaced terms or is connected to uplaced instances in design. 
+Type 'man IMPOPT-665' for more detail.
+**WARN: (IMPOPT-665):	plaintext[58] : Net has unplaced terms or is connected to uplaced instances in design. 
+Type 'man IMPOPT-665' for more detail.
+**WARN: (IMPOPT-665):	plaintext[57] : Net has unplaced terms or is connected to uplaced instances in design. 
+Type 'man IMPOPT-665' for more detail.
+**WARN: (IMPOPT-665):	plaintext[56] : Net has unplaced terms or is connected to uplaced instances in design. 
+Type 'man IMPOPT-665' for more detail.
+**WARN: (IMPOPT-665):	plaintext[55] : Net has unplaced terms or is connected to uplaced instances in design. 
+Type 'man IMPOPT-665' for more detail.
+**WARN: (IMPOPT-665):	plaintext[54] : Net has unplaced terms or is connected to uplaced instances in design. 
+Type 'man IMPOPT-665' for more detail.
+**WARN: (IMPOPT-665):	plaintext[53] : Net has unplaced terms or is connected to uplaced instances in design. 
+Type 'man IMPOPT-665' for more detail.
+**WARN: (IMPOPT-665):	plaintext[52] : Net has unplaced terms or is connected to uplaced instances in design. 
+Type 'man IMPOPT-665' for more detail.
+**WARN: (IMPOPT-665):	plaintext[51] : Net has unplaced terms or is connected to uplaced instances in design. 
+Type 'man IMPOPT-665' for more detail.
+**WARN: (IMPOPT-665):	plaintext[50] : Net has unplaced terms or is connected to uplaced instances in design. 
+Type 'man IMPOPT-665' for more detail.
+**WARN: (IMPOPT-665):	plaintext[49] : Net has unplaced terms or is connected to uplaced instances in design. 
+Type 'man IMPOPT-665' for more detail.
+**WARN: (IMPOPT-665):	plaintext[48] : Net has unplaced terms or is connected to uplaced instances in design. 
+Type 'man IMPOPT-665' for more detail.
+**WARN: (IMPOPT-665):	plaintext[47] : Net has unplaced terms or is connected to uplaced instances in design. 
+Type 'man IMPOPT-665' for more detail.
+**WARN: (IMPOPT-665):	plaintext[46] : Net has unplaced terms or is connected to uplaced instances in design. 
+Type 'man IMPOPT-665' for more detail.
+**WARN: (IMPOPT-665):	plaintext[45] : Net has unplaced terms or is connected to uplaced instances in design. 
+Type 'man IMPOPT-665' for more detail.
+**WARN: (IMPOPT-665):	plaintext[44] : Net has unplaced terms or is connected to uplaced instances in design. 
+Type 'man IMPOPT-665' for more detail.
+**WARN: (EMS-27):	Message (IMPOPT-665) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+Setting timing_disable_library_data_to_data_checks to 'true'.
+Setting timing_disable_user_data_to_data_checks to 'true'.
+**optDesign ... cpu = 0:00:00, real = 0:00:00, mem = 585.0M, totSessionCpu=0:00:39 **
+*** optDesign utilize ART technology is enabled.
+setTrialRouteMode -honorActiveLogicView true
+Added -handlePreroute to trialRouteMode
+*** optDesign -preCTS ***
+DRC Margin: user margin 0.0; extra margin 0.2
+Setup Target Slack: user slack 0; extra slack 0.1
+Hold Target Slack: user slack 0
+No user sequential activity specified, applying default sequential activity of "0.2" for Dynamic Power reporting.
+'set_default_switching_activity' finished successfully.
+**WARN: (IMPOPT-3195):	Analysis mode has changed.
+Type 'man IMPOPT-3195' for more detail.
+
+Multi-VT timing optimization disabled based on library information.
+Start to check current routing status for nets...
+All nets are already routed correctly.
+End to check current routing status for nets (mem=855.0M)
+Extraction called for design 'PresentEnc' of instances=1432 and nets=1790 using extraction engine 'preRoute' .
+**WARN: (IMPEXT-3530):	The process node is not set. Use the command setDesignMode -process <process node> prior to extraction for maximum accuracy and optimal automatic threshold setting.
+Type 'man IMPEXT-3530' for more detail.
+PreRoute RC Extraction called for design PresentEnc.
+RC Extraction called in multi-corner(1) mode.
+**WARN: (IMPEXT-6197):	The Cap table file is not specified. This will result in lower parasitic accuracy when using preRoute extraction or postRoute extraction with effort level 'low'. It is recommended to generate the Cap table file using the 'generateCapTbl' command and specify it before extraction using 'create_rc_corner/update_rc_corner -cap_table'.
+Type 'man IMPEXT-6197' for more detail.
+RCMode: PreRoute
+      RC Corner Indexes            0   
+Capacitance Scaling Factor   : 1.00000 
+Resistance Scaling Factor    : 1.00000 
+Clock Cap. Scaling Factor    : 1.00000 
+Clock Res. Scaling Factor    : 1.00000 
+Shrink Factor                : 1.00000
+PreRoute extraction is honoring NDR/Shielding/ExtraSpace for clock nets.
+Updating RC grid for preRoute extraction ...
+Initializing multi-corner resistance tables ...
+PreRoute RC Extraction DONE (CPU Time: 0:00:00.0  Real Time: 0:00:00.0  MEM: 854.984M)
+
+#################################################################################
+# Design Stage: PostRoute
+# Design Name: PresentEnc
+# Design Mode: 90nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: No SPEF/RCDB
+# Signoff Settings: SI Off 
+#################################################################################
+AAE_INFO: 1 threads acquired from CTE.
+Calculate delays in Single mode...
+Start delay calculation (fullDC) (1 T). (MEM=862.719)
+Total number of fetched objects 1570
+End delay calculation. (MEM=954.629 CPU=0:00:00.6 REAL=0:00:01.0)
+End delay calculation (fullDC). (MEM=954.629 CPU=0:00:00.8 REAL=0:00:01.0)
+*** Done Building Timing Graph (cpu=0:00:00.9 real=0:00:01.0 totSessionCpu=0:00:40.4 mem=954.6M)
+
+------------------------------------------------------------
+     Initial Summary(with ART technology)                             
+------------------------------------------------------------
+
+Setup views included:
+ present_enc_av 
+
++--------------------+---------+
+|     Setup mode     |   all   |
++--------------------+---------+
+|           WNS (ns):| -5.012  |
+|           TNS (ns):|-710.156 |
+|    Violating Paths:|   151   |
+|          All Paths:|   302   |
++--------------------+---------+
+
++----------------+-------------------------------+------------------+
+|                |              Real             |       Total      |
+|    DRVs        +------------------+------------+------------------|
+|                |  Nr nets(terms)  | Worst Vio  |  Nr nets(terms)  |
++----------------+------------------+------------+------------------+
+|   max_cap      |      3 (3)       |   -0.549   |      3 (3)       |
+|   max_tran     |      0 (0)       |   0.000    |      0 (0)       |
+|   max_fanout   |      0 (0)       |     0      |      0 (0)       |
+|   max_length   |      0 (0)       |     0      |      0 (0)       |
++----------------+------------------+------------+------------------+
+
+Density: 86.189%
+------------------------------------------------------------
+**optDesign ... cpu = 0:00:01, real = 0:00:01, mem = 611.9M, totSessionCpu=0:00:40 **
+** INFO : this run is activating optVirtual flow
+**Info: (IMPSP-307): Design contains fractional 20 cells.
+**Info: (IMPSP-307): Design contains fractional 20 cells.
+*** Starting optimizing excluded clock nets MEM= 891.9M) ***
+*info: No excluded clock nets to be optimized.
+*** Finished optimizing excluded clock nets (CPU Time= 0:00:00.0  MEM= 891.9M) ***
+Begin: GigaOpt high fanout net optimization
+Info: 9 don't touch nets, 0 undriven net  excluded from IPO operation.
+Info: 1 clock net  excluded from IPO operation.
+**Info: (IMPSP-307): Design contains fractional 20 cells.
+
+Footprint cell infomation for calculating maxBufDist
+*info: There are 2 candidate Buffer cells
+*info: There are 4 candidate Inverter cells
+
+End: GigaOpt high fanout net optimization
+Begin: GigaOpt DRV Optimization
+Info: 9 don't touch nets, 0 undriven net  excluded from IPO operation.
+Info: 1 clock net  excluded from IPO operation.
+**Info: (IMPSP-307): Design contains fractional 20 cells.
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+|        max-tran       |        max-cap        |  max-fanout |  max-length |       setup       |        |        |        |       |          |         |
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+| nets | terms|  wViol  | nets | terms|  wViol  | nets | terms| nets | terms|   WNS   |   TNS   |  #Buf  |  #Inv  | #Resize|Density|   Real   |   Mem   |
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+|     0|     0|     0.00|     4|     4|    -0.60|     0|     0|     0|     0|    -5.01|  -710.15|       0|       0|       0|  86.19|          |         |
+Dumping Information for Job 0 **WARN: (IMPOPT-3161):	Cannot find node to be deleted.
+**WARN: (IMPOPT-3161):	Cannot find node to be deleted.
+**WARN: (IMPOPT-3161):	Cannot find node to be deleted.
+**WARN: (IMPOPT-3161):	Cannot find node to be deleted.
+**WARN: (IMPOPT-3161):	Cannot find node to be deleted.
+**WARN: (IMPOPT-3161):	Cannot find node to be deleted.
+**WARN: (IMPOPT-3161):	Cannot find node to be deleted.
+**WARN: (IMPOPT-3161):	Cannot find node to be deleted.
+ 
+Dumping Information for Job 1 **WARN: (IMPOPT-3161):	Cannot find node to be deleted.
+**WARN: (IMPOPT-3161):	Cannot find node to be deleted.
+ 
+Dumping Information for Job 2 **WARN: (IMPOPT-3161):	Cannot find node to be deleted.
+**WARN: (IMPOPT-3161):	Cannot find node to be deleted.
+**WARN: (IMPOPT-3161):	Cannot find node to be deleted.
+**WARN: (IMPOPT-3161):	Cannot find node to be deleted.
+**WARN: (IMPOPT-3161):	Cannot find node to be deleted.
+**WARN: (IMPOPT-3161):	Cannot find node to be deleted.
+**WARN: (IMPOPT-3161):	Cannot find node to be deleted.
+**WARN: (IMPOPT-3161):	Cannot find node to be deleted.
+**WARN: (IMPOPT-3161):	Cannot find node to be deleted.
+**WARN: (IMPOPT-3161):	Cannot find node to be deleted.
+ 
+Dumping Information for Job 3 **WARN: (EMS-27):	Message (IMPOPT-3161) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+ 
+|     0|     0|     0.00|     0|     0|     0.00|     0|     0|     0|     0|    -1.60|  -182.56|       3|       0|       0|  86.30| 0:00:00.0|  1117.5M|
+|     0|     0|     0.00|     0|     0|     0.00|     0|     0|     0|     0|    -1.60|  -182.56|       0|       0|       0|  86.30| 0:00:00.0|  1117.5M|
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+**** Begin NDR-Layer Usage Statistics ****
+0 Ndr or Layer constraints added by optimization 
+**** End NDR-Layer Usage Statistics ****
+
+*** Finish DRV Fixing (cpu=0:00:00.6 real=0:00:00.0 mem=1117.5M) ***
+
+End: GigaOpt DRV Optimization
+**optDesign ... cpu = 0:00:03, real = 0:00:02, mem = 703.1M, totSessionCpu=0:00:42 **
+Begin: GigaOpt Global Optimization
+*info: use new DP (enabled)
+Info: 9 don't touch nets, 0 undriven net  excluded from IPO operation.
+Info: 1 clock net  excluded from IPO operation.
+**Info: (IMPSP-307): Design contains fractional 20 cells.
+*info: 9 don't touch nets excluded
+*info: 1 clock net excluded
+*info: 211 no-driver nets excluded.
+** GigaOpt Global Opt WNS Slack -1.601  TNS Slack -182.563 
++--------+--------+----------+------------+--------+--------------+---------+-------------------------+
+|  WNS   |  TNS   | Density  |    Real    |  Mem   |  Worst View  |Pathgroup|        End Point        |
++--------+--------+----------+------------+--------+--------------+---------+-------------------------+
+|  -1.601|-182.563|    86.30%|   0:00:00.0| 1127.9M|present_enc_av|  default| regText/reg_reg[24]/D   |
+Dumping Information for Job 331 **WARN: (IMPOPT-664):	Net start cannot be routed. The reason could be any one of the following: one of its terms is unplaced, the net is connected to at least one unplaced instance or the net is constrained to be routed on a layer which has no vias.  Please check this net & retry.
+ 
+|  -0.139|  -0.258|    88.26%|   0:00:01.0| 1137.4M|present_enc_av|  default| regText/reg_reg[62]/D   |
+|  -0.101|  -0.176|    88.29%|   0:00:00.0| 1137.4M|present_enc_av|  default| regText/reg_reg[62]/D   |
+|  -0.082|  -0.156|    88.39%|   0:00:00.0| 1137.4M|present_enc_av|  default| regText/reg_reg[62]/D   |
+|  -0.082|  -0.156|    88.39%|   0:00:00.0| 1137.4M|present_enc_av|  default| regText/reg_reg[62]/D   |
+|  -0.082|  -0.156|    88.39%|   0:00:00.0| 1137.4M|present_enc_av|  default| regText/reg_reg[62]/D   |
+|  -0.082|  -0.156|    88.39%|   0:00:00.0| 1137.4M|present_enc_av|  default| regText/reg_reg[62]/D   |
++--------+--------+----------+------------+--------+--------------+---------+-------------------------+
+
+*** Finish pre-CTS Global Setup Fixing (cpu=0:00:00.7 real=0:00:01.0 mem=1137.4M) ***
+
+*** Finish pre-CTS Setup Fixing (cpu=0:00:00.7 real=0:00:01.0 mem=1137.4M) ***
+**** Begin NDR-Layer Usage Statistics ****
+0 Ndr or Layer constraints added by optimization 
+**** End NDR-Layer Usage Statistics ****
+** GigaOpt Global Opt End WNS Slack -0.082  TNS Slack -0.157 
+End: GigaOpt Global Optimization
+**WARN: (IMPOPT-3195):	Analysis mode has changed.
+Type 'man IMPOPT-3195' for more detail.
+*** Finished optDesign ***
+29 instances only resized, 61 buffers added on 14 nets (with 2 drivers resized)
+
+
+**WARN: (IMPTCM-70):	Option "-effort low" for command setOptMode is obsolete and has been replaced by "setDesignMode -flowEffort express". The obsolete option still works in this release but to avoid this warning and to ensure compatibility with future releases, update your script to use "setDesignMode -flowEffort express".
+*** Finished with optVirtual (cpu=0:00:04, real=0:00:04, mem=902.35M).
+Deriving budgets for Setup view present_enc_av
+Phase 1 timing budget data preparation (Setup)
+Ptn Name AsyncMux_width64
+Ptn Name AsyncMux_width80
+Ptn Name Reg_width80
+Ptn Name Reg_width64
+*** Completed the optVirtual stage - (cpu=0:00:00.0, real=0:00:00.0 mem=902.3M) ***
+Phase 2 timing budget data preparation (setup) (mem=902.348M)
+Budgeter Threads available : 1
+Phase 3 timing budget data preparation (setup) (mem=902.348M)
+Processing clock for object Reg_width64 (mem=902.348M).....
+Processing inputs(SDC) for object Reg_width64 (mem=902.348M)...
+Processing outputs(SDC) for object Reg_width64 (mem=902.348M)...
+Processing inputs(lib) for object Reg_width64 (mem=902.348M)...
+Processing outputs(lib) for object Reg_width64 (mem=902.348M)...
+***Completed processing of object Reg_width64 (cpu=0:00:00.0 mem=902.3M)***
+Processing clock for object Reg_width80 (mem=902.348M).....
+Processing inputs(SDC) for object Reg_width80 (mem=902.348M)...
+Processing outputs(SDC) for object Reg_width80 (mem=902.348M)...
+Processing inputs(lib) for object Reg_width80 (mem=902.348M)...
+Processing outputs(lib) for object Reg_width80 (mem=902.348M)...
+***Completed processing of object Reg_width80 (cpu=0:00:00.0 mem=902.3M)***
+Processing clock for object AsyncMux_width80 (mem=902.348M).....
+Processing inputs(SDC) for object AsyncMux_width80 (mem=902.348M)...
+Processing outputs(SDC) for object AsyncMux_width80 (mem=902.348M)...
+Processing inputs(lib) for object AsyncMux_width80 (mem=902.348M)...
+Processing outputs(lib) for object AsyncMux_width80 (mem=902.348M)...
+***Completed processing of object AsyncMux_width80 (cpu=0:00:00.0 mem=902.3M)***
+Processing clock for object AsyncMux_width64 (mem=902.348M).....
+Processing inputs(SDC) for object AsyncMux_width64 (mem=902.348M)...
+Processing outputs(SDC) for object AsyncMux_width64 (mem=902.348M)...
+Processing inputs(lib) for object AsyncMux_width64 (mem=902.348M)...
+Processing outputs(lib) for object AsyncMux_width64 (mem=902.348M)...
+***Completed processing of object AsyncMux_width64 (cpu=0:00:00.0 mem=902.3M)***
+*** Derive timing shell (cpu=0:00:00.2 mem=902.3M) ***
+*** Justify budget for the object Reg_width64 ***
+*** End justify budget for the object Reg_width64 (cpu=0:00:00.2 mem=904.4M) ***
+*** Justify budget for the object Reg_width80 ***
+*** End justify budget for the object Reg_width80 (cpu=0:00:00.3 mem=904.4M) ***
+*** Justify budget for the object AsyncMux_width80 ***
+*** End justify budget for the object AsyncMux_width80 (cpu=0:00:00.2 mem=904.4M) ***
+*** Justify budget for the object AsyncMux_width64 ***
+*** End justify budget for the object AsyncMux_width64 (cpu=0:00:00.2 mem=904.4M) ***
+Save timing shell in file /tmp/innovus_temp_79792_ece-linlabsrv01.ece.gatech.edu_mwhite93_y4oA4K/.tbTempPushDownCstr_giTfjv
+#################################################################################
+# Design Stage: PostRoute
+# Design Name: PresentEnc
+# Design Mode: 90nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: No SPEF/RCDB
+# Signoff Settings: SI Off 
+#################################################################################
+AAE_INFO: 1 threads acquired from CTE.
+Calculate delays in Single mode...
+Start delay calculation (fullDC) (1 T). (MEM=888.215)
+**WARN: (IMPESI-3014):	The RC network is incomplete for net clk. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[63]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[60]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[59]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[58]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[56]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[55]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[54]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[52]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[51]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[50]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[49]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[48]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[47]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[46]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[44]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[43]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[42]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[40]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[39]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[37]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[36]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[35]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[34]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[33]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[32]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[31]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[28]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[27]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[26]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[25]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[24]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[23]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[22]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[20]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[19]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[18]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[17]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[16]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[15]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[14]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[13]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[12]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[11]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[8]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[7]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[6]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[5]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[4]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[3]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[2]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[0]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+Total number of fetched objects 1570
+End delay calculation. (MEM=971.121 CPU=0:00:00.6 REAL=0:00:01.0)
+End delay calculation (fullDC). (MEM=971.121 CPU=0:00:00.8 REAL=0:00:01.0)
+
+Footprint cell infomation for RecomputeHighFanoutDelayEstimateForHold
+
+*** Done with optVirtual - (cpu=0:00:00.4, real=0:00:00.0 mem=1128.9M) ***
+Deriving budgets for Hold view present_enc_av
+Phase 1 timing budget data preparation (Hold)
+Ptn Name AsyncMux_width64
+Ptn Name AsyncMux_width80
+Ptn Name Reg_width80
+Ptn Name Reg_width64
+*** Completed the optVirtual stage - (cpu=0:00:00.0, real=0:00:00.0 mem=1128.9M) ***
+Phase 2 timing budget data preparation (hold) (mem=1128.934M)
+Phase 3 timing budget data preparation (hold) (mem=1128.934M)
+Processing clock for object Reg_width64 (mem=1128.934M).....
+Processing inputs(SDC) for object Reg_width64 (mem=1128.934M)...
+Processing outputs(SDC) for object Reg_width64 (mem=1128.934M)...
+Processing inputs(lib) for object Reg_width64 (mem=1128.934M)...
+Processing outputs(lib) for object Reg_width64 (mem=1128.934M)...
+***Completed processing of object Reg_width64 (cpu=0:00:00.0 mem=1128.9M)***
+Processing clock for object Reg_width80 (mem=1128.934M).....
+Processing inputs(SDC) for object Reg_width80 (mem=1128.934M)...
+Processing outputs(SDC) for object Reg_width80 (mem=1128.934M)...
+Processing inputs(lib) for object Reg_width80 (mem=1128.934M)...
+Processing outputs(lib) for object Reg_width80 (mem=1128.934M)...
+***Completed processing of object Reg_width80 (cpu=0:00:00.0 mem=1128.9M)***
+Processing clock for object AsyncMux_width80 (mem=1128.934M).....
+Processing inputs(SDC) for object AsyncMux_width80 (mem=1128.934M)...
+Processing outputs(SDC) for object AsyncMux_width80 (mem=1128.934M)...
+Processing inputs(lib) for object AsyncMux_width80 (mem=1128.934M)...
+Processing outputs(lib) for object AsyncMux_width80 (mem=1128.934M)...
+***Completed processing of object AsyncMux_width80 (cpu=0:00:00.0 mem=1128.9M)***
+Processing clock for object AsyncMux_width64 (mem=1128.934M).....
+Processing inputs(SDC) for object AsyncMux_width64 (mem=1128.934M)...
+Processing outputs(SDC) for object AsyncMux_width64 (mem=1128.934M)...
+Processing inputs(lib) for object AsyncMux_width64 (mem=1128.934M)...
+Processing outputs(lib) for object AsyncMux_width64 (mem=1128.934M)...
+***Completed processing of object AsyncMux_width64 (cpu=0:00:00.0 mem=1128.9M)***
+*** Derive timing shell (cpu=0:00:00.2 mem=1128.9M) ***
+*** Justify budget for the object Reg_width64 ***
+*** End justify budget for the object Reg_width64 (cpu=0:00:00.2 mem=1128.9M) ***
+*** Justify budget for the object Reg_width80 ***
+*** End justify budget for the object Reg_width80 (cpu=0:00:00.2 mem=1128.9M) ***
+*** Justify budget for the object AsyncMux_width80 ***
+*** End justify budget for the object AsyncMux_width80 (cpu=0:00:00.2 mem=1128.9M) ***
+*** Justify budget for the object AsyncMux_width64 ***
+*** End justify budget for the object AsyncMux_width64 (cpu=0:00:00.2 mem=1128.9M) ***
+Save timing shell in file /tmp/innovus_temp_79792_ece-linlabsrv01.ece.gatech.edu_mwhite93_y4oA4K/.tbTempPushDownCstr_WfYhtX
+*Info: Begin of clearActiveLogicView (mem=985.761719M)
+*** Clear Unused Logic Marking (cpu=0:00:00.0, mem=966.9M) ***
+Current (total cpu=0:00:47.3, real=0:01:11, peak res=724.4M, current mem=724.4M)
+Ending "clearActiveLogicView" (total cpu=0:00:00.3, real=0:00:00.0, peak res=724.4M, current mem=688.9M)
+
+::Rda_CDTV::setCDTVMode -noKeepInstInSdc
+
+
+::Rda_CDTV::setCDTVMode -noTraceConstantRoot
+
+
+::Rda_CDTV::setCDTVMode -noReduceUnusedConstant
+
+
+::Rda_CDTV::setCDTVMode -reduceFalsePath
+
+#% End deriveTimingBudget (date=04/23 16:06:52, total cpu=0:00:08.5, real=0:00:09.0, peak res=724.4M, current mem=688.9M)
+<CMD> saveTimingBudget
+#% Begin saveTimingBudget (date=04/23 16:06:52, mem=688.9M)
+**WARN: (IMPTB-514):	.libs of partition blocks generated at this stage might have inaccurate power information. To get accurate power information for partition block .libs, commit the partition using "partition" command and save partition data using "savePartition" command.
+Save timing shell in file AsyncMux_width64/AsyncMux_width64_present_enc_av.constr.pt
+Save input loading of partitioned cells in the file AsyncMux_width64/AsyncMux_width64_present_enc_av_max.lib
+Save input loading of partitioned cells in the file AsyncMux_width64/AsyncMux_width64_present_enc_av_min.lib
+Save timing shell in file AsyncMux_width80/AsyncMux_width80_present_enc_av.constr.pt
+Save input loading of partitioned cells in the file AsyncMux_width80/AsyncMux_width80_present_enc_av_max.lib
+Save input loading of partitioned cells in the file AsyncMux_width80/AsyncMux_width80_present_enc_av_min.lib
+Save timing shell in file Reg_width80/Reg_width80_present_enc_av.constr.pt
+Save input loading of partitioned cells in the file Reg_width80/Reg_width80_present_enc_av_max.lib
+Save input loading of partitioned cells in the file Reg_width80/Reg_width80_present_enc_av_min.lib
+Save timing shell in file Reg_width64/Reg_width64_present_enc_av.constr.pt
+Save input loading of partitioned cells in the file Reg_width64/Reg_width64_present_enc_av_max.lib
+Save input loading of partitioned cells in the file Reg_width64/Reg_width64_present_enc_av_min.lib
+#% End saveTimingBudget (date=04/23 16:06:52, total cpu=0:00:00.1, real=0:00:00.0, peak res=689.2M, current mem=689.2M)
+<CMD> buildTimingGraph
+<CMD> report_timing > timing_report.txt
+#################################################################################
+# Design Stage: PostRoute
+# Design Name: PresentEnc
+# Design Mode: 90nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: No SPEF/RCDB
+# Signoff Settings: SI Off 
+#################################################################################
+Extraction called for design 'PresentEnc' of instances=1432 and nets=1792 using extraction engine 'preRoute' .
+**WARN: (IMPEXT-3530):	The process node is not set. Use the command setDesignMode -process <process node> prior to extraction for maximum accuracy and optimal automatic threshold setting.
+Type 'man IMPEXT-3530' for more detail.
+PreRoute RC Extraction called for design PresentEnc.
+RC Extraction called in multi-corner(1) mode.
+**WARN: (IMPEXT-6197):	The Cap table file is not specified. This will result in lower parasitic accuracy when using preRoute extraction or postRoute extraction with effort level 'low'. It is recommended to generate the Cap table file using the 'generateCapTbl' command and specify it before extraction using 'create_rc_corner/update_rc_corner -cap_table'.
+Type 'man IMPEXT-6197' for more detail.
+RCMode: PreRoute
+      RC Corner Indexes            0   
+Capacitance Scaling Factor   : 1.00000 
+Resistance Scaling Factor    : 1.00000 
+Clock Cap. Scaling Factor    : 1.00000 
+Clock Res. Scaling Factor    : 1.00000 
+Shrink Factor                : 1.00000
+PreRoute extraction is honoring NDR/Shielding/ExtraSpace for clock nets.
+Updating RC grid for preRoute extraction ...
+Initializing multi-corner resistance tables ...
+PreRoute RC Extraction DONE (CPU Time: 0:00:00.0  Real Time: 0:00:00.0  MEM: 957.863M)
+AAE_INFO: 1 threads acquired from CTE.
+Calculate delays in Single mode...
+Start delay calculation (fullDC) (1 T). (MEM=968.66)
+**WARN: (IMPESI-3014):	The RC network is incomplete for net clk. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[63]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[60]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[59]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[58]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[56]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[55]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[54]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[52]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[51]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[50]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[49]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[48]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[47]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[46]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[44]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[43]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[42]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[40]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[39]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[37]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[36]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[35]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[34]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[33]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[32]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[31]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[28]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[27]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[26]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[25]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[24]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[23]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[22]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[20]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[19]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[18]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[17]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[16]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[15]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[14]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[13]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[12]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[11]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[8]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[7]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[6]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[5]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[4]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[3]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[2]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+**WARN: (IMPESI-3014):	The RC network is incomplete for net ciphertext[0]. As a result, a lumped model will be used during delay calculation which may compromise timing accuracy. To resolve this, check parasitics for completeness, re-extraction may be required.
+Total number of fetched objects 1579
+End delay calculation. (MEM=1051.57 CPU=0:00:00.6 REAL=0:00:01.0)
+End delay calculation (fullDC). (MEM=1051.57 CPU=0:00:00.7 REAL=0:00:01.0)
+<CMD> setAnalysisMode -analysisType onChipVariation
+<CMD> timeDesign -postRoute
+Switching SI Aware to true by default in postroute mode   
+**WARN: (IMPEXT-3493):	The design extraction status has been reset by set_analysis_view/update_rc_corner or setExtractRCMode  command. The parasitic data can be regenerated either by extracting the design using the extractRC command or by loading the SPEF or RCDB file(s). To prevent resetting of the extraction status, avoid changing extraction modes.
+Type 'man IMPEXT-3493' for more detail.
+ Reset EOS DB
+Ignoring AAE DB Resetting ...
+Extraction called for design 'PresentEnc' of instances=1432 and nets=1792 using extraction engine 'postRoute' at effort level 'low' .
+**WARN: (IMPEXT-3530):	The process node is not set. Use the command setDesignMode -process <process node> prior to extraction for maximum accuracy and optimal automatic threshold setting.
+Type 'man IMPEXT-3530' for more detail.
+PostRoute (effortLevel low) RC Extraction called for design PresentEnc.
+RC Extraction called in multi-corner(1) mode.
+**WARN: (IMPEXT-6197):	The Cap table file is not specified. This will result in lower parasitic accuracy when using preRoute extraction or postRoute extraction with effort level 'low'. It is recommended to generate the Cap table file using the 'generateCapTbl' command and specify it before extraction using 'create_rc_corner/update_rc_corner -cap_table'.
+Type 'man IMPEXT-6197' for more detail.
+**WARN: (IMPEXT-3032):	Because the cap table file was not provided, it will be created internally with the following process info:
+* Layer Id             : 1 - M1
+      Thickness        : 0.6
+      Min Width        : 0.065
+      Layer Dielectric : 4.1
+* Layer Id             : 2 - M2
+      Thickness        : 0.6
+      Min Width        : 0.07
+      Layer Dielectric : 4.1
+* Layer Id             : 3 - M3
+      Thickness        : 0.6
+      Min Width        : 0.07
+      Layer Dielectric : 4.1
+* Layer Id             : 4 - M4
+      Thickness        : 0.6
+      Min Width        : 0.14
+      Layer Dielectric : 4.1
+* Layer Id             : 5 - M5
+      Thickness        : 0.6
+      Min Width        : 0.14
+      Layer Dielectric : 4.1
+* Layer Id             : 6 - M6
+      Thickness        : 0.6
+      Min Width        : 0.14
+      Layer Dielectric : 4.1
+* Layer Id             : 7 - M7
+      Thickness        : 0.6
+      Min Width        : 0.4
+      Layer Dielectric : 4.1
+* Layer Id             : 8 - M8
+      Thickness        : 0.6
+      Min Width        : 0.4
+      Layer Dielectric : 4.1
+* Layer Id             : 9 - M9
+      Thickness        : 0.6
+      Min Width        : 0.8
+      Layer Dielectric : 4.1
+* Layer Id             : 10 - M10
+      Thickness        : 1
+      Min Width        : 0.8
+      Layer Dielectric : 4.1
+extractDetailRC Option : -outfile /tmp/innovus_temp_79792_ece-linlabsrv01.ece.gatech.edu_mwhite93_y4oA4K/PresentEnc_79792_s6FDGx.rcdb.d  -basic
+RC Mode: PostRoute -effortLevel low [Basic CapTable, LEF Resistances]
+      RC Corner Indexes            0   
+Capacitance Scaling Factor   : 1.00000 
+Coupling Cap. Scaling Factor : 1.00000 
+Resistance Scaling Factor    : 1.00000 
+Clock Cap. Scaling Factor    : 1.00000 
+Clock Res. Scaling Factor    : 1.00000 
+Shrink Factor                : 1.00000
+Initializing multi-corner resistance tables ...
+Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 1037.4M)
+Extracted 10.0061% (CPU Time= 0:00:00.0  MEM= 1085.5M)
+Extracted 20.0067% (CPU Time= 0:00:00.0  MEM= 1085.5M)
+Extracted 30.0072% (CPU Time= 0:00:00.0  MEM= 1085.5M)
+Extracted 40.0078% (CPU Time= 0:00:00.0  MEM= 1085.5M)
+Extracted 50.0083% (CPU Time= 0:00:00.1  MEM= 1085.5M)
+Extracted 60.0089% (CPU Time= 0:00:00.1  MEM= 1085.5M)
+Extracted 70.0094% (CPU Time= 0:00:00.1  MEM= 1085.5M)
+Extracted 80.01% (CPU Time= 0:00:00.1  MEM= 1085.5M)
+Extracted 90.0106% (CPU Time= 0:00:00.1  MEM= 1085.5M)
+Extracted 100% (CPU Time= 0:00:00.1  MEM= 1085.5M)
+Number of Extracted Resistors     : 27453
+Number of Extracted Ground Cap.   : 28452
+Number of Extracted Coupling Cap. : 55204
+Filtering XCap in 'relativeOnly' mode using values relative_c_threshold=0.03 and total_c_threshold=5fF.
+Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 1037.4M)
+PostRoute (effortLevel low) RC Extraction DONE (CPU Time: 0:00:00.2  Real Time: 0:00:00.0  MEM: 1037.438M)
+Starting SI iteration 1 using Infinite Timing Windows
+#################################################################################
+# Design Stage: PostRoute
+# Design Name: PresentEnc
+# Design Mode: 90nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: SPEF/RCDB
+# Signoff Settings: SI On 
+#################################################################################
+AAE_INFO: 1 threads acquired from CTE.
+Calculate early delays in OCV mode...
+Calculate late delays in OCV mode...
+Start delay calculation (fullDC) (1 T). (MEM=1035.44)
+Initializing multi-corner resistance tables ...
+AAE_INFO: 1 threads acquired from CTE.
+Total number of fetched objects 1579
+AAE_INFO-618: Total number of nets in the design is 1792,  88.3 percent of the nets selected for SI analysis
+End delay calculation. (MEM=1051.58 CPU=0:00:05.3 REAL=0:00:05.0)
+End delay calculation (fullDC). (MEM=1051.58 CPU=0:00:05.5 REAL=0:00:06.0)
+Loading CTE timing window with TwFlowType 0...(CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1051.6M)
+Add other clocks and setupCteToAAEClockMapping during iter 1
+Loading CTE timing window is completed (CPU = 0:00:00.0, REAL = 0:00:00.0, MEM = 1051.6M)
+Starting SI iteration 2
+AAE_INFO: 1 threads acquired from CTE.
+Calculate early delays in OCV mode...
+Calculate late delays in OCV mode...
+Start delay calculation (fullDC) (1 T). (MEM=1059.63)
+Glitch Analysis: View present_enc_av -- Total Number of Nets Skipped = 1. 
+Glitch Analysis: View present_enc_av -- Total Number of Nets Analyzed = 1579. 
+Total number of fetched objects 1579
+AAE_INFO-618: Total number of nets in the design is 1792,  13.8 percent of the nets selected for SI analysis
+End delay calculation. (MEM=1065.78 CPU=0:00:05.2 REAL=0:00:05.0)
+End delay calculation (fullDC). (MEM=1065.78 CPU=0:00:05.3 REAL=0:00:05.0)
+
+
+------------------------------------------------------------
+          timeDesign Summary                             
+------------------------------------------------------------
+
+Setup views included:
+ present_enc_av 
+
++--------------------+---------+---------+---------+
+|     Setup mode     |   all   | reg2reg | default |
++--------------------+---------+---------+---------+
+|           WNS (ns):| -5.442  | -5.442  | -3.154  |
+|           TNS (ns):|-710.765 |-710.765 |-371.632 |
+|    Violating Paths:|   151   |   151   |   144   |
+|          All Paths:|   302   |   151   |   297   |
++--------------------+---------+---------+---------+
+
++----------------+-------------------------------+------------------+
+|                |              Real             |       Total      |
+|    DRVs        +------------------+------------+------------------|
+|                |  Nr nets(terms)  | Worst Vio  |  Nr nets(terms)  |
++----------------+------------------+------------+------------------+
+|   max_cap      |      2 (2)       |   -0.524   |      2 (2)       |
+|   max_tran     |      0 (0)       |   0.000    |      0 (0)       |
+|   max_fanout   |      0 (0)       |     0      |      0 (0)       |
+|   max_length   |      0 (0)       |     0      |      0 (0)       |
++----------------+------------------+------------+------------------+
+
+Density: 86.189%
+Total number of glitch violations: 0
+------------------------------------------------------------
+Reported timing to dir ./timingReports
+Total CPU time: 11.81 sec
+Total Real time: 12.0 sec
+Total Memory Usage: 968.359375 Mbytes
+Reset AAE Options
+<CMD> get_metric timing.setup.TNS.all
+	-710.765 ns 	timing.setup.TNS.all
+<CMD> modifyBudget -file modify.tcl -inst regText -view present_enc_av
+Innovus terminated by external (TERM) signal.
+Innovus terminated by external (TERM) signal.
+
+*** Memory Usage v#1 (Current mem = 415.770M, initial mem = 179.902M) ***
+*** Message Summary: 0 warning(s), 0 error(s)
+
+--- Ending "Innovus" (totcpu=0:00:00.1, real=0:06:10, mem=415.8M) ---
+
+*** Memory Usage v#1 (Current mem = 1400.605M, initial mem = 179.902M) ***
+*** Message Summary: 1359 warning(s), 1 error(s)
+
+--- Ending "Innovus" (totcpu=0:06:00, real=0:06:38, mem=1400.6M) ---

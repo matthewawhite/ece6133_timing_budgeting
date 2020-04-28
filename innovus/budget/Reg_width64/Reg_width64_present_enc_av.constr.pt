@@ -1,0 +1,2154 @@
+#/**************************************************
+# * Timing constraint file for partition Reg_width64         
+# * Without clock latency adjustments             
+# **************************************************/
+set {clk_period} 1.000
+create_clock -name {clk} -period ${clk_period} -waveform { 0.000 0.500 } [list  \
+  [get_ports {clk}]]
+create_clock -name {clk_v0} -period ${clk_period} -waveform { 0.000 0.500 }
+create_clock -name {clk_v0_setuphold} -period ${clk_period} -waveform { 0.000 0.500 }
+create_clock -name {clk_v1} -period ${clk_period} -waveform { 0.000 0.500 }
+create_clock -name {clk_v1_setuphold} -period ${clk_period} -waveform { 0.000 0.500 }
+set_input_delay [expr 5.968 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[63]}] -add_delay 
+set_input_delay [expr 5.971 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[63]}] -add_delay 
+set_input_delay [expr 0.980 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[63]}] -add_delay 
+set_input_delay [expr 0.988 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[63]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[62]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[62]}] -add_delay 
+set_input_delay [expr 0.976 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[62]}] -add_delay 
+set_input_delay [expr 0.984 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[62]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[61]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[61]}] -add_delay 
+set_input_delay [expr 0.977 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[61]}] -add_delay 
+set_input_delay [expr 0.987 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[61]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[60]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[60]}] -add_delay 
+set_input_delay [expr 0.976 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[60]}] -add_delay 
+set_input_delay [expr 0.984 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[60]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[59]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[59]}] -add_delay 
+set_input_delay [expr 0.976 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[59]}] -add_delay 
+set_input_delay [expr 0.984 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[59]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[58]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[58]}] -add_delay 
+set_input_delay [expr 0.976 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[58]}] -add_delay 
+set_input_delay [expr 0.984 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[58]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[57]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[57]}] -add_delay 
+set_input_delay [expr 0.977 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[57]}] -add_delay 
+set_input_delay [expr 0.986 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[57]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[56]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[56]}] -add_delay 
+set_input_delay [expr 0.976 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[56]}] -add_delay 
+set_input_delay [expr 0.984 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[56]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[55]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[55]}] -add_delay 
+set_input_delay [expr 0.977 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[55]}] -add_delay 
+set_input_delay [expr 0.986 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[55]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[54]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[54]}] -add_delay 
+set_input_delay [expr 0.977 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[54]}] -add_delay 
+set_input_delay [expr 0.986 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[54]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[53]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[53]}] -add_delay 
+set_input_delay [expr 0.976 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[53]}] -add_delay 
+set_input_delay [expr 0.985 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[53]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[52]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[52]}] -add_delay 
+set_input_delay [expr 0.975 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[52]}] -add_delay 
+set_input_delay [expr 0.984 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[52]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[51]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[51]}] -add_delay 
+set_input_delay [expr 0.977 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[51]}] -add_delay 
+set_input_delay [expr 0.987 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[51]}] -add_delay 
+set_input_delay [expr 5.968 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[50]}] -add_delay 
+set_input_delay [expr 5.971 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[50]}] -add_delay 
+set_input_delay [expr 0.980 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[50]}] -add_delay 
+set_input_delay [expr 0.988 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[50]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[49]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[49]}] -add_delay 
+set_input_delay [expr 0.977 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[49]}] -add_delay 
+set_input_delay [expr 0.986 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[49]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[48]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[48]}] -add_delay 
+set_input_delay [expr 0.977 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[48]}] -add_delay 
+set_input_delay [expr 0.987 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[48]}] -add_delay 
+set_input_delay [expr 5.968 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[47]}] -add_delay 
+set_input_delay [expr 5.971 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[47]}] -add_delay 
+set_input_delay [expr 0.981 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[47]}] -add_delay 
+set_input_delay [expr 0.989 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[47]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[46]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[46]}] -add_delay 
+set_input_delay [expr 0.976 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[46]}] -add_delay 
+set_input_delay [expr 0.985 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[46]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[45]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[45]}] -add_delay 
+set_input_delay [expr 0.977 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[45]}] -add_delay 
+set_input_delay [expr 0.986 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[45]}] -add_delay 
+set_input_delay [expr 5.968 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[44]}] -add_delay 
+set_input_delay [expr 5.971 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[44]}] -add_delay 
+set_input_delay [expr 0.981 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[44]}] -add_delay 
+set_input_delay [expr 0.990 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[44]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[43]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[43]}] -add_delay 
+set_input_delay [expr 0.977 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[43]}] -add_delay 
+set_input_delay [expr 0.985 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[43]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[42]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[42]}] -add_delay 
+set_input_delay [expr 0.976 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[42]}] -add_delay 
+set_input_delay [expr 0.985 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[42]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[41]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[41]}] -add_delay 
+set_input_delay [expr 0.975 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[41]}] -add_delay 
+set_input_delay [expr 0.984 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[41]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[40]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[40]}] -add_delay 
+set_input_delay [expr 0.976 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[40]}] -add_delay 
+set_input_delay [expr 0.984 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[40]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[39]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[39]}] -add_delay 
+set_input_delay [expr 0.977 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[39]}] -add_delay 
+set_input_delay [expr 0.986 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[39]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[38]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[38]}] -add_delay 
+set_input_delay [expr 0.977 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[38]}] -add_delay 
+set_input_delay [expr 0.987 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[38]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[37]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[37]}] -add_delay 
+set_input_delay [expr 0.976 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[37]}] -add_delay 
+set_input_delay [expr 0.985 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[37]}] -add_delay 
+set_input_delay [expr 5.968 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[36]}] -add_delay 
+set_input_delay [expr 5.971 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[36]}] -add_delay 
+set_input_delay [expr 0.981 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[36]}] -add_delay 
+set_input_delay [expr 0.990 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[36]}] -add_delay 
+set_input_delay [expr 5.965 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[35]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[35]}] -add_delay 
+set_input_delay [expr 0.977 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[35]}] -add_delay 
+set_input_delay [expr 0.985 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[35]}] -add_delay 
+set_input_delay [expr 5.968 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[34]}] -add_delay 
+set_input_delay [expr 5.971 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[34]}] -add_delay 
+set_input_delay [expr 0.980 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[34]}] -add_delay 
+set_input_delay [expr 0.989 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[34]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[33]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[33]}] -add_delay 
+set_input_delay [expr 0.975 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[33]}] -add_delay 
+set_input_delay [expr 0.983 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[33]}] -add_delay 
+set_input_delay [expr 5.968 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[32]}] -add_delay 
+set_input_delay [expr 5.971 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[32]}] -add_delay 
+set_input_delay [expr 0.980 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[32]}] -add_delay 
+set_input_delay [expr 0.989 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[32]}] -add_delay 
+set_input_delay [expr 5.966 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[31]}] -add_delay 
+set_input_delay [expr 5.970 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[31]}] -add_delay 
+set_input_delay [expr 0.979 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[31]}] -add_delay 
+set_input_delay [expr 0.987 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[31]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[30]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[30]}] -add_delay 
+set_input_delay [expr 0.976 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[30]}] -add_delay 
+set_input_delay [expr 0.985 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[30]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[29]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[29]}] -add_delay 
+set_input_delay [expr 0.977 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[29]}] -add_delay 
+set_input_delay [expr 0.987 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[29]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[28]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[28]}] -add_delay 
+set_input_delay [expr 0.977 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[28]}] -add_delay 
+set_input_delay [expr 0.986 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[28]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[27]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[27]}] -add_delay 
+set_input_delay [expr 0.977 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[27]}] -add_delay 
+set_input_delay [expr 0.986 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[27]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[26]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[26]}] -add_delay 
+set_input_delay [expr 0.977 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[26]}] -add_delay 
+set_input_delay [expr 0.987 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[26]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[25]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[25]}] -add_delay 
+set_input_delay [expr 0.976 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[25]}] -add_delay 
+set_input_delay [expr 0.985 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[25]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[24]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[24]}] -add_delay 
+set_input_delay [expr 0.976 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[24]}] -add_delay 
+set_input_delay [expr 0.985 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[24]}] -add_delay 
+set_input_delay [expr 5.968 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[23]}] -add_delay 
+set_input_delay [expr 5.971 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[23]}] -add_delay 
+set_input_delay [expr 0.980 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[23]}] -add_delay 
+set_input_delay [expr 0.987 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[23]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[22]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[22]}] -add_delay 
+set_input_delay [expr 0.977 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[22]}] -add_delay 
+set_input_delay [expr 0.987 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[22]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[21]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[21]}] -add_delay 
+set_input_delay [expr 0.976 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[21]}] -add_delay 
+set_input_delay [expr 0.985 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[21]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[20]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[20]}] -add_delay 
+set_input_delay [expr 0.975 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[20]}] -add_delay 
+set_input_delay [expr 0.983 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[20]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[19]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[19]}] -add_delay 
+set_input_delay [expr 0.976 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[19]}] -add_delay 
+set_input_delay [expr 0.986 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[19]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[18]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[18]}] -add_delay 
+set_input_delay [expr 0.976 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[18]}] -add_delay 
+set_input_delay [expr 0.985 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[18]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[17]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[17]}] -add_delay 
+set_input_delay [expr 0.975 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[17]}] -add_delay 
+set_input_delay [expr 0.983 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[17]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[16]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[16]}] -add_delay 
+set_input_delay [expr 0.975 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[16]}] -add_delay 
+set_input_delay [expr 0.983 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[16]}] -add_delay 
+set_input_delay [expr 5.968 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[15]}] -add_delay 
+set_input_delay [expr 5.971 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[15]}] -add_delay 
+set_input_delay [expr 0.981 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[15]}] -add_delay 
+set_input_delay [expr 0.989 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[15]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[14]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[14]}] -add_delay 
+set_input_delay [expr 0.977 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[14]}] -add_delay 
+set_input_delay [expr 0.987 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[14]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[13]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[13]}] -add_delay 
+set_input_delay [expr 0.977 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[13]}] -add_delay 
+set_input_delay [expr 0.987 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[13]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[12]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[12]}] -add_delay 
+set_input_delay [expr 0.977 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[12]}] -add_delay 
+set_input_delay [expr 0.987 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[12]}] -add_delay 
+set_input_delay [expr 5.965 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[11]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[11]}] -add_delay 
+set_input_delay [expr 0.978 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[11]}] -add_delay 
+set_input_delay [expr 0.988 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[11]}] -add_delay 
+set_input_delay [expr 5.968 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[10]}] -add_delay 
+set_input_delay [expr 5.971 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[10]}] -add_delay 
+set_input_delay [expr 0.980 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[10]}] -add_delay 
+set_input_delay [expr 0.987 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[10]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[9]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[9]}] -add_delay 
+set_input_delay [expr 0.976 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[9]}] -add_delay 
+set_input_delay [expr 0.985 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[9]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[8]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[8]}] -add_delay 
+set_input_delay [expr 0.977 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[8]}] -add_delay 
+set_input_delay [expr 0.986 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[8]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[7]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[7]}] -add_delay 
+set_input_delay [expr 0.976 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[7]}] -add_delay 
+set_input_delay [expr 0.985 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[7]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[6]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[6]}] -add_delay 
+set_input_delay [expr 0.977 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[6]}] -add_delay 
+set_input_delay [expr 0.987 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[6]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[5]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[5]}] -add_delay 
+set_input_delay [expr 0.977 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[5]}] -add_delay 
+set_input_delay [expr 0.985 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[5]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[4]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[4]}] -add_delay 
+set_input_delay [expr 0.974 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[4]}] -add_delay 
+set_input_delay [expr 0.981 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[4]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[3]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[3]}] -add_delay 
+set_input_delay [expr 0.976 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[3]}] -add_delay 
+set_input_delay [expr 0.985 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[3]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[2]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[2]}] -add_delay 
+set_input_delay [expr 0.974 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[2]}] -add_delay 
+set_input_delay [expr 0.981 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[2]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[1]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[1]}] -add_delay 
+set_input_delay [expr 0.975 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[1]}] -add_delay 
+set_input_delay [expr 0.983 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[1]}] -add_delay 
+set_input_delay [expr 5.964 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {input[0]}] -add_delay 
+set_input_delay [expr 5.969 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {input[0]}] -add_delay 
+set_input_delay [expr 0.976 * ${clk_period}] -clock {clk_v1_setuphold} -max -rise \
+  [get_ports {input[0]}] -add_delay 
+set_input_delay [expr 0.985 * ${clk_period}] -clock {clk_v1_setuphold} -max -fall \
+  [get_ports {input[0]}] -add_delay 
+set_input_delay [expr 0.643 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {enable}] -add_delay 
+set_input_delay [expr 0.547 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {enable}] -add_delay 
+set_input_delay [expr 5.160 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {reset}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[63]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[63]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[62]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[62]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[61]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[61]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[60]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[60]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[59]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[59]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[58]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[58]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[57]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[57]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[56]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[56]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[55]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[55]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[54]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[54]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[53]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[53]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[52]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[52]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[51]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[51]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[50]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[50]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[49]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[49]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[48]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[48]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[47]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[47]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[46]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[46]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[45]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[45]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[44]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[44]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[43]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[43]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[42]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[42]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[41]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[41]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[40]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[40]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[39]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[39]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[38]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[38]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[37]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[37]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[36]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[36]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[35]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[35]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[34]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[34]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[33]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[33]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[32]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[32]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[31]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[31]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[30]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[30]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[29]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[29]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[28]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[28]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[27]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[27]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[26]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[26]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[25]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[25]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[24]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[24]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[23]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[23]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[22]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[22]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[21]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[21]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[20]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[20]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[19]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[19]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[18]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[18]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[17]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[17]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[16]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[16]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[15]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[15]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[14]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[14]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[13]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[13]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[12]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[12]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[11]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[11]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[10]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[10]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[9]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[9]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[8]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[8]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[7]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[7]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[6]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[6]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[5]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[5]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[4]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[4]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[3]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[3]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[2]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[2]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[1]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[1]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -rise \
+  [get_ports {output[0]}] -add_delay 
+set_output_delay [expr 5.000 * ${clk_period}] -clock {clk_v0_setuphold} -max -fall \
+  [get_ports {output[0]}] -add_delay 
+set_input_delay [expr 4.643 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[63]}] -add_delay 
+set_input_delay [expr 4.519 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[63]}] -add_delay 
+set_input_delay [expr 0.870 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[63]}] -add_delay 
+set_input_delay [expr 0.860 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[63]}] -add_delay 
+set_input_delay [expr 4.472 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[62]}] -add_delay 
+set_input_delay [expr 4.323 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[62]}] -add_delay 
+set_input_delay [expr 0.893 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[62]}] -add_delay 
+set_input_delay [expr 0.840 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[62]}] -add_delay 
+set_input_delay [expr 4.490 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[61]}] -add_delay 
+set_input_delay [expr 4.244 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[61]}] -add_delay 
+set_input_delay [expr 0.869 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[61]}] -add_delay 
+set_input_delay [expr 0.852 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[61]}] -add_delay 
+set_input_delay [expr 5.029 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[60]}] -add_delay 
+set_input_delay [expr 4.673 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[60]}] -add_delay 
+set_input_delay [expr 0.896 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[60]}] -add_delay 
+set_input_delay [expr 0.837 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[60]}] -add_delay 
+set_input_delay [expr 4.553 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[59]}] -add_delay 
+set_input_delay [expr 4.435 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[59]}] -add_delay 
+set_input_delay [expr 0.892 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[59]}] -add_delay 
+set_input_delay [expr 0.842 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[59]}] -add_delay 
+set_input_delay [expr 4.555 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[58]}] -add_delay 
+set_input_delay [expr 4.414 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[58]}] -add_delay 
+set_input_delay [expr 0.894 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[58]}] -add_delay 
+set_input_delay [expr 0.841 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[58]}] -add_delay 
+set_input_delay [expr 4.748 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[57]}] -add_delay 
+set_input_delay [expr 4.582 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[57]}] -add_delay 
+set_input_delay [expr 0.871 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[57]}] -add_delay 
+set_input_delay [expr 0.851 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[57]}] -add_delay 
+set_input_delay [expr 4.684 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[56]}] -add_delay 
+set_input_delay [expr 4.519 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[56]}] -add_delay 
+set_input_delay [expr 0.896 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[56]}] -add_delay 
+set_input_delay [expr 0.837 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[56]}] -add_delay 
+set_input_delay [expr 3.973 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[55]}] -add_delay 
+set_input_delay [expr 4.082 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[55]}] -add_delay 
+set_input_delay [expr 0.865 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[55]}] -add_delay 
+set_input_delay [expr 0.858 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[55]}] -add_delay 
+set_input_delay [expr 4.651 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[54]}] -add_delay 
+set_input_delay [expr 4.639 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[54]}] -add_delay 
+set_input_delay [expr 0.867 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[54]}] -add_delay 
+set_input_delay [expr 0.855 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[54]}] -add_delay 
+set_input_delay [expr 5.028 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[53]}] -add_delay 
+set_input_delay [expr 4.700 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[53]}] -add_delay 
+set_input_delay [expr 0.896 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[53]}] -add_delay 
+set_input_delay [expr 0.838 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[53]}] -add_delay 
+set_input_delay [expr 5.205 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[52]}] -add_delay 
+set_input_delay [expr 4.998 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[52]}] -add_delay 
+set_input_delay [expr 0.890 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[52]}] -add_delay 
+set_input_delay [expr 0.835 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[52]}] -add_delay 
+set_input_delay [expr 4.118 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[51]}] -add_delay 
+set_input_delay [expr 4.217 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[51]}] -add_delay 
+set_input_delay [expr 0.865 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[51]}] -add_delay 
+set_input_delay [expr 0.858 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[51]}] -add_delay 
+set_input_delay [expr 4.979 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[50]}] -add_delay 
+set_input_delay [expr 4.868 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[50]}] -add_delay 
+set_input_delay [expr 0.874 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[50]}] -add_delay 
+set_input_delay [expr 0.857 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[50]}] -add_delay 
+set_input_delay [expr 4.626 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[49]}] -add_delay 
+set_input_delay [expr 4.202 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[49]}] -add_delay 
+set_input_delay [expr 0.891 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[49]}] -add_delay 
+set_input_delay [expr 0.841 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[49]}] -add_delay 
+set_input_delay [expr 3.819 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[48]}] -add_delay 
+set_input_delay [expr 3.770 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[48]}] -add_delay 
+set_input_delay [expr 0.865 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[48]}] -add_delay 
+set_input_delay [expr 0.854 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[48]}] -add_delay 
+set_input_delay [expr 4.329 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[47]}] -add_delay 
+set_input_delay [expr 4.097 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[47]}] -add_delay 
+set_input_delay [expr 0.869 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[47]}] -add_delay 
+set_input_delay [expr 0.856 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[47]}] -add_delay 
+set_input_delay [expr 4.674 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[46]}] -add_delay 
+set_input_delay [expr 4.554 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[46]}] -add_delay 
+set_input_delay [expr 0.894 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[46]}] -add_delay 
+set_input_delay [expr 0.840 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[46]}] -add_delay 
+set_input_delay [expr 4.322 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[45]}] -add_delay 
+set_input_delay [expr 4.584 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[45]}] -add_delay 
+set_input_delay [expr 0.865 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[45]}] -add_delay 
+set_input_delay [expr 0.860 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[45]}] -add_delay 
+set_input_delay [expr 4.397 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[44]}] -add_delay 
+set_input_delay [expr 4.348 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[44]}] -add_delay 
+set_input_delay [expr 0.868 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[44]}] -add_delay 
+set_input_delay [expr 0.859 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[44]}] -add_delay 
+set_input_delay [expr 4.620 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[43]}] -add_delay 
+set_input_delay [expr 4.582 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[43]}] -add_delay 
+set_input_delay [expr 0.890 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[43]}] -add_delay 
+set_input_delay [expr 0.843 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[43]}] -add_delay 
+set_input_delay [expr 4.669 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[42]}] -add_delay 
+set_input_delay [expr 4.247 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[42]}] -add_delay 
+set_input_delay [expr 0.895 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[42]}] -add_delay 
+set_input_delay [expr 0.836 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[42]}] -add_delay 
+set_input_delay [expr 4.659 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[41]}] -add_delay 
+set_input_delay [expr 4.377 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[41]}] -add_delay 
+set_input_delay [expr 0.896 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[41]}] -add_delay 
+set_input_delay [expr 0.837 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[41]}] -add_delay 
+set_input_delay [expr 4.749 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[40]}] -add_delay 
+set_input_delay [expr 4.856 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[40]}] -add_delay 
+set_input_delay [expr 0.890 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[40]}] -add_delay 
+set_input_delay [expr 0.846 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[40]}] -add_delay 
+set_input_delay [expr 4.039 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[39]}] -add_delay 
+set_input_delay [expr 4.250 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[39]}] -add_delay 
+set_input_delay [expr 0.865 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[39]}] -add_delay 
+set_input_delay [expr 0.857 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[39]}] -add_delay 
+set_input_delay [expr 4.475 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[38]}] -add_delay 
+set_input_delay [expr 4.399 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[38]}] -add_delay 
+set_input_delay [expr 0.865 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[38]}] -add_delay 
+set_input_delay [expr 0.856 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[38]}] -add_delay 
+set_input_delay [expr 4.976 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[37]}] -add_delay 
+set_input_delay [expr 4.645 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[37]}] -add_delay 
+set_input_delay [expr 0.893 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[37]}] -add_delay 
+set_input_delay [expr 0.840 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[37]}] -add_delay 
+set_input_delay [expr 4.489 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[36]}] -add_delay 
+set_input_delay [expr 4.421 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[36]}] -add_delay 
+set_input_delay [expr 0.869 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[36]}] -add_delay 
+set_input_delay [expr 0.859 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[36]}] -add_delay 
+set_input_delay [expr 5.368 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[35]}] -add_delay 
+set_input_delay [expr 4.982 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[35]}] -add_delay 
+set_input_delay [expr 0.896 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[35]}] -add_delay 
+set_input_delay [expr 0.838 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[35]}] -add_delay 
+set_input_delay [expr 4.067 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[34]}] -add_delay 
+set_input_delay [expr 4.000 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[34]}] -add_delay 
+set_input_delay [expr 0.870 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[34]}] -add_delay 
+set_input_delay [expr 0.857 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[34]}] -add_delay 
+set_input_delay [expr 4.825 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[33]}] -add_delay 
+set_input_delay [expr 4.625 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[33]}] -add_delay 
+set_input_delay [expr 0.881 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[33]}] -add_delay 
+set_input_delay [expr 0.822 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[33]}] -add_delay 
+set_input_delay [expr 4.572 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[32]}] -add_delay 
+set_input_delay [expr 4.227 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[32]}] -add_delay 
+set_input_delay [expr 0.874 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[32]}] -add_delay 
+set_input_delay [expr 0.853 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[32]}] -add_delay 
+set_input_delay [expr 4.147 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[31]}] -add_delay 
+set_input_delay [expr 4.184 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[31]}] -add_delay 
+set_input_delay [expr 0.867 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[31]}] -add_delay 
+set_input_delay [expr 0.859 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[31]}] -add_delay 
+set_input_delay [expr 5.065 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[30]}] -add_delay 
+set_input_delay [expr 4.753 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[30]}] -add_delay 
+set_input_delay [expr 0.891 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[30]}] -add_delay 
+set_input_delay [expr 0.842 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[30]}] -add_delay 
+set_input_delay [expr 4.253 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[29]}] -add_delay 
+set_input_delay [expr 4.198 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[29]}] -add_delay 
+set_input_delay [expr 0.865 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[29]}] -add_delay 
+set_input_delay [expr 0.855 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[29]}] -add_delay 
+set_input_delay [expr 4.904 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[28]}] -add_delay 
+set_input_delay [expr 4.463 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[28]}] -add_delay 
+set_input_delay [expr 0.891 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[28]}] -add_delay 
+set_input_delay [expr 0.841 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[28]}] -add_delay 
+set_input_delay [expr 4.706 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[27]}] -add_delay 
+set_input_delay [expr 4.681 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[27]}] -add_delay 
+set_input_delay [expr 0.865 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[27]}] -add_delay 
+set_input_delay [expr 0.856 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[27]}] -add_delay 
+set_input_delay [expr 4.152 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[26]}] -add_delay 
+set_input_delay [expr 4.240 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[26]}] -add_delay 
+set_input_delay [expr 0.869 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[26]}] -add_delay 
+set_input_delay [expr 0.851 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[26]}] -add_delay 
+set_input_delay [expr 5.158 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[25]}] -add_delay 
+set_input_delay [expr 4.813 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[25]}] -add_delay 
+set_input_delay [expr 0.892 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[25]}] -add_delay 
+set_input_delay [expr 0.840 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[25]}] -add_delay 
+set_input_delay [expr 5.040 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[24]}] -add_delay 
+set_input_delay [expr 4.655 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[24]}] -add_delay 
+set_input_delay [expr 0.897 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[24]}] -add_delay 
+set_input_delay [expr 0.834 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[24]}] -add_delay 
+set_input_delay [expr 5.321 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[23]}] -add_delay 
+set_input_delay [expr 4.932 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[23]}] -add_delay 
+set_input_delay [expr 0.900 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[23]}] -add_delay 
+set_input_delay [expr 0.840 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[23]}] -add_delay 
+set_input_delay [expr 4.284 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[22]}] -add_delay 
+set_input_delay [expr 4.266 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[22]}] -add_delay 
+set_input_delay [expr 0.866 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[22]}] -add_delay 
+set_input_delay [expr 0.854 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[22]}] -add_delay 
+set_input_delay [expr 4.712 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[21]}] -add_delay 
+set_input_delay [expr 4.341 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[21]}] -add_delay 
+set_input_delay [expr 0.894 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[21]}] -add_delay 
+set_input_delay [expr 0.838 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[21]}] -add_delay 
+set_input_delay [expr 5.308 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[20]}] -add_delay 
+set_input_delay [expr 5.184 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[20]}] -add_delay 
+set_input_delay [expr 0.891 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[20]}] -add_delay 
+set_input_delay [expr 0.845 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[20]}] -add_delay 
+set_input_delay [expr 5.214 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[19]}] -add_delay 
+set_input_delay [expr 4.877 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[19]}] -add_delay 
+set_input_delay [expr 0.890 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[19]}] -add_delay 
+set_input_delay [expr 0.844 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[19]}] -add_delay 
+set_input_delay [expr 4.789 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[18]}] -add_delay 
+set_input_delay [expr 4.442 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[18]}] -add_delay 
+set_input_delay [expr 0.893 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[18]}] -add_delay 
+set_input_delay [expr 0.840 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[18]}] -add_delay 
+set_input_delay [expr 4.576 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[17]}] -add_delay 
+set_input_delay [expr 4.487 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[17]}] -add_delay 
+set_input_delay [expr 0.892 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[17]}] -add_delay 
+set_input_delay [expr 0.843 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[17]}] -add_delay 
+set_input_delay [expr 4.635 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[16]}] -add_delay 
+set_input_delay [expr 4.518 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[16]}] -add_delay 
+set_input_delay [expr 0.893 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[16]}] -add_delay 
+set_input_delay [expr 0.841 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[16]}] -add_delay 
+set_input_delay [expr 4.647 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[15]}] -add_delay 
+set_input_delay [expr 4.474 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[15]}] -add_delay 
+set_input_delay [expr 0.869 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[15]}] -add_delay 
+set_input_delay [expr 0.857 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[15]}] -add_delay 
+set_input_delay [expr 4.190 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[14]}] -add_delay 
+set_input_delay [expr 4.284 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[14]}] -add_delay 
+set_input_delay [expr 0.865 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[14]}] -add_delay 
+set_input_delay [expr 0.858 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[14]}] -add_delay 
+set_input_delay [expr 4.383 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[13]}] -add_delay 
+set_input_delay [expr 4.424 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[13]}] -add_delay 
+set_input_delay [expr 0.865 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[13]}] -add_delay 
+set_input_delay [expr 0.858 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[13]}] -add_delay 
+set_input_delay [expr 4.469 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[12]}] -add_delay 
+set_input_delay [expr 4.399 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[12]}] -add_delay 
+set_input_delay [expr 0.865 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[12]}] -add_delay 
+set_input_delay [expr 0.855 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[12]}] -add_delay 
+set_input_delay [expr 4.446 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[11]}] -add_delay 
+set_input_delay [expr 4.406 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[11]}] -add_delay 
+set_input_delay [expr 0.866 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[11]}] -add_delay 
+set_input_delay [expr 0.858 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[11]}] -add_delay 
+set_input_delay [expr 5.192 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[10]}] -add_delay 
+set_input_delay [expr 5.043 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[10]}] -add_delay 
+set_input_delay [expr 0.875 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[10]}] -add_delay 
+set_input_delay [expr 0.859 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[10]}] -add_delay 
+set_input_delay [expr 5.131 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[9]}] -add_delay 
+set_input_delay [expr 4.768 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[9]}] -add_delay 
+set_input_delay [expr 0.894 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[9]}] -add_delay 
+set_input_delay [expr 0.835 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[9]}] -add_delay 
+set_input_delay [expr 4.043 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[8]}] -add_delay 
+set_input_delay [expr 4.234 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[8]}] -add_delay 
+set_input_delay [expr 0.865 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[8]}] -add_delay 
+set_input_delay [expr 0.859 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[8]}] -add_delay 
+set_input_delay [expr 4.468 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[7]}] -add_delay 
+set_input_delay [expr 4.749 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[7]}] -add_delay 
+set_input_delay [expr 0.866 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[7]}] -add_delay 
+set_input_delay [expr 0.860 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[7]}] -add_delay 
+set_input_delay [expr 4.179 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[6]}] -add_delay 
+set_input_delay [expr 4.215 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[6]}] -add_delay 
+set_input_delay [expr 0.865 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[6]}] -add_delay 
+set_input_delay [expr 0.856 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[6]}] -add_delay 
+set_input_delay [expr 4.935 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[5]}] -add_delay 
+set_input_delay [expr 4.586 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[5]}] -add_delay 
+set_input_delay [expr 0.891 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[5]}] -add_delay 
+set_input_delay [expr 0.842 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[5]}] -add_delay 
+set_input_delay [expr 4.718 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[4]}] -add_delay 
+set_input_delay [expr 4.670 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[4]}] -add_delay 
+set_input_delay [expr 0.890 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[4]}] -add_delay 
+set_input_delay [expr 0.838 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[4]}] -add_delay 
+set_input_delay [expr 5.305 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[3]}] -add_delay 
+set_input_delay [expr 4.889 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[3]}] -add_delay 
+set_input_delay [expr 0.893 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[3]}] -add_delay 
+set_input_delay [expr 0.839 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[3]}] -add_delay 
+set_input_delay [expr 4.833 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[2]}] -add_delay 
+set_input_delay [expr 4.905 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[2]}] -add_delay 
+set_input_delay [expr 0.891 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[2]}] -add_delay 
+set_input_delay [expr 0.838 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[2]}] -add_delay 
+set_input_delay [expr 4.591 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[1]}] -add_delay 
+set_input_delay [expr 4.482 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[1]}] -add_delay 
+set_input_delay [expr 0.892 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[1]}] -add_delay 
+set_input_delay [expr 0.842 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[1]}] -add_delay 
+set_input_delay [expr 4.963 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {input[0]}] -add_delay 
+set_input_delay [expr 4.578 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {input[0]}] -add_delay 
+set_input_delay [expr 0.895 * ${clk_period}] -clock {clk_v1} -min -rise \
+  [get_ports {input[0]}] -add_delay 
+set_input_delay [expr 0.837 * ${clk_period}] -clock {clk_v1} -min -fall \
+  [get_ports {input[0]}] -add_delay 
+set_input_delay [expr 0.373 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {enable}] -add_delay 
+set_input_delay [expr 0.281 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {enable}] -add_delay 
+set_input_delay [expr 5.033 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {reset}] -add_delay 
+set_output_delay [expr 1.358 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[63]}] -add_delay 
+set_output_delay [expr 1.348 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[63]}] -add_delay 
+set_output_delay [expr 1.576 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[62]}] -add_delay 
+set_output_delay [expr 1.569 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[62]}] -add_delay 
+set_output_delay [expr 1.441 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[61]}] -add_delay 
+set_output_delay [expr 1.437 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[61]}] -add_delay 
+set_output_delay [expr 1.332 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[60]}] -add_delay 
+set_output_delay [expr 1.322 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[60]}] -add_delay 
+set_output_delay [expr 1.498 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[59]}] -add_delay 
+set_output_delay [expr 1.491 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[59]}] -add_delay 
+set_output_delay [expr 1.595 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[58]}] -add_delay 
+set_output_delay [expr 1.586 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[58]}] -add_delay 
+set_output_delay [expr 1.593 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[57]}] -add_delay 
+set_output_delay [expr 1.584 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[57]}] -add_delay 
+set_output_delay [expr 1.441 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[56]}] -add_delay 
+set_output_delay [expr 1.436 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[56]}] -add_delay 
+set_output_delay [expr 1.250 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[55]}] -add_delay 
+set_output_delay [expr 1.244 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[55]}] -add_delay 
+set_output_delay [expr 1.525 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[54]}] -add_delay 
+set_output_delay [expr 1.522 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[54]}] -add_delay 
+set_output_delay [expr 1.414 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[53]}] -add_delay 
+set_output_delay [expr 1.410 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[53]}] -add_delay 
+set_output_delay [expr 1.255 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[52]}] -add_delay 
+set_output_delay [expr 1.251 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[52]}] -add_delay 
+set_output_delay [expr 1.371 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[51]}] -add_delay 
+set_output_delay [expr 1.370 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[51]}] -add_delay 
+set_output_delay [expr 1.611 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[50]}] -add_delay 
+set_output_delay [expr 1.607 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[50]}] -add_delay 
+set_output_delay [expr 1.586 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[49]}] -add_delay 
+set_output_delay [expr 1.581 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[49]}] -add_delay 
+set_output_delay [expr 1.376 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[48]}] -add_delay 
+set_output_delay [expr 1.375 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[48]}] -add_delay 
+set_output_delay [expr 1.360 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[47]}] -add_delay 
+set_output_delay [expr 1.356 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[47]}] -add_delay 
+set_output_delay [expr 1.543 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[46]}] -add_delay 
+set_output_delay [expr 1.536 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[46]}] -add_delay 
+set_output_delay [expr 1.767 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[45]}] -add_delay 
+set_output_delay [expr 1.759 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[45]}] -add_delay 
+set_output_delay [expr 1.337 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[44]}] -add_delay 
+set_output_delay [expr 1.336 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[44]}] -add_delay 
+set_output_delay [expr 1.581 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[43]}] -add_delay 
+set_output_delay [expr 1.573 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[43]}] -add_delay 
+set_output_delay [expr 1.713 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[42]}] -add_delay 
+set_output_delay [expr 1.707 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[42]}] -add_delay 
+set_output_delay [expr 1.844 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[41]}] -add_delay 
+set_output_delay [expr 1.840 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[41]}] -add_delay 
+set_output_delay [expr 1.544 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[40]}] -add_delay 
+set_output_delay [expr 1.533 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[40]}] -add_delay 
+set_output_delay [expr 1.466 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[39]}] -add_delay 
+set_output_delay [expr 1.462 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[39]}] -add_delay 
+set_output_delay [expr 1.456 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[38]}] -add_delay 
+set_output_delay [expr 1.451 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[38]}] -add_delay 
+set_output_delay [expr 1.489 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[37]}] -add_delay 
+set_output_delay [expr 1.482 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[37]}] -add_delay 
+set_output_delay [expr 1.385 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[36]}] -add_delay 
+set_output_delay [expr 1.384 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[36]}] -add_delay 
+set_output_delay [expr 1.613 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[35]}] -add_delay 
+set_output_delay [expr 1.600 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[35]}] -add_delay 
+set_output_delay [expr 1.705 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[34]}] -add_delay 
+set_output_delay [expr 1.698 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[34]}] -add_delay 
+set_output_delay [expr 1.739 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[33]}] -add_delay 
+set_output_delay [expr 1.735 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[33]}] -add_delay 
+set_output_delay [expr 1.501 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[32]}] -add_delay 
+set_output_delay [expr 1.496 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[32]}] -add_delay 
+set_output_delay [expr 1.609 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[31]}] -add_delay 
+set_output_delay [expr 1.602 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[31]}] -add_delay 
+set_output_delay [expr 1.653 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[30]}] -add_delay 
+set_output_delay [expr 1.648 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[30]}] -add_delay 
+set_output_delay [expr 1.623 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[29]}] -add_delay 
+set_output_delay [expr 1.621 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[29]}] -add_delay 
+set_output_delay [expr 1.682 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[28]}] -add_delay 
+set_output_delay [expr 1.677 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[28]}] -add_delay 
+set_output_delay [expr 1.345 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[27]}] -add_delay 
+set_output_delay [expr 1.342 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[27]}] -add_delay 
+set_output_delay [expr 1.515 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[26]}] -add_delay 
+set_output_delay [expr 1.508 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[26]}] -add_delay 
+set_output_delay [expr 1.696 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[25]}] -add_delay 
+set_output_delay [expr 1.692 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[25]}] -add_delay 
+set_output_delay [expr 1.351 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[24]}] -add_delay 
+set_output_delay [expr 1.342 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[24]}] -add_delay 
+set_output_delay [expr 1.527 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[23]}] -add_delay 
+set_output_delay [expr 1.517 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[23]}] -add_delay 
+set_output_delay [expr 1.541 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[22]}] -add_delay 
+set_output_delay [expr 1.536 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[22]}] -add_delay 
+set_output_delay [expr 1.586 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[21]}] -add_delay 
+set_output_delay [expr 1.579 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[21]}] -add_delay 
+set_output_delay [expr 1.550 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[20]}] -add_delay 
+set_output_delay [expr 1.543 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[20]}] -add_delay 
+set_output_delay [expr 1.301 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[19]}] -add_delay 
+set_output_delay [expr 1.297 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[19]}] -add_delay 
+set_output_delay [expr 1.480 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[18]}] -add_delay 
+set_output_delay [expr 1.470 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[18]}] -add_delay 
+set_output_delay [expr 1.459 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[17]}] -add_delay 
+set_output_delay [expr 1.452 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[17]}] -add_delay 
+set_output_delay [expr 1.518 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[16]}] -add_delay 
+set_output_delay [expr 1.512 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[16]}] -add_delay 
+set_output_delay [expr 1.327 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[15]}] -add_delay 
+set_output_delay [expr 1.323 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[15]}] -add_delay 
+set_output_delay [expr 1.382 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[14]}] -add_delay 
+set_output_delay [expr 1.378 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[14]}] -add_delay 
+set_output_delay [expr 1.330 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[13]}] -add_delay 
+set_output_delay [expr 1.325 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[13]}] -add_delay 
+set_output_delay [expr 1.309 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[12]}] -add_delay 
+set_output_delay [expr 1.303 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[12]}] -add_delay 
+set_output_delay [expr 1.406 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[11]}] -add_delay 
+set_output_delay [expr 1.404 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[11]}] -add_delay 
+set_output_delay [expr 1.566 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[10]}] -add_delay 
+set_output_delay [expr 1.562 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[10]}] -add_delay 
+set_output_delay [expr 1.535 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[9]}] -add_delay 
+set_output_delay [expr 1.522 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[9]}] -add_delay 
+set_output_delay [expr 1.525 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[8]}] -add_delay 
+set_output_delay [expr 1.520 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[8]}] -add_delay 
+set_output_delay [expr 1.849 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[7]}] -add_delay 
+set_output_delay [expr 1.843 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[7]}] -add_delay 
+set_output_delay [expr 1.751 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[6]}] -add_delay 
+set_output_delay [expr 1.745 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[6]}] -add_delay 
+set_output_delay [expr 1.824 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[5]}] -add_delay 
+set_output_delay [expr 1.819 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[5]}] -add_delay 
+set_output_delay [expr 1.805 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[4]}] -add_delay 
+set_output_delay [expr 1.804 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[4]}] -add_delay 
+set_output_delay [expr 1.409 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[3]}] -add_delay 
+set_output_delay [expr 1.395 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[3]}] -add_delay 
+set_output_delay [expr 1.536 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[2]}] -add_delay 
+set_output_delay [expr 1.534 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[2]}] -add_delay 
+set_output_delay [expr 1.471 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[1]}] -add_delay 
+set_output_delay [expr 1.467 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[1]}] -add_delay 
+set_output_delay [expr 1.412 * ${clk_period}] -clock {clk_v0} -min -rise \
+  [get_ports {output[0]}] -add_delay 
+set_output_delay [expr 1.407 * ${clk_period}] -clock {clk_v0} -min -fall \
+  [get_ports {output[0]}] -add_delay 
+set_drive -max 3.122 -rise [get_ports {input[63]}]
+set_drive -max 2.049 -fall [get_ports {input[63]}]
+set_drive -max 3.122 -rise [get_ports {input[62]}]
+set_drive -max 2.049 -fall [get_ports {input[62]}]
+set_drive -max 3.122 -rise [get_ports {input[61]}]
+set_drive -max 2.049 -fall [get_ports {input[61]}]
+set_drive -max 3.122 -rise [get_ports {input[60]}]
+set_drive -max 2.049 -fall [get_ports {input[60]}]
+set_drive -max 3.122 -rise [get_ports {input[59]}]
+set_drive -max 2.049 -fall [get_ports {input[59]}]
+set_drive -max 3.122 -rise [get_ports {input[58]}]
+set_drive -max 2.049 -fall [get_ports {input[58]}]
+set_drive -max 3.122 -rise [get_ports {input[57]}]
+set_drive -max 2.049 -fall [get_ports {input[57]}]
+set_drive -max 3.122 -rise [get_ports {input[56]}]
+set_drive -max 2.049 -fall [get_ports {input[56]}]
+set_drive -max 3.122 -rise [get_ports {input[55]}]
+set_drive -max 2.049 -fall [get_ports {input[55]}]
+set_drive -max 3.122 -rise [get_ports {input[54]}]
+set_drive -max 2.049 -fall [get_ports {input[54]}]
+set_drive -max 3.122 -rise [get_ports {input[53]}]
+set_drive -max 2.049 -fall [get_ports {input[53]}]
+set_drive -max 3.122 -rise [get_ports {input[52]}]
+set_drive -max 2.049 -fall [get_ports {input[52]}]
+set_drive -max 3.122 -rise [get_ports {input[51]}]
+set_drive -max 2.049 -fall [get_ports {input[51]}]
+set_drive -max 3.122 -rise [get_ports {input[50]}]
+set_drive -max 2.049 -fall [get_ports {input[50]}]
+set_drive -max 3.122 -rise [get_ports {input[49]}]
+set_drive -max 2.049 -fall [get_ports {input[49]}]
+set_drive -max 3.122 -rise [get_ports {input[48]}]
+set_drive -max 2.049 -fall [get_ports {input[48]}]
+set_drive -max 3.122 -rise [get_ports {input[47]}]
+set_drive -max 2.049 -fall [get_ports {input[47]}]
+set_drive -max 3.122 -rise [get_ports {input[46]}]
+set_drive -max 2.049 -fall [get_ports {input[46]}]
+set_drive -max 3.122 -rise [get_ports {input[45]}]
+set_drive -max 2.049 -fall [get_ports {input[45]}]
+set_drive -max 3.122 -rise [get_ports {input[44]}]
+set_drive -max 2.049 -fall [get_ports {input[44]}]
+set_drive -max 3.122 -rise [get_ports {input[43]}]
+set_drive -max 2.049 -fall [get_ports {input[43]}]
+set_drive -max 3.122 -rise [get_ports {input[42]}]
+set_drive -max 2.049 -fall [get_ports {input[42]}]
+set_drive -max 3.122 -rise [get_ports {input[41]}]
+set_drive -max 2.049 -fall [get_ports {input[41]}]
+set_drive -max 3.122 -rise [get_ports {input[40]}]
+set_drive -max 2.049 -fall [get_ports {input[40]}]
+set_drive -max 3.122 -rise [get_ports {input[39]}]
+set_drive -max 2.049 -fall [get_ports {input[39]}]
+set_drive -max 3.122 -rise [get_ports {input[38]}]
+set_drive -max 2.049 -fall [get_ports {input[38]}]
+set_drive -max 3.122 -rise [get_ports {input[37]}]
+set_drive -max 2.049 -fall [get_ports {input[37]}]
+set_drive -max 3.122 -rise [get_ports {input[36]}]
+set_drive -max 2.049 -fall [get_ports {input[36]}]
+set_drive -max 3.122 -rise [get_ports {input[35]}]
+set_drive -max 2.049 -fall [get_ports {input[35]}]
+set_drive -max 3.122 -rise [get_ports {input[34]}]
+set_drive -max 2.049 -fall [get_ports {input[34]}]
+set_drive -max 3.122 -rise [get_ports {input[33]}]
+set_drive -max 2.049 -fall [get_ports {input[33]}]
+set_drive -max 3.122 -rise [get_ports {input[32]}]
+set_drive -max 2.049 -fall [get_ports {input[32]}]
+set_drive -max 3.122 -rise [get_ports {input[31]}]
+set_drive -max 2.049 -fall [get_ports {input[31]}]
+set_drive -max 3.122 -rise [get_ports {input[30]}]
+set_drive -max 2.049 -fall [get_ports {input[30]}]
+set_drive -max 3.122 -rise [get_ports {input[29]}]
+set_drive -max 2.049 -fall [get_ports {input[29]}]
+set_drive -max 3.122 -rise [get_ports {input[28]}]
+set_drive -max 2.049 -fall [get_ports {input[28]}]
+set_drive -max 3.122 -rise [get_ports {input[27]}]
+set_drive -max 2.049 -fall [get_ports {input[27]}]
+set_drive -max 3.122 -rise [get_ports {input[26]}]
+set_drive -max 2.049 -fall [get_ports {input[26]}]
+set_drive -max 3.122 -rise [get_ports {input[25]}]
+set_drive -max 2.049 -fall [get_ports {input[25]}]
+set_drive -max 3.122 -rise [get_ports {input[24]}]
+set_drive -max 2.049 -fall [get_ports {input[24]}]
+set_drive -max 3.122 -rise [get_ports {input[23]}]
+set_drive -max 2.049 -fall [get_ports {input[23]}]
+set_drive -max 3.122 -rise [get_ports {input[22]}]
+set_drive -max 2.049 -fall [get_ports {input[22]}]
+set_drive -max 3.122 -rise [get_ports {input[21]}]
+set_drive -max 2.049 -fall [get_ports {input[21]}]
+set_drive -max 3.122 -rise [get_ports {input[20]}]
+set_drive -max 2.049 -fall [get_ports {input[20]}]
+set_drive -max 3.122 -rise [get_ports {input[19]}]
+set_drive -max 2.049 -fall [get_ports {input[19]}]
+set_drive -max 3.122 -rise [get_ports {input[18]}]
+set_drive -max 2.049 -fall [get_ports {input[18]}]
+set_drive -max 3.122 -rise [get_ports {input[17]}]
+set_drive -max 2.049 -fall [get_ports {input[17]}]
+set_drive -max 3.122 -rise [get_ports {input[16]}]
+set_drive -max 2.049 -fall [get_ports {input[16]}]
+set_drive -max 3.122 -rise [get_ports {input[15]}]
+set_drive -max 2.049 -fall [get_ports {input[15]}]
+set_drive -max 3.122 -rise [get_ports {input[14]}]
+set_drive -max 2.049 -fall [get_ports {input[14]}]
+set_drive -max 3.122 -rise [get_ports {input[13]}]
+set_drive -max 2.049 -fall [get_ports {input[13]}]
+set_drive -max 3.122 -rise [get_ports {input[12]}]
+set_drive -max 2.049 -fall [get_ports {input[12]}]
+set_drive -max 3.122 -rise [get_ports {input[11]}]
+set_drive -max 2.049 -fall [get_ports {input[11]}]
+set_drive -max 3.122 -rise [get_ports {input[10]}]
+set_drive -max 2.049 -fall [get_ports {input[10]}]
+set_drive -max 3.122 -rise [get_ports {input[9]}]
+set_drive -max 2.049 -fall [get_ports {input[9]}]
+set_drive -max 3.122 -rise [get_ports {input[8]}]
+set_drive -max 2.049 -fall [get_ports {input[8]}]
+set_drive -max 3.122 -rise [get_ports {input[7]}]
+set_drive -max 2.049 -fall [get_ports {input[7]}]
+set_drive -max 3.122 -rise [get_ports {input[6]}]
+set_drive -max 2.049 -fall [get_ports {input[6]}]
+set_drive -max 3.122 -rise [get_ports {input[5]}]
+set_drive -max 2.049 -fall [get_ports {input[5]}]
+set_drive -max 3.122 -rise [get_ports {input[4]}]
+set_drive -max 2.049 -fall [get_ports {input[4]}]
+set_drive -max 3.122 -rise [get_ports {input[3]}]
+set_drive -max 2.049 -fall [get_ports {input[3]}]
+set_drive -max 3.122 -rise [get_ports {input[2]}]
+set_drive -max 2.049 -fall [get_ports {input[2]}]
+set_drive -max 3.122 -rise [get_ports {input[1]}]
+set_drive -max 2.049 -fall [get_ports {input[1]}]
+set_drive -max 3.122 -rise [get_ports {input[0]}]
+set_drive -max 2.049 -fall [get_ports {input[0]}]
+set_drive -max 3.122 -rise [get_ports {enable}]
+set_drive -max 2.049 -fall [get_ports {enable}]
+set_drive -max 0.250 -rise [get_ports {clk}]
+set_drive -max 0.250 -fall [get_ports {clk}]
+set_drive -max 3.089 -rise [get_ports {reset}]
+set_drive -max 3.089 -fall [get_ports {reset}]
+set_load -max -pin_load 0.004 [get_ports {output[63]}]
+set_load -max -wire_load 0.000 [get_ports {output[63]}]
+set_load -max -pin_load 0.004 [get_ports {output[62]}]
+set_load -max -wire_load 0.000 [get_ports {output[62]}]
+set_load -max -pin_load 0.004 [get_ports {output[61]}]
+set_load -max -wire_load 0.000 [get_ports {output[61]}]
+set_load -max -pin_load 0.004 [get_ports {output[60]}]
+set_load -max -wire_load 0.000 [get_ports {output[60]}]
+set_load -max -pin_load 0.004 [get_ports {output[59]}]
+set_load -max -wire_load 0.000 [get_ports {output[59]}]
+set_load -max -pin_load 0.004 [get_ports {output[58]}]
+set_load -max -wire_load 0.000 [get_ports {output[58]}]
+set_load -max -pin_load 0.004 [get_ports {output[57]}]
+set_load -max -wire_load 0.000 [get_ports {output[57]}]
+set_load -max -pin_load 0.004 [get_ports {output[56]}]
+set_load -max -wire_load 0.000 [get_ports {output[56]}]
+set_load -max -pin_load 0.004 [get_ports {output[55]}]
+set_load -max -wire_load 0.000 [get_ports {output[55]}]
+set_load -max -pin_load 0.004 [get_ports {output[54]}]
+set_load -max -wire_load 0.000 [get_ports {output[54]}]
+set_load -max -pin_load 0.004 [get_ports {output[53]}]
+set_load -max -wire_load 0.000 [get_ports {output[53]}]
+set_load -max -pin_load 0.004 [get_ports {output[52]}]
+set_load -max -wire_load 0.000 [get_ports {output[52]}]
+set_load -max -pin_load 0.004 [get_ports {output[51]}]
+set_load -max -wire_load 0.000 [get_ports {output[51]}]
+set_load -max -pin_load 0.004 [get_ports {output[50]}]
+set_load -max -wire_load 0.000 [get_ports {output[50]}]
+set_load -max -pin_load 0.004 [get_ports {output[49]}]
+set_load -max -wire_load 0.000 [get_ports {output[49]}]
+set_load -max -pin_load 0.004 [get_ports {output[48]}]
+set_load -max -wire_load 0.000 [get_ports {output[48]}]
+set_load -max -pin_load 0.004 [get_ports {output[47]}]
+set_load -max -wire_load 0.000 [get_ports {output[47]}]
+set_load -max -pin_load 0.004 [get_ports {output[46]}]
+set_load -max -wire_load 0.000 [get_ports {output[46]}]
+set_load -max -pin_load 0.004 [get_ports {output[45]}]
+set_load -max -wire_load 0.000 [get_ports {output[45]}]
+set_load -max -pin_load 0.004 [get_ports {output[44]}]
+set_load -max -wire_load 0.000 [get_ports {output[44]}]
+set_load -max -pin_load 0.004 [get_ports {output[43]}]
+set_load -max -wire_load 0.000 [get_ports {output[43]}]
+set_load -max -pin_load 0.004 [get_ports {output[42]}]
+set_load -max -wire_load 0.000 [get_ports {output[42]}]
+set_load -max -pin_load 0.004 [get_ports {output[41]}]
+set_load -max -wire_load 0.000 [get_ports {output[41]}]
+set_load -max -pin_load 0.004 [get_ports {output[40]}]
+set_load -max -wire_load 0.000 [get_ports {output[40]}]
+set_load -max -pin_load 0.004 [get_ports {output[39]}]
+set_load -max -wire_load 0.000 [get_ports {output[39]}]
+set_load -max -pin_load 0.004 [get_ports {output[38]}]
+set_load -max -wire_load 0.000 [get_ports {output[38]}]
+set_load -max -pin_load 0.004 [get_ports {output[37]}]
+set_load -max -wire_load 0.000 [get_ports {output[37]}]
+set_load -max -pin_load 0.004 [get_ports {output[36]}]
+set_load -max -wire_load 0.000 [get_ports {output[36]}]
+set_load -max -pin_load 0.004 [get_ports {output[35]}]
+set_load -max -wire_load 0.000 [get_ports {output[35]}]
+set_load -max -pin_load 0.004 [get_ports {output[34]}]
+set_load -max -wire_load 0.000 [get_ports {output[34]}]
+set_load -max -pin_load 0.004 [get_ports {output[33]}]
+set_load -max -wire_load 0.000 [get_ports {output[33]}]
+set_load -max -pin_load 0.004 [get_ports {output[32]}]
+set_load -max -wire_load 0.000 [get_ports {output[32]}]
+set_load -max -pin_load 0.004 [get_ports {output[31]}]
+set_load -max -wire_load 0.000 [get_ports {output[31]}]
+set_load -max -pin_load 0.004 [get_ports {output[30]}]
+set_load -max -wire_load 0.000 [get_ports {output[30]}]
+set_load -max -pin_load 0.004 [get_ports {output[29]}]
+set_load -max -wire_load 0.000 [get_ports {output[29]}]
+set_load -max -pin_load 0.004 [get_ports {output[28]}]
+set_load -max -wire_load 0.000 [get_ports {output[28]}]
+set_load -max -pin_load 0.004 [get_ports {output[27]}]
+set_load -max -wire_load 0.000 [get_ports {output[27]}]
+set_load -max -pin_load 0.004 [get_ports {output[26]}]
+set_load -max -wire_load 0.000 [get_ports {output[26]}]
+set_load -max -pin_load 0.004 [get_ports {output[25]}]
+set_load -max -wire_load 0.000 [get_ports {output[25]}]
+set_load -max -pin_load 0.004 [get_ports {output[24]}]
+set_load -max -wire_load 0.000 [get_ports {output[24]}]
+set_load -max -pin_load 0.004 [get_ports {output[23]}]
+set_load -max -wire_load 0.000 [get_ports {output[23]}]
+set_load -max -pin_load 0.004 [get_ports {output[22]}]
+set_load -max -wire_load 0.000 [get_ports {output[22]}]
+set_load -max -pin_load 0.004 [get_ports {output[21]}]
+set_load -max -wire_load 0.000 [get_ports {output[21]}]
+set_load -max -pin_load 0.004 [get_ports {output[20]}]
+set_load -max -wire_load 0.000 [get_ports {output[20]}]
+set_load -max -pin_load 0.004 [get_ports {output[19]}]
+set_load -max -wire_load 0.000 [get_ports {output[19]}]
+set_load -max -pin_load 0.004 [get_ports {output[18]}]
+set_load -max -wire_load 0.000 [get_ports {output[18]}]
+set_load -max -pin_load 0.004 [get_ports {output[17]}]
+set_load -max -wire_load 0.000 [get_ports {output[17]}]
+set_load -max -pin_load 0.004 [get_ports {output[16]}]
+set_load -max -wire_load 0.000 [get_ports {output[16]}]
+set_load -max -pin_load 0.004 [get_ports {output[15]}]
+set_load -max -wire_load 0.000 [get_ports {output[15]}]
+set_load -max -pin_load 0.004 [get_ports {output[14]}]
+set_load -max -wire_load 0.000 [get_ports {output[14]}]
+set_load -max -pin_load 0.004 [get_ports {output[13]}]
+set_load -max -wire_load 0.011 [get_ports {output[13]}]
+set_load -max -pin_load 0.004 [get_ports {output[12]}]
+set_load -max -wire_load 0.000 [get_ports {output[12]}]
+set_load -max -pin_load 0.004 [get_ports {output[11]}]
+set_load -max -wire_load 0.000 [get_ports {output[11]}]
+set_load -max -pin_load 0.004 [get_ports {output[10]}]
+set_load -max -wire_load 0.000 [get_ports {output[10]}]
+set_load -max -pin_load 0.004 [get_ports {output[9]}]
+set_load -max -wire_load 0.000 [get_ports {output[9]}]
+set_load -max -pin_load 0.004 [get_ports {output[8]}]
+set_load -max -wire_load 0.000 [get_ports {output[8]}]
+set_load -max -pin_load 0.004 [get_ports {output[7]}]
+set_load -max -wire_load 0.000 [get_ports {output[7]}]
+set_load -max -pin_load 0.004 [get_ports {output[6]}]
+set_load -max -wire_load 0.000 [get_ports {output[6]}]
+set_load -max -pin_load 0.004 [get_ports {output[5]}]
+set_load -max -wire_load 0.000 [get_ports {output[5]}]
+set_load -max -pin_load 0.004 [get_ports {output[4]}]
+set_load -max -wire_load 0.000 [get_ports {output[4]}]
+set_load -max -pin_load 0.004 [get_ports {output[3]}]
+set_load -max -wire_load 0.000 [get_ports {output[3]}]
+set_load -max -pin_load 0.004 [get_ports {output[2]}]
+set_load -max -wire_load 0.000 [get_ports {output[2]}]
+set_load -max -pin_load 0.004 [get_ports {output[1]}]
+set_load -max -wire_load 0.000 [get_ports {output[1]}]
+set_load -max -pin_load 0.004 [get_ports {output[0]}]
+set_load -max -wire_load 0.000 [get_ports {output[0]}]
+set_drive -min 3.122 -rise [get_ports {input[63]}]
+set_drive -min 2.049 -fall [get_ports {input[63]}]
+set_drive -min 3.122 -rise [get_ports {input[62]}]
+set_drive -min 2.049 -fall [get_ports {input[62]}]
+set_drive -min 3.122 -rise [get_ports {input[61]}]
+set_drive -min 2.049 -fall [get_ports {input[61]}]
+set_drive -min 3.122 -rise [get_ports {input[60]}]
+set_drive -min 2.049 -fall [get_ports {input[60]}]
+set_drive -min 3.122 -rise [get_ports {input[59]}]
+set_drive -min 2.049 -fall [get_ports {input[59]}]
+set_drive -min 3.122 -rise [get_ports {input[58]}]
+set_drive -min 2.049 -fall [get_ports {input[58]}]
+set_drive -min 3.122 -rise [get_ports {input[57]}]
+set_drive -min 2.049 -fall [get_ports {input[57]}]
+set_drive -min 3.122 -rise [get_ports {input[56]}]
+set_drive -min 2.049 -fall [get_ports {input[56]}]
+set_drive -min 3.122 -rise [get_ports {input[55]}]
+set_drive -min 2.049 -fall [get_ports {input[55]}]
+set_drive -min 3.122 -rise [get_ports {input[54]}]
+set_drive -min 2.049 -fall [get_ports {input[54]}]
+set_drive -min 3.122 -rise [get_ports {input[53]}]
+set_drive -min 2.049 -fall [get_ports {input[53]}]
+set_drive -min 3.122 -rise [get_ports {input[52]}]
+set_drive -min 2.049 -fall [get_ports {input[52]}]
+set_drive -min 3.122 -rise [get_ports {input[51]}]
+set_drive -min 2.049 -fall [get_ports {input[51]}]
+set_drive -min 3.122 -rise [get_ports {input[50]}]
+set_drive -min 2.049 -fall [get_ports {input[50]}]
+set_drive -min 3.122 -rise [get_ports {input[49]}]
+set_drive -min 2.049 -fall [get_ports {input[49]}]
+set_drive -min 3.122 -rise [get_ports {input[48]}]
+set_drive -min 2.049 -fall [get_ports {input[48]}]
+set_drive -min 3.122 -rise [get_ports {input[47]}]
+set_drive -min 2.049 -fall [get_ports {input[47]}]
+set_drive -min 3.122 -rise [get_ports {input[46]}]
+set_drive -min 2.049 -fall [get_ports {input[46]}]
+set_drive -min 3.122 -rise [get_ports {input[45]}]
+set_drive -min 2.049 -fall [get_ports {input[45]}]
+set_drive -min 3.122 -rise [get_ports {input[44]}]
+set_drive -min 2.049 -fall [get_ports {input[44]}]
+set_drive -min 3.122 -rise [get_ports {input[43]}]
+set_drive -min 2.049 -fall [get_ports {input[43]}]
+set_drive -min 3.122 -rise [get_ports {input[42]}]
+set_drive -min 2.049 -fall [get_ports {input[42]}]
+set_drive -min 3.122 -rise [get_ports {input[41]}]
+set_drive -min 2.049 -fall [get_ports {input[41]}]
+set_drive -min 3.122 -rise [get_ports {input[40]}]
+set_drive -min 2.049 -fall [get_ports {input[40]}]
+set_drive -min 3.122 -rise [get_ports {input[39]}]
+set_drive -min 2.049 -fall [get_ports {input[39]}]
+set_drive -min 3.122 -rise [get_ports {input[38]}]
+set_drive -min 2.049 -fall [get_ports {input[38]}]
+set_drive -min 3.122 -rise [get_ports {input[37]}]
+set_drive -min 2.049 -fall [get_ports {input[37]}]
+set_drive -min 3.122 -rise [get_ports {input[36]}]
+set_drive -min 2.049 -fall [get_ports {input[36]}]
+set_drive -min 3.122 -rise [get_ports {input[35]}]
+set_drive -min 2.049 -fall [get_ports {input[35]}]
+set_drive -min 3.122 -rise [get_ports {input[34]}]
+set_drive -min 2.049 -fall [get_ports {input[34]}]
+set_drive -min 3.122 -rise [get_ports {input[33]}]
+set_drive -min 2.049 -fall [get_ports {input[33]}]
+set_drive -min 3.122 -rise [get_ports {input[32]}]
+set_drive -min 2.049 -fall [get_ports {input[32]}]
+set_drive -min 3.122 -rise [get_ports {input[31]}]
+set_drive -min 2.049 -fall [get_ports {input[31]}]
+set_drive -min 3.122 -rise [get_ports {input[30]}]
+set_drive -min 2.049 -fall [get_ports {input[30]}]
+set_drive -min 3.122 -rise [get_ports {input[29]}]
+set_drive -min 2.049 -fall [get_ports {input[29]}]
+set_drive -min 3.122 -rise [get_ports {input[28]}]
+set_drive -min 2.049 -fall [get_ports {input[28]}]
+set_drive -min 3.122 -rise [get_ports {input[27]}]
+set_drive -min 2.049 -fall [get_ports {input[27]}]
+set_drive -min 3.122 -rise [get_ports {input[26]}]
+set_drive -min 2.049 -fall [get_ports {input[26]}]
+set_drive -min 3.122 -rise [get_ports {input[25]}]
+set_drive -min 2.049 -fall [get_ports {input[25]}]
+set_drive -min 3.122 -rise [get_ports {input[24]}]
+set_drive -min 2.049 -fall [get_ports {input[24]}]
+set_drive -min 3.122 -rise [get_ports {input[23]}]
+set_drive -min 2.049 -fall [get_ports {input[23]}]
+set_drive -min 3.122 -rise [get_ports {input[22]}]
+set_drive -min 2.049 -fall [get_ports {input[22]}]
+set_drive -min 3.122 -rise [get_ports {input[21]}]
+set_drive -min 2.049 -fall [get_ports {input[21]}]
+set_drive -min 3.122 -rise [get_ports {input[20]}]
+set_drive -min 2.049 -fall [get_ports {input[20]}]
+set_drive -min 3.122 -rise [get_ports {input[19]}]
+set_drive -min 2.049 -fall [get_ports {input[19]}]
+set_drive -min 3.122 -rise [get_ports {input[18]}]
+set_drive -min 2.049 -fall [get_ports {input[18]}]
+set_drive -min 3.122 -rise [get_ports {input[17]}]
+set_drive -min 2.049 -fall [get_ports {input[17]}]
+set_drive -min 3.122 -rise [get_ports {input[16]}]
+set_drive -min 2.049 -fall [get_ports {input[16]}]
+set_drive -min 3.122 -rise [get_ports {input[15]}]
+set_drive -min 2.049 -fall [get_ports {input[15]}]
+set_drive -min 3.122 -rise [get_ports {input[14]}]
+set_drive -min 2.049 -fall [get_ports {input[14]}]
+set_drive -min 3.122 -rise [get_ports {input[13]}]
+set_drive -min 2.049 -fall [get_ports {input[13]}]
+set_drive -min 3.122 -rise [get_ports {input[12]}]
+set_drive -min 2.049 -fall [get_ports {input[12]}]
+set_drive -min 3.122 -rise [get_ports {input[11]}]
+set_drive -min 2.049 -fall [get_ports {input[11]}]
+set_drive -min 3.122 -rise [get_ports {input[10]}]
+set_drive -min 2.049 -fall [get_ports {input[10]}]
+set_drive -min 3.122 -rise [get_ports {input[9]}]
+set_drive -min 2.049 -fall [get_ports {input[9]}]
+set_drive -min 3.122 -rise [get_ports {input[8]}]
+set_drive -min 2.049 -fall [get_ports {input[8]}]
+set_drive -min 3.122 -rise [get_ports {input[7]}]
+set_drive -min 2.049 -fall [get_ports {input[7]}]
+set_drive -min 3.122 -rise [get_ports {input[6]}]
+set_drive -min 2.049 -fall [get_ports {input[6]}]
+set_drive -min 3.122 -rise [get_ports {input[5]}]
+set_drive -min 2.049 -fall [get_ports {input[5]}]
+set_drive -min 3.122 -rise [get_ports {input[4]}]
+set_drive -min 2.049 -fall [get_ports {input[4]}]
+set_drive -min 3.122 -rise [get_ports {input[3]}]
+set_drive -min 2.049 -fall [get_ports {input[3]}]
+set_drive -min 3.122 -rise [get_ports {input[2]}]
+set_drive -min 2.049 -fall [get_ports {input[2]}]
+set_drive -min 3.122 -rise [get_ports {input[1]}]
+set_drive -min 2.049 -fall [get_ports {input[1]}]
+set_drive -min 3.122 -rise [get_ports {input[0]}]
+set_drive -min 2.049 -fall [get_ports {input[0]}]
+set_drive -min 3.122 -rise [get_ports {enable}]
+set_drive -min 2.049 -fall [get_ports {enable}]
+set_drive -min 0.250 -rise [get_ports {clk}]
+set_drive -min 0.250 -fall [get_ports {clk}]
+set_drive -min 3.089 -rise [get_ports {reset}]
+set_drive -min 3.089 -fall [get_ports {reset}]
+set_load -min -pin_load 0.004 [get_ports {output[63]}]
+set_load -min -wire_load 0.000 [get_ports {output[63]}]
+set_load -min -pin_load 0.004 [get_ports {output[62]}]
+set_load -min -wire_load 0.000 [get_ports {output[62]}]
+set_load -min -pin_load 0.004 [get_ports {output[61]}]
+set_load -min -wire_load 0.000 [get_ports {output[61]}]
+set_load -min -pin_load 0.004 [get_ports {output[60]}]
+set_load -min -wire_load 0.000 [get_ports {output[60]}]
+set_load -min -pin_load 0.004 [get_ports {output[59]}]
+set_load -min -wire_load 0.000 [get_ports {output[59]}]
+set_load -min -pin_load 0.004 [get_ports {output[58]}]
+set_load -min -wire_load 0.000 [get_ports {output[58]}]
+set_load -min -pin_load 0.004 [get_ports {output[57]}]
+set_load -min -wire_load 0.000 [get_ports {output[57]}]
+set_load -min -pin_load 0.004 [get_ports {output[56]}]
+set_load -min -wire_load 0.000 [get_ports {output[56]}]
+set_load -min -pin_load 0.004 [get_ports {output[55]}]
+set_load -min -wire_load 0.000 [get_ports {output[55]}]
+set_load -min -pin_load 0.004 [get_ports {output[54]}]
+set_load -min -wire_load 0.000 [get_ports {output[54]}]
+set_load -min -pin_load 0.004 [get_ports {output[53]}]
+set_load -min -wire_load 0.000 [get_ports {output[53]}]
+set_load -min -pin_load 0.004 [get_ports {output[52]}]
+set_load -min -wire_load 0.000 [get_ports {output[52]}]
+set_load -min -pin_load 0.004 [get_ports {output[51]}]
+set_load -min -wire_load 0.000 [get_ports {output[51]}]
+set_load -min -pin_load 0.004 [get_ports {output[50]}]
+set_load -min -wire_load 0.000 [get_ports {output[50]}]
+set_load -min -pin_load 0.004 [get_ports {output[49]}]
+set_load -min -wire_load 0.000 [get_ports {output[49]}]
+set_load -min -pin_load 0.004 [get_ports {output[48]}]
+set_load -min -wire_load 0.000 [get_ports {output[48]}]
+set_load -min -pin_load 0.004 [get_ports {output[47]}]
+set_load -min -wire_load 0.000 [get_ports {output[47]}]
+set_load -min -pin_load 0.004 [get_ports {output[46]}]
+set_load -min -wire_load 0.000 [get_ports {output[46]}]
+set_load -min -pin_load 0.004 [get_ports {output[45]}]
+set_load -min -wire_load 0.000 [get_ports {output[45]}]
+set_load -min -pin_load 0.004 [get_ports {output[44]}]
+set_load -min -wire_load 0.000 [get_ports {output[44]}]
+set_load -min -pin_load 0.004 [get_ports {output[43]}]
+set_load -min -wire_load 0.000 [get_ports {output[43]}]
+set_load -min -pin_load 0.004 [get_ports {output[42]}]
+set_load -min -wire_load 0.000 [get_ports {output[42]}]
+set_load -min -pin_load 0.004 [get_ports {output[41]}]
+set_load -min -wire_load 0.000 [get_ports {output[41]}]
+set_load -min -pin_load 0.004 [get_ports {output[40]}]
+set_load -min -wire_load 0.000 [get_ports {output[40]}]
+set_load -min -pin_load 0.004 [get_ports {output[39]}]
+set_load -min -wire_load 0.000 [get_ports {output[39]}]
+set_load -min -pin_load 0.004 [get_ports {output[38]}]
+set_load -min -wire_load 0.000 [get_ports {output[38]}]
+set_load -min -pin_load 0.004 [get_ports {output[37]}]
+set_load -min -wire_load 0.000 [get_ports {output[37]}]
+set_load -min -pin_load 0.004 [get_ports {output[36]}]
+set_load -min -wire_load 0.000 [get_ports {output[36]}]
+set_load -min -pin_load 0.004 [get_ports {output[35]}]
+set_load -min -wire_load 0.000 [get_ports {output[35]}]
+set_load -min -pin_load 0.004 [get_ports {output[34]}]
+set_load -min -wire_load 0.000 [get_ports {output[34]}]
+set_load -min -pin_load 0.004 [get_ports {output[33]}]
+set_load -min -wire_load 0.000 [get_ports {output[33]}]
+set_load -min -pin_load 0.004 [get_ports {output[32]}]
+set_load -min -wire_load 0.000 [get_ports {output[32]}]
+set_load -min -pin_load 0.004 [get_ports {output[31]}]
+set_load -min -wire_load 0.000 [get_ports {output[31]}]
+set_load -min -pin_load 0.004 [get_ports {output[30]}]
+set_load -min -wire_load 0.000 [get_ports {output[30]}]
+set_load -min -pin_load 0.004 [get_ports {output[29]}]
+set_load -min -wire_load 0.000 [get_ports {output[29]}]
+set_load -min -pin_load 0.004 [get_ports {output[28]}]
+set_load -min -wire_load 0.000 [get_ports {output[28]}]
+set_load -min -pin_load 0.004 [get_ports {output[27]}]
+set_load -min -wire_load 0.000 [get_ports {output[27]}]
+set_load -min -pin_load 0.004 [get_ports {output[26]}]
+set_load -min -wire_load 0.000 [get_ports {output[26]}]
+set_load -min -pin_load 0.004 [get_ports {output[25]}]
+set_load -min -wire_load 0.000 [get_ports {output[25]}]
+set_load -min -pin_load 0.004 [get_ports {output[24]}]
+set_load -min -wire_load 0.000 [get_ports {output[24]}]
+set_load -min -pin_load 0.004 [get_ports {output[23]}]
+set_load -min -wire_load 0.000 [get_ports {output[23]}]
+set_load -min -pin_load 0.004 [get_ports {output[22]}]
+set_load -min -wire_load 0.000 [get_ports {output[22]}]
+set_load -min -pin_load 0.004 [get_ports {output[21]}]
+set_load -min -wire_load 0.000 [get_ports {output[21]}]
+set_load -min -pin_load 0.004 [get_ports {output[20]}]
+set_load -min -wire_load 0.000 [get_ports {output[20]}]
+set_load -min -pin_load 0.004 [get_ports {output[19]}]
+set_load -min -wire_load 0.000 [get_ports {output[19]}]
+set_load -min -pin_load 0.004 [get_ports {output[18]}]
+set_load -min -wire_load 0.000 [get_ports {output[18]}]
+set_load -min -pin_load 0.004 [get_ports {output[17]}]
+set_load -min -wire_load 0.000 [get_ports {output[17]}]
+set_load -min -pin_load 0.004 [get_ports {output[16]}]
+set_load -min -wire_load 0.000 [get_ports {output[16]}]
+set_load -min -pin_load 0.004 [get_ports {output[15]}]
+set_load -min -wire_load 0.000 [get_ports {output[15]}]
+set_load -min -pin_load 0.004 [get_ports {output[14]}]
+set_load -min -wire_load 0.000 [get_ports {output[14]}]
+set_load -min -pin_load 0.004 [get_ports {output[13]}]
+set_load -min -wire_load 0.011 [get_ports {output[13]}]
+set_load -min -pin_load 0.004 [get_ports {output[12]}]
+set_load -min -wire_load 0.000 [get_ports {output[12]}]
+set_load -min -pin_load 0.004 [get_ports {output[11]}]
+set_load -min -wire_load 0.000 [get_ports {output[11]}]
+set_load -min -pin_load 0.004 [get_ports {output[10]}]
+set_load -min -wire_load 0.000 [get_ports {output[10]}]
+set_load -min -pin_load 0.004 [get_ports {output[9]}]
+set_load -min -wire_load 0.000 [get_ports {output[9]}]
+set_load -min -pin_load 0.004 [get_ports {output[8]}]
+set_load -min -wire_load 0.000 [get_ports {output[8]}]
+set_load -min -pin_load 0.004 [get_ports {output[7]}]
+set_load -min -wire_load 0.000 [get_ports {output[7]}]
+set_load -min -pin_load 0.004 [get_ports {output[6]}]
+set_load -min -wire_load 0.000 [get_ports {output[6]}]
+set_load -min -pin_load 0.004 [get_ports {output[5]}]
+set_load -min -wire_load 0.000 [get_ports {output[5]}]
+set_load -min -pin_load 0.004 [get_ports {output[4]}]
+set_load -min -wire_load 0.000 [get_ports {output[4]}]
+set_load -min -pin_load 0.004 [get_ports {output[3]}]
+set_load -min -wire_load 0.000 [get_ports {output[3]}]
+set_load -min -pin_load 0.004 [get_ports {output[2]}]
+set_load -min -wire_load 0.000 [get_ports {output[2]}]
+set_load -min -pin_load 0.004 [get_ports {output[1]}]
+set_load -min -wire_load 0.000 [get_ports {output[1]}]
+set_load -min -pin_load 0.004 [get_ports {output[0]}]
+set_load -min -wire_load 0.000 [get_ports {output[0]}]
+set_max_capacitance 0.024 [get_ports {input[63]}]
+set_max_capacitance 0.024 [get_ports {input[62]}]
+set_max_capacitance 0.024 [get_ports {input[61]}]
+set_max_capacitance 0.024 [get_ports {input[60]}]
+set_max_capacitance 0.024 [get_ports {input[59]}]
+set_max_capacitance 0.024 [get_ports {input[58]}]
+set_max_capacitance 0.024 [get_ports {input[57]}]
+set_max_capacitance 0.024 [get_ports {input[56]}]
+set_max_capacitance 0.024 [get_ports {input[55]}]
+set_max_capacitance 0.024 [get_ports {input[54]}]
+set_max_capacitance 0.024 [get_ports {input[53]}]
+set_max_capacitance 0.024 [get_ports {input[52]}]
+set_max_capacitance 0.024 [get_ports {input[51]}]
+set_max_capacitance 0.024 [get_ports {input[50]}]
+set_max_capacitance 0.024 [get_ports {input[49]}]
+set_max_capacitance 0.024 [get_ports {input[48]}]
+set_max_capacitance 0.024 [get_ports {input[47]}]
+set_max_capacitance 0.024 [get_ports {input[46]}]
+set_max_capacitance 0.024 [get_ports {input[45]}]
+set_max_capacitance 0.024 [get_ports {input[44]}]
+set_max_capacitance 0.024 [get_ports {input[43]}]
+set_max_capacitance 0.024 [get_ports {input[42]}]
+set_max_capacitance 0.024 [get_ports {input[41]}]
+set_max_capacitance 0.024 [get_ports {input[40]}]
+set_max_capacitance 0.024 [get_ports {input[39]}]
+set_max_capacitance 0.024 [get_ports {input[38]}]
+set_max_capacitance 0.024 [get_ports {input[37]}]
+set_max_capacitance 0.024 [get_ports {input[36]}]
+set_max_capacitance 0.024 [get_ports {input[35]}]
+set_max_capacitance 0.024 [get_ports {input[34]}]
+set_max_capacitance 0.024 [get_ports {input[33]}]
+set_max_capacitance 0.024 [get_ports {input[32]}]
+set_max_capacitance 0.024 [get_ports {input[31]}]
+set_max_capacitance 0.024 [get_ports {input[30]}]
+set_max_capacitance 0.024 [get_ports {input[29]}]
+set_max_capacitance 0.024 [get_ports {input[28]}]
+set_max_capacitance 0.024 [get_ports {input[27]}]
+set_max_capacitance 0.024 [get_ports {input[26]}]
+set_max_capacitance 0.024 [get_ports {input[25]}]
+set_max_capacitance 0.024 [get_ports {input[24]}]
+set_max_capacitance 0.024 [get_ports {input[23]}]
+set_max_capacitance 0.024 [get_ports {input[22]}]
+set_max_capacitance 0.024 [get_ports {input[21]}]
+set_max_capacitance 0.024 [get_ports {input[20]}]
+set_max_capacitance 0.024 [get_ports {input[19]}]
+set_max_capacitance 0.024 [get_ports {input[18]}]
+set_max_capacitance 0.024 [get_ports {input[17]}]
+set_max_capacitance 0.024 [get_ports {input[16]}]
+set_max_capacitance 0.024 [get_ports {input[15]}]
+set_max_capacitance 0.024 [get_ports {input[14]}]
+set_max_capacitance 0.024 [get_ports {input[13]}]
+set_max_capacitance 0.024 [get_ports {input[12]}]
+set_max_capacitance 0.024 [get_ports {input[11]}]
+set_max_capacitance 0.024 [get_ports {input[10]}]
+set_max_capacitance 0.024 [get_ports {input[9]}]
+set_max_capacitance 0.024 [get_ports {input[8]}]
+set_max_capacitance 0.024 [get_ports {input[7]}]
+set_max_capacitance 0.024 [get_ports {input[6]}]
+set_max_capacitance 0.024 [get_ports {input[5]}]
+set_max_capacitance 0.024 [get_ports {input[4]}]
+set_max_capacitance 0.024 [get_ports {input[3]}]
+set_max_capacitance 0.024 [get_ports {input[2]}]
+set_max_capacitance 0.024 [get_ports {input[1]}]
+set_max_capacitance 0.024 [get_ports {input[0]}]
+set_max_capacitance 0.024 [get_ports {enable}]
+set_max_capacitance 0.100 [get_ports {clk}]
+set_max_capacitance 0.004 [get_ports {reset}]
+
+#/**********************************************************************
+# * Constraint pushed down from top level constraint file constraints.sdc
+# **********************************************************************/

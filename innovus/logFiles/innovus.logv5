@@ -1,0 +1,39 @@
+[04/22 17:40:17      0s] 
+[04/22 17:40:17      0s] Cadence Innovus(TM) Implementation System.
+[04/22 17:40:17      0s] Copyright 2017 Cadence Design Systems, Inc. All rights reserved worldwide.
+[04/22 17:40:17      0s] 
+[04/22 17:40:17      0s] Version:	v17.12-s095_1, built Thu Nov 9 12:10:01 PST 2017
+[04/22 17:40:17      0s] Options:	-no_gui 
+[04/22 17:40:17      0s] Date:		Wed Apr 22 17:40:17 2020
+[04/22 17:40:17      0s] Host:		ece-linlabsrv01.ece.gatech.edu (x86_64 w/Linux 3.10.0-1062.7.1.el7.x86_64) (14cores*112cpus*Intel(R) Xeon(R) Gold 5117 CPU @ 2.00GHz 19712KB)
+[04/22 17:40:17      0s] OS:		Red Hat Enterprise Linux Server release 7.8 (Maipo)
+[04/22 17:40:17      0s] 
+[04/22 17:40:17      0s] License:
+[04/22 17:40:18      0s] 		invs	Innovus Implementation System	17.1	checkout succeeded
+[04/22 17:40:18      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[04/22 17:40:30     11s] @(#)CDS: Innovus v17.12-s095_1 (64bit) 11/09/2017 12:10 (Linux 2.6.18-194.el5)
+[04/22 17:40:30     11s] @(#)CDS: NanoRoute 17.12-s095_1 NR171102-1913/17_12-UB (database version 2.30, 405.7.1) {superthreading v1.44}
+[04/22 17:40:30     11s] @(#)CDS: AAE 17.12-s040 (64bit) 11/09/2017 (Linux 2.6.18-194.el5)
+[04/22 17:40:30     11s] @(#)CDS: CTE 17.12-s036_1 () Nov  2 2017 09:33:40 ( )
+[04/22 17:40:30     11s] @(#)CDS: SYNTECH 17.12-s012_1 () Oct 31 2017 04:30:11 ( )
+[04/22 17:40:30     11s] @(#)CDS: CPE v17.12-s076
+[04/22 17:40:30     11s] @(#)CDS: IQRC/TQRC 16.1.1-s220 (64bit) Fri Aug  4 09:53:48 PDT 2017 (Linux 2.6.18-194.el5)
+[04/22 17:40:30     11s] @(#)CDS: OA 22.50-p063 Fri Feb  3 19:45:13 2017
+[04/22 17:40:30     11s] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+[04/22 17:40:30     11s] @(#)CDS: RCDB 11.10
+[04/22 17:40:30     11s] --- Running on ece-linlabsrv01.ece.gatech.edu (x86_64 w/Linux 3.10.0-1062.7.1.el7.x86_64) (14cores*112cpus*Intel(R) Xeon(R) Gold 5117 CPU @ 2.00GHz 19712KB) ---
+[04/22 17:40:30     11s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_42276_ece-linlabsrv01.ece.gatech.edu_mwhite93_2q2dw1.
+
+[04/22 17:40:30     11s] Change the soft stacksize limit to 0.2%RAM (383 mbytes). Set global soft_stack_size_limit to change the value.
+[04/22 17:40:30     11s] 
+[04/22 17:40:30     11s] **INFO:  MMMC transition support version v31-84 
+[04/22 17:40:30     11s] 
+[04/22 17:40:30     11s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[04/22 17:40:30     11s] <CMD> suppressMessage ENCEXT-2799
+[04/22 17:46:16     12s] **INFO (INTERRUPT): The current script will stop before next command.
+[04/22 17:46:16     12s] **INFO (INTERRUPT): One more Ctrl-C to exit Innovus ...
+[04/22 17:46:19     12s] 
+[04/22 17:46:19     12s] *** Memory Usage v#1 (Current mem = 431.762M, initial mem = 179.902M) ***
+[04/22 17:46:19     12s] *** Message Summary: 0 warning(s), 0 error(s)
+[04/22 17:46:19     12s] 
+[04/22 17:46:19     12s] --- Ending "Innovus" (totcpu=0:00:12.2, real=0:06:02, mem=431.8M) ---
