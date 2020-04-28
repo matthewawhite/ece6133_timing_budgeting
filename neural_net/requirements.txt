@@ -1,5 +1,5 @@
 matplotlib
 pandas
 tensorflow
-tensorflow_docs
 seaborn
+git+https://github.com/tensorflow/docs
