@@ -1,0 +1,5 @@
+matplotlib
+pandas
+tensorflow
+tensorflow_docs
+seaborn
