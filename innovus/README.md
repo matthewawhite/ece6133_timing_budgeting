@@ -37,7 +37,7 @@ modifyFlow.tcl
 - This script runs through the typical flow discussed above then attempts budget modifications and saving the modifications to a budgetMod/ folder
 
 setup-171.tcl
-- This script is essentially the same as the modifyFlow.tcl script but instead runs on Innovus-171 (it is separate due to a lack of backwards compatibility within Innovus)
+- This script is essentially the same as the typicalFlow.tcl script but instead runs on Innovus-171 (it is separate due to a lack of backwards compatibility within Innovus)
 
 budgetModify.tcl
 - This script is used by the modifyBudget command and should not be called directly
