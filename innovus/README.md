@@ -3,10 +3,22 @@ This README covers the scripts, design, and results of our Innovus approach to t
 TESTING OUR DESIGN:
 Warning: if you have your own configuration for Innovus then our runInnovus.csh scripts could potential change your Innovus version until you start a new session on the server
 
-Follow the steps below to test our typical flow and modify flow designs:
+Follow the steps below to test our typical flow and modify flow designs if using Innovus-191:
 1.) source runInnovus.csh
 2.) Wait for Innovus-191 to open in non-gui mode
+3.) For the modify flow run:
+    source modifyFlow.tcl
 
+    For the typical flow run:
+    source typicalFlow.tcl
+4.) Wait a while for the script to finish running
+5.) Output data is available in the places mentioned below
+
+Follow the steps below to test our typical flow and modify flow designs if using Innovus-171:
+1.) source runInnovus-171.csh
+2.) Wait for Innovus-171 to open in non-gui mode
+3.) source setup-171.tcl
+4.) Wait for flow to finish, and once done the data is available in the folder mentioned below
 
 DESCRIPTION OF SCRIPTS WE WROTE AND THE STEPS INVOLVED IN RUNNING THEM:
 runInnovus.csh
