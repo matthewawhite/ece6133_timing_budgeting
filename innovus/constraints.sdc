@@ -11,7 +11,7 @@ set_drive .25 {clk}
 set_load [expr 10 * [get_property [get_lib_pins gscl45nm/INVX1/A] capacitance]] [all_outputs]
 
 #set input delay
-set_input_delay 5.0 -clock clk [all_inputs]
+set_input_delay 3.0 -clock clk [all_inputs]
 
 #set output delay
-set_output_delay 5.0 -clock clk [all_outputs]
+set_output_delay 3.0 -clock clk [all_outputs]
