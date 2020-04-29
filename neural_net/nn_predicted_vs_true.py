@@ -82,3 +82,7 @@ plt.xlim(lims)
 plt.ylim(lims)
 _ = plt.plot(lims, lims)
 plt.show()
+
+filename = ("nn_predicted_vs_true-" + str(sys.argv[1]) + ".png")
+plt.savefig(filename)
+print("wrote figure to " + filename)

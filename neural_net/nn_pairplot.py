@@ -17,3 +17,6 @@ train_data = data.sample(frac=frac_train, random_state=0)
 
 sns.pairplot(train_data[["slack_delta", "delay_split", "efo_ratio", "route_ratio"]], diag_kind="kde")
 plt.show()
+plt.savefig("nn_pairplot.png")
+print('wrote figure to nn_pairplot.png')
+
