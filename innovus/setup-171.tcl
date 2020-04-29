@@ -53,5 +53,5 @@ timeDesign -postRoute
 get_metric timing.setup.TNS.all
 
 set_interactive_constraint_modes [all_constraint_modes -active]
-modifyBudget -file modify.tcl -inst regText -view present_enc_av
+modifyBudget -file budgetModify.tcl -inst regText -view present_enc_av
 saveTimingBudget -dir budgetMod

@@ -22,9 +22,6 @@ saveTimingBudget -ptn Reg_width80
 saveTimingBudget -ptn AsyncMux_width80
 saveTimingBudget -ptn AsyncMux_width64
 
-deriveTimingBudget
-saveTimingBudget -dir budget
-
 buildTimingGraph
 
 report_timing > timing_report_typical.txt
